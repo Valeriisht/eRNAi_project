@@ -1,0 +1,6 @@
+name: eRNAi_framework
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
