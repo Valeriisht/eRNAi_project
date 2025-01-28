@@ -4,3 +4,6 @@ channels:
   - bioconda
   - defaults
 dependencies:
+  - numpy
+  - pandas
+  - pytest
