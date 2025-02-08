@@ -1,6 +1,10 @@
-## Формат кода
+## Coding style
 
-- Стандарт PEP8
-- Рекомендуемая версия python >= 3.9
-- Для аннотации используем стандарт  «PEP 585 – Type Hinting Generics In Standard Collections»
-- Для аннотации функций используем объект Callable из модуля typing
+- Follow existing style, formatting, and naming conventions for the file you are modifying and for the entire project. 
+
+#### Main points:
+
+- Use the PEP8 standard
+- Recommended Python version >= 3.9
+- Use the standard "PEP 585 - Type Hinting Generics in Standard Collections
+- For function annotation, use the Callable object from the typing module.
