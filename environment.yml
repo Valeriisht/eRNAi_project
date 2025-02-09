@@ -1,4 +1,4 @@
-name: eRNAi_framework
+name: eRNAi
 channels:
   - conda-forge
   - bioconda
@@ -9,3 +9,10 @@ dependencies:
   - pytest
   - snakemake
   - biopython
+  - pip=23.3.1
+   - pip:
+    - numpy==1.26
+    - pandas==2.1.1
+    - scipy==1.11.3
+
+ 
