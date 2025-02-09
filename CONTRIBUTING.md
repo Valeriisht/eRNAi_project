@@ -8,3 +8,5 @@
 - Recommended Python version >= 3.9
 - Use the standard "PEP 585 - Type Hinting Generics in Standard Collections
 - For function annotation, use the Callable object from the typing module.
+
+код — который генерируется в процессе разработки, тестирования, сборки/компиляции, рантайма — должен находиться в gitignore.
