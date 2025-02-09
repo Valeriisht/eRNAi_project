@@ -9,10 +9,10 @@ dependencies:
   - pytest
   - snakemake
   - biopython
-  - pip=23.3.1
+  - pip
    - pip:
-    - numpy==1.26
-    - pandas==2.1.1
-    - scipy==1.11.3
+    - numpy
+    - pandas
+    - scipy
 
  
