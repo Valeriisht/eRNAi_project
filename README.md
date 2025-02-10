@@ -38,5 +38,5 @@ To run it, execute the command:
 
 ## Contributing 
 
-[Contributing.md](Valeriisht/eRNAi_project/master/docs/CONTRIBUTING.md).
+[Contributing.md](Valeriisht/eRNAi_project/main/docs/CONTRIBUTING.md).
 
