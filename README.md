@@ -19,7 +19,7 @@ To install the dependencies, run the command
 To get the tool clone the git repository:
 
 ```sh
-git clnone
+git clnone git@github.com:Valeriisht/eRNAi_project.git
 ```
 Create a conda environment with the necessary packages. 
 Activate it:
