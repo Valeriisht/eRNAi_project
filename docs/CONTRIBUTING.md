@@ -1,5 +1,8 @@
 # Contributing
 
+
+This project and everyone participating in it is governed by the
+[CONTRIBUTING.md Code of Conduct](Valeriisht/master/CONTRIBUTING.md).
 Please review the following guidelines before you get started
 
 ## Coding standards
