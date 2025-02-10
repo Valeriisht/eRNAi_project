@@ -1,1 +1,7 @@
 # Conda environment file
+name: eRNAi_project
+channels: 
+   - conda-forge
+   - bioconda
+   dependencies:
+   
