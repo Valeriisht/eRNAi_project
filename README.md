@@ -8,20 +8,39 @@
 - [Testing](#Testing)
 - [Contributing](#Contributing)
 
-
 ## System specifications
 
-Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org/) v8+
+To install and run the project, you need 
 
-Для установки зависимостей, выполните команду:
+To install the dependencies, run the command
 
-## Installation 
+## Installation
+
+To get the tool clone the git repository:
+
+```sh
+git clnone
+```
+Create a conda environment with the necessary packages. 
+Activate it:
+
+```sh
+conda env create -f environment.yml
+conda activate eRNAi
+```
 
 ## Usage
 
+## Examples
+
 ## Testing
 
-Наш проект покрыт юнит-тестами Jest. Для их запуска выполните команду:
+Three types of tests: unit tests, integration tests, and generation tests cover the project.
+
+To run it, execute the command:
+
+```
+```
 
 ## Contributing 
 
