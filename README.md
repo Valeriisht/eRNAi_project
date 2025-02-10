@@ -3,7 +3,7 @@
 - The repository for scientific project to develop an algorithm for predicting RNA interference from the environment based on omics data
 
 ## Содержание
-- [System specifications](#System specifications)
+- [System specifications](#System_specifications)
 - [Installation](#Installation)
 - [Testing](#Testing)
 - [Contributing](#Contributing )
