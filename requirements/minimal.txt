@@ -1,3 +1,7 @@
-setuptools<60.0; python_version<'3.12'
-numpy; python_version>='3.8'
-scipy
+python>=3.9
+pytest
+flake8
+black 
+requests 
+pandas 
+numpy 
