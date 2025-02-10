@@ -63,6 +63,8 @@ The minimum list of packages and their versions that are required for the projec
 - Each package is installed using conda. Save the installation code in repository. 
 
 - The repository contains a separate YAML files that lists the dependencies and the versions used. A list of Conda packages and channels to install is contained in the environment.yaml file.
+  
+- When creating or upgrading an environment, you must specify the exact versions of the packages that will be installed.
 
 ## SnakeMake wraps
 
