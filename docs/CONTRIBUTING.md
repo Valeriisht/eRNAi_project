@@ -1,4 +1,8 @@
-## Coding style
+# Contributing
+
+Please review the following guidelines before you get started
+
+## Coding standards
 Follow existing style, formatting, and naming conventions for the file you are modifying and for the entire project.
 Main points:
 Use the PEP8 standard
