@@ -1,0 +1,8 @@
+# Project accesion number from the GEO NCBI database
+
+- PRJNA1208679
+- PRJNA1199999
+- PRJNA266439
+- PRJNA1130089
+- PRJNA1141962
+- PRJNA304106
