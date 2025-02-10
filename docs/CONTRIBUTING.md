@@ -15,7 +15,34 @@ Please review the following guidelines before you get started
 ##  Function Annotation
 
 - The Python typing module is used to annotate types for functions and variables.
-- Use the argparse module to process command line arguments
+- Annotate the types of all functions, methods, arguments, and return values, as well as variables, where possible and appropriate.
+
+- Using:
+  - **str**, **int**, **float**, and **bool** to annotate simple data types.
+  - **List**, **Tuple**, **Dict**, and **Set** from the typing module to annotate collections.
+  - Union to indicate that a variable can have one of several types.
+  - Callable to annotate functions as types.
+  - Вocstrings to describe the purpose of a function, its arguments, and its return value.
+
+
+## ArgParse annotation
+
+- Use ArgParse for all scripts that need the user to interact with the command line.
+- Using:
+  - Create an ArgumentParser object.
+  - Describe what the script does in the description
+  - Use the *add_argument()* method to define the arguments that your script will accept.
+
+    The options for *add_argument()* :
+    - *name or flags*: The name of the argument or a list of flags (e.g., -o, --output).
+    - *help*: A short description of the argument to be displayed in the help.
+    - *type*: The expected data type of the argument (e.g., str, int, float).
+    - *default*: The default value of the argument.
+    - *required*: Specify True if the argument is required.
+    - *choices*: A list of acceptable values for the argument.
+    - *action*: Specifies the action to perform when this argument is detected on the command line.
+      
+  - Calling the parse_args() method to parse command line arguments
 
 ## Base Packages
 
