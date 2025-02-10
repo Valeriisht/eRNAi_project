@@ -29,6 +29,8 @@ The following basic packages are required to work on the project:
 - pandas (for data analysis)
 - numpy (for data analysis)
 
+The minimum list of packages and their versions that are required for the project can be found in requirements/minimal.txt
+
 ## Install packeges 
 
 - Each package is installed using conda. Save the installation code in repository. 
@@ -55,6 +57,9 @@ Use the following folder structure
 
 - examples/: Usage examples.
   - Contains code examples that demonstrate how to use the framework.
+
+- requirements/: packages 
+  - contains a set of minimum required packages 
 
 - scripts/: Basic project scripts for execution.
 
