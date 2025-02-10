@@ -1,9 +1,0 @@
-
-The code is run through a bash layer
-
--- BASH Instruction --
-
-
-Options:
---help: display this message and exit
---test: use test data as input
