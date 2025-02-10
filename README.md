@@ -8,12 +8,6 @@
 - [Testing](#Testing)
 - [Contributing](#Contributing)
 
-## System specifications
-
-To install and run the project, you need 
-
-To install the dependencies, run the command
-
 ## Installation
 
 To get the tool clone the git repository:
