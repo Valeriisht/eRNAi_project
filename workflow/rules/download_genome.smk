@@ -8,7 +8,7 @@ GENOME_FILE = f"{OUTPUT_DIR}/{TAXID}.fna"
 rule all:
     input:
         GENOME_FILE
-
+#Загрузка архива
 rule download_genome:
     output:
         zip = temp(f"{OUTPUT_DIR}/{TAXID}_genome.zip")
@@ -18,7 +18,7 @@ rule download_genome:
         f"{OUTPUT_DIR}/logs/download.log"
     shell:
         "datasets download genome taxon {params.taxid} --reference --filename {output.zip} > {log} 2>&1"
-
+#Распаковка
 rule extract_genome:
     input:
         rules.download_genome.output.zip
@@ -28,7 +28,7 @@ rule extract_genome:
         f"{OUTPUT_DIR}/logs/extract.log"
     shell:
         "unzip {input} -d {output} > {log} 2>&1"
-
+#Поиск и переименование 
 rule find_rename_genome:
     input:
         rules.extract_genome.output
