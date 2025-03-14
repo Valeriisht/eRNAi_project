@@ -1,7 +1,10 @@
 ##### directories
 result_dir:  results/ 
 
-##### params for specific rules
+##### params for specific rules ####
 # read quality trimming
 fastp:
   qualified_quality_phred: 30
+
+
+input_fastq:
