@@ -1,12 +1,6 @@
 configfile: "config.yaml"
 
 
-Input: fastq.gz 
-Output: metaphlan-like tableTRANSCRIPTOME_FASTA = "transcriptome.fa"  # Файл с транскриптомом
-
-OUTPUT_DIR
-
-
 rule fastp_preprocessing:
     input: 
         fastq = config["input_fastq"]
@@ -18,11 +12,11 @@ rule fastp_preprocessing:
     shell:
         """
         fastp -i {input.fastq} -o {output.processed_fastq} \
-        -h {output.html_report} \ 
+        -h {output.html_report} \
         -j {output.json_report} \
         --thread {threads} \
         --qualified_quality_phred 30 \
-        --length_required 50\
+        --length_required 50
         """ 
         
 # Анализ с MetaPhlAn
@@ -32,12 +26,14 @@ rule analysis_MetaPhlAn:
     output: 
         metaphlan = "output/metaphlan.tsv"
     threads: 8
-    shell: 
+    shell:
         """
-         metaphlan {input.processed_fastq} \
-          --input_type fastq \
-          --nproc {threads} \ 
-          -o {output.metaphlan} 
+        fastp -i {input.fastq} -o {output.processed_fastq} \
+        -h {output.html_report} \
+        -j {output.json_report} \
+        --thread {threads} \
+        --qualified_quality_phred 30 \
+        --length_required 50
         """
 
 # Анализ с HUMAnN
@@ -48,11 +44,12 @@ rule humann_analysis:
         pathabundance = "output/humann_output/humann_pathabundance.tsv"
     threads: 8
     shell: 
+        shell: 
         """
-         humann {input.processed_fastq} \
-          --input_type fastq \
-          --output output/humann_output \ 
-          --threads {threads}
+        humann {input.processed_fastq} \
+        --input_type fastq \
+        --output output/humann_output \
+        --threads {threads}
         """
         
 # переименование
@@ -63,9 +60,9 @@ rule rename_human:
         table_renamed = "output/humann_output/pathabundance_renamed.tsv"
     shell: 
         """
-         humann_rename_table {input.pathabundance} \
-          --output {output.table_renamed} \ 
-          --names uniref90
+        humann_rename_table {input.pathabundance} \
+        --output {output.table_renamed} \
+        --names uniref90
         """
 
 # перегруппировка таблицы 
@@ -76,9 +73,9 @@ rule regroup_table_humman:
         regroup_table_humman =  "output/humann_output/pathabundance_regroup.tsv"
     shell:
         """
-         humann_regroup_table {input.table_renamed} \
-          --output {output.regroup_table_humman} \ 
-          --groups metacyc
+        humann_regroup_table {input.table_renamed} \
+        --output {output.regroup_table_humman} \
+        --groups metacyc
         """ 
 
 # финальное переименование таблицы 
@@ -89,13 +86,13 @@ rule final_humann_table:
         final_table = "output/humann_output/pathabundance_final.tsv"
     shell:
         """
-         humann_rename_table {input.regroup_table_humman} \
-          --output {output.final_table} \ 
-          --groups metacyc
+        humann_rename_table {input.regroup_table_humman} \
+        --output {output.final_table} \
+        --groups metacyc
         """
 
 # очистка временных файлов
-rule clean_temporary_files::
+rule clean_temporary_files:
     input: 
         processed_fastq = "output/processed.fastq.gz",
     output: 
@@ -103,12 +100,10 @@ rule clean_temporary_files::
     shell: 
         """
         rm -f {input.processed_fastq}
-
-        """"
-
+        """
 
 
 rule all:
     input:
-        metaphlan_output = "output/metaphlan_output.tsv",
+        metaphlan_output = "output/metaphlan.tsv",
         humann_output = "output/humann_output/pathabundance_final.tsv"
