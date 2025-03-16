@@ -36,7 +36,6 @@ rule kallisto_index:
 # квази-выравнивание 
 
 rule kallisto_quant:
-
     input: 
         index = OUTPUT_DIR + "/transcriptome.idx"
         r1 = INPUT_FASTQ_R1 
@@ -51,16 +50,12 @@ rule kallisto_quant:
         if os.path.exists(input.r2):
             shell(
                 """
-
                 kallisto quant -i {input.index} -o {output} -b {params.bootstrap} {input.r1} {input.r2} > {log} 2>&1
-                
                 """
             )
         else:
             shell (
                 """
-
                 kallisto quant -i {input.index} -o {output} -b {params.bootstrap} {input.r1} > {log} 2>&1
-
                 """
             )
