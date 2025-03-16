@@ -1,10 +1,26 @@
 ##### directories
 result_dir:  results/ 
 
+##### input_files
+input_fastq: # указать путь 
+
 ##### params for specific rules ####
-# read quality trimming
 fastp:
   qualified_quality_phred: 30
+  length_required: 50
+  threads: 6
+
+# metaphlan parameters
+metaphlan:
+  threads: 8
+
+# humann parameters
+humann:
+  threads: 8
 
 
-input_fastq:
+# входные файлы
+metagenome: "metagenome.fastq.gz" 
+host_genome: "host_genome.fna"   # референс
+
+output_dir: "results/output"  # результаты 
