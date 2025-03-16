@@ -1,17 +1,16 @@
 
 ####### Configuration #######
-configfile: "enviromental.yaml"
+configfile: "config.yaml"
 
-SRA_ID = $1 
-OUTPUT_DIR = "processed_data" 
+# для выходных файлов
+OUTPUT_DIR = config["output_dir"]
 
 # Создаем директорию для выходных файлов, если она не существует
 shell:
     (
     """
-
     mkdir -p {OUTPUT_DIR}
-
+    mkdir -p {OUTPUT_DIR}/logs
     """
     )
 
@@ -20,11 +19,15 @@ rule download_data:
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq"
         r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
     params:
-        sra_id = SRA_ID
+        sra_id = config["sra"]["sra_id"]
+        threads = config["sra"]["thread"]
     log:
         OUTPUT_DIR + "/logs/download.log"
-    run: 
-        fasterq-dump {params.sra_id} --outdir {OUTPUT_DIR}  --split-files > {log} 2>&1 # --threads 8
+    shell: 
+        """
+        fasterq-dump {params.sra_id} \
+        --outdir {OUTPUT_DIR}  --split-files > {log} 2>&1 # --threads 8
+        """
 
 
 rule process_paired_data:
@@ -36,20 +39,20 @@ rule process_paired_data:
         filtered_r2 = OUTPUT_DIR + "/{sra_id}_filtered_2.fastq"
         report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
     params:
-        sra_id = SRA_ID
+        threads = config["fastp"]["threads"],
+        quality_threshold = config["fastp"]["quality_threshold"],
+        min_length = config["fastp"]["min_length"]
     log:
         OUTPUT_DIR + "/logs/fastp_paired.log"
     shell: 
         """
         fastp -i {input.r1} -I {input.r2} \
-              -o {output.filtered_r1} -O {output.filtered_r2} \ 
-              --threads 8
-              --detect_adapter_for_pe
-              -q 15
-              --length_required 50
-              --correction
-              --json {output.report_json} > {log} 2>&1
-
+        -o {output.filtered_r1} -O {output.filtered_r2} \ 
+        --threads {params.threads} \
+        {params.detect_adapters} \
+        -q {params.quality_threshold} \
+        --length_required {params.min_length} \
+        --json {output.report_json} > {log} 2>&1
         """
 
 rule process_single_data:
