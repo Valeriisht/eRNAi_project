@@ -2,7 +2,7 @@
 result_dir:  results/ 
 
 ##### input_files
-taxid: 9606
+taxid: 928560
 
 ##### params for specific rules ####
 fastp:
