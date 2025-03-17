@@ -2,7 +2,7 @@
 result_dir:  results/ 
 
 ##### input_files
-input_fastq: # указать путь 
+taxid: 9606
 
 ##### params for specific rules ####
 fastp:
