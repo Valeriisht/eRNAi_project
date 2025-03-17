@@ -5,9 +5,6 @@ TAXID = config["taxid"]
 OUTPUT_DIR = config["output_dir"]
 GENOME_FILE = f"{OUTPUT_DIR}/{TAXID}.fna"
 
-rule all:
-    input:
-        GENOME_FILE
 #Загрузка архива
 rule download_genome:
     output:
