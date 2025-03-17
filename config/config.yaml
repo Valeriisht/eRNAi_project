@@ -1,5 +1,5 @@
 ##### directories
-result_dir:  results/ 
+result_dir: "results/"
 
 ##### input_files
 taxid: 928560
@@ -18,9 +18,8 @@ metaphlan:
 humann:
   threads: 8
 
-
 # входные файлы
-metagenome: "metagenome.fastq.gz" 
-host_genome: "host_genome.fna"   # референс
+metagenome: "metagenome.fastq.gz"
+host_genome: "host_genome.fna"  # референс
 
-output_dir: "results/output"  # результаты 
+output_dir: "results/output"  # результаты
