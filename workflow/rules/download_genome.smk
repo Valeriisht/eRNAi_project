@@ -1,5 +1,5 @@
 # Snakefile
-configfile: "config.yaml"
+configfile: "config/config.yaml"
 
 TAXID = config["taxid"]
 OUTPUT_DIR = config["output_dir"]
