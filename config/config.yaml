@@ -4,6 +4,11 @@ result_dir: "results/"
 ##### input_files
 taxid: 6239
 
+#### files
+sra:
+  sra_id: "SRR13239754"  # Идентификатор SRA 
+  thread: 8  
+
 ##### params for specific rules ####
 fastp:
   qualified_quality_phred: 30
