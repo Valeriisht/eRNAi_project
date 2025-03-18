@@ -3,7 +3,6 @@ configfile: "config/config.yaml"
 
 # для выходных файлов
 OUTPUT_DIR = config["output_dir"]
-SRA_ID = config["sra"]["sra_id"]
 
 # Создаем директорию для выходных файлов, если она не существует
 import os
@@ -78,7 +77,7 @@ rule clean_temp_files:
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
         r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
     params:
-        sra_id = SRA_ID
+        sra_id = config["sra"]["sra_id"]
     shell: 
         """
 
