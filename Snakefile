@@ -1,7 +1,7 @@
 ####### Configuration #######
 configfile: "config/config.yaml"
 
-include: "workflow/rules/download_genome.smk"
+include: "workflow/rules/pre_prossecing.smk"
 
 rule all:
      input:
