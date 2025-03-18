@@ -5,12 +5,6 @@ TAXID = config["taxid"]
 OUTPUT_DIR = config["output_dir"]
 GENOME_FILE = f"{OUTPUT_DIR}/{TAXID}.fna"
 
-rule create_dirs:
-    output:
-        directory(f"{OUTPUT_DIR}/logs")
-    shell:
-        "mkdir -p {output}"
-
 #Загрузка архива
 rule download_genome:
     output:
@@ -31,12 +25,10 @@ rule extract_genome:
         f"{OUTPUT_DIR}/logs/extract.log"
     shell:
         "unzip {input} -d {output} > {log} 2>&1"
-
-# Поиск и переименование 
+#Поиск и переименование 
 rule find_rename_genome:
     input:
-        rules.extract_genome.output,
-        f"{OUTPUT_DIR}/logs"  
+        rules.extract_genome.output
     output:
         GENOME_FILE
     params:
@@ -44,11 +36,10 @@ rule find_rename_genome:
     log:
         f"{OUTPUT_DIR}/logs/rename.log"
     run:
-        import subprocess
-        genome = subprocess.getoutput(f"find {input} -name '*.fna' -print -quit")
+        genome = shell("find {input} -name '*.fna' -print -quit", iterable=True)
         if not genome:
             raise ValueError(f"Геном для taxid {params.taxid} не найден")
-        shell(f"mv '{genome}' '{output}' > {log} 2>&1")
+        shell("mv '{genome}' '{output}' > {log} 2>&1")
 
 rule clean_temp:
     input:
