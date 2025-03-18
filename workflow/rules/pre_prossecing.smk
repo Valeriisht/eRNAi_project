@@ -57,7 +57,7 @@ rule process_single_data:
         filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
         report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
     params:
-        sra_id = SRA_ID
+        sra_id = config["sra"]["sra_id"]
     log:
         OUTPUT_DIR + "/logs/{sra_id}_fastp_single.log"
     shell: 
