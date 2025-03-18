@@ -1,6 +1,6 @@
 
 ####### Configuration #######
-configfile: "config.yaml"
+configfile: "config/config.yaml"
 
 # для выходных файлов
 OUTPUT_DIR = config["output_dir"]
