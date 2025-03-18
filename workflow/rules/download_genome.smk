@@ -1,3 +1,4 @@
+# Snakefile
 configfile: "config/config.yaml"
 
 TAXID = config["taxid"]
@@ -10,19 +11,20 @@ rule create_dirs:
     shell:
         "mkdir -p {output}"
 
+#Загрузка архива
 rule download_genome:
     output:
-        zip = f"{OUTPUT_DIR}/{TAXID}_genome.zip"
+        zip = temp(f"{OUTPUT_DIR}/{TAXID}_genome.zip")
     params:
         taxid = TAXID
     log:
         f"{OUTPUT_DIR}/logs/download.log"
     shell:
         "datasets download genome taxon {params.taxid} --reference --filename {output.zip} > {log} 2>&1"
-
+#Распаковка
 rule extract_genome:
     input:
-        download_genome.output.zip  # Используем output из правила download_genome
+        rules.download_genome.output.zip
     output:
         directory(f"{OUTPUT_DIR}/{TAXID}_genome")
     log:
@@ -30,25 +32,23 @@ rule extract_genome:
     shell:
         "unzip {input} -d {output} > {log} 2>&1"
 
+# Поиск и переименование 
 rule find_rename_genome:
     input:
-        genome_dir = extract_genome.output,
-        logs = f"{OUTPUT_DIR}/logs"
+        rules.extract_genome.output,
+        f"{OUTPUT_DIR}/logs"  
     output:
         GENOME_FILE
     params:
         taxid = TAXID
     log:
         f"{OUTPUT_DIR}/logs/rename.log"
-    shell:
-        """
-        GENOME_FILE=$(find {input.genome_dir} -name '*.fna' -print -quit)
-        if [[ -z "$GENOME_FILE" ]]; then
-            echo "Геном для taxid {params.taxid} не найден" > {log}
-            exit 1
-        fi
-        mv "$GENOME_FILE" {output} >> {log} 2>&1
-        """
+    run:
+        import subprocess
+        genome = subprocess.getoutput(f"find {input} -name '*.fna' -print -quit")
+        if not genome:
+            raise ValueError(f"Геном для taxid {params.taxid} не найден")
+        shell(f"mv '{genome}' '{output}' > {log} 2>&1")
 
 rule clean_temp:
     input:
