@@ -1,4 +1,3 @@
-
 ####### Configuration #######
 configfile: "config/config.yaml"
 
