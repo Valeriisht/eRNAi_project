@@ -36,7 +36,7 @@ rule process_paired_data:
         report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
     params:
         threads = config["fastp"]["threads"],
-        quality_threshold = config["fastp"]["quality_threshold"],
+        quality_threshold = config["fastp"]["qualified_quality_phred"],
         min_length = config["fastp"]["min_length"]
     log:
         OUTPUT_DIR + "/logs/fastp_paired.log"
