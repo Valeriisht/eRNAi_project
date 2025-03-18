@@ -22,7 +22,7 @@ rule download_genome:
 
 rule extract_genome:
     input:
-        rules.download_genome.output.zip
+        download_genome.output.zip  # Используем output из правила download_genome
     output:
         directory(f"{OUTPUT_DIR}/{TAXID}_genome")
     log:
@@ -32,7 +32,7 @@ rule extract_genome:
 
 rule find_rename_genome:
     input:
-        extract_genome.output,
+        extract_genome.output,  # Используем output из правила extract_genome
         f"{OUTPUT_DIR}/logs"
     output:
         GENOME_FILE
