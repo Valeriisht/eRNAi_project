@@ -3,6 +3,7 @@ configfile: "config/config.yaml"
 
 # для выходных файлов
 OUTPUT_DIR = config["output_dir"]
+SRA_ID = config["sra"]["sra_id"]
 
 # Создаем директорию для выходных файлов, если она не существует
 import os
