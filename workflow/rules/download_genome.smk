@@ -28,18 +28,25 @@ rule extract_genome:
 #Поиск и переименование 
 rule find_rename_genome:
     input:
-        rules.extract_genome.output
+        genome_dir = extract_genome.output,
+        logs = f"{OUTPUT_DIR}/logs"
     output:
         GENOME_FILE
     params:
         taxid = TAXID
     log:
         f"{OUTPUT_DIR}/logs/rename.log"
-    run:
-        genome = shell("find {input} -name '*.fna' -print -quit", iterable=True)
-        if not genome:
-            raise ValueError(f"Геном для taxid {params.taxid} не найден")
-        shell("mv '{genome}' '{output}' > {log} 2>&1")
+    shell:
+        """
+        echo "Поиск файла .fna в директории {input.genome_dir}" > {log}
+        GENOME_FILE=$(find "{input.genome_dir}" -name '*.fna' -print -quit)
+        if [[ -z "$GENOME_FILE" ]]; then
+            echo "Геном для taxid {params.taxid} не найден" >> {log}
+            exit 1
+        fi
+        echo "Найден файл: $GENOME_FILE" >> {log}
+        mv "$GENOME_FILE" {output} >> {log} 2>&1
+        """
 
 rule clean_temp:
     input:
