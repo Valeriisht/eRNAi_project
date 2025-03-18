@@ -18,7 +18,7 @@ rule download_genome:
 #Распаковка
 rule extract_genome:
     input:
-        rules.download_genome.output.zip
+        download_genome.output.zip
     output:
         directory(f"{OUTPUT_DIR}/{TAXID}_genome")
     log:
@@ -28,8 +28,7 @@ rule extract_genome:
 #Поиск и переименование 
 rule find_rename_genome:
     input:
-        genome_dir = extract_genome.output,
-        logs = f"{OUTPUT_DIR}/logs"
+        rules.extract_genome.output
     output:
         GENOME_FILE
     params:
@@ -38,13 +37,13 @@ rule find_rename_genome:
         f"{OUTPUT_DIR}/logs/rename.log"
     shell:
         """
-        echo "Поиск файла .fna в директории {input.genome_dir}" > {log}
-        GENOME_FILE=$(find "{input.genome_dir}" -name '*.fna' -print -quit)
+        # Поиск файла .fna в директории
+        GENOME_FILE=$(find {input} -name '*.fna' -print -quit)
         if [[ -z "$GENOME_FILE" ]]; then
             echo "Геном для taxid {params.taxid} не найден" >> {log}
             exit 1
         fi
-        echo "Найден файл: $GENOME_FILE" >> {log}
+        # Переименовываем файл
         mv "$GENOME_FILE" {output} >> {log} 2>&1
         """
 
