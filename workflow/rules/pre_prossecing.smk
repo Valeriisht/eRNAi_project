@@ -12,10 +12,10 @@ os.makedirs(os.path.join(OUTPUT_DIR, "logs"), exist_ok=True)
 
 rule download_data:
     output: 
-        r1 = OUTPUT_DIR + "/{sra_id}_1.fastq"
+        r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
         r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
     params:
-        sra_id = config["sra"]["sra_id"]
+        sra_id = config["sra"]["sra_id"],
         threads = config["sra"]["thread"]
     log:
         OUTPUT_DIR + "/logs/download.log"
@@ -28,11 +28,11 @@ rule download_data:
 
 rule process_paired_data:
     input:
-        r1 = OUTPUT_DIR + "/{sra_id}_1.fastq"
+        r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
         r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
     output: 
-        filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq"
-        filtered_r2 = OUTPUT_DIR + "/{sra_id}_filtered_2.fastq"
+        filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
+        filtered_r2 = OUTPUT_DIR + "/{sra_id}_filtered_2.fastq",
         report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
     params:
         threads = config["fastp"]["threads"],
@@ -55,7 +55,7 @@ rule process_single_data:
     input:
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq"
     output: 
-        filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq"
+        filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
         report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
     params:
         sra_id = SRA_ID
@@ -75,7 +75,7 @@ rule process_single_data:
 
 rule clean_temp_files:
     input: 
-        r1 = OUTPUT_DIR + "/{sra_id}_1.fastq"
+        r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
         r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
     params:
         sra_id = SRA_ID
