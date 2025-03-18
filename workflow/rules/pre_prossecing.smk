@@ -18,7 +18,7 @@ rule download_data:
         sra_id = config["sra"]["sra_id"],
         threads = config["sra"]["thread"]
     log:
-        OUTPUT_DIR + "/logs/download.log"
+        OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell: 
         """
         fasterq-dump {params.sra_id} \
