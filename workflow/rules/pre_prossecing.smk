@@ -38,7 +38,7 @@ rule process_paired_data:
         quality_threshold = config["fastp"]["qualified_quality_phred"],
         min_length = config["fastp"]["min_length"]
     log:
-        OUTPUT_DIR + "/logs/fastp_paired.log"
+        OUTPUT_DIR + "/logs/{sra_id}_fastp_paired.log"
     shell: 
         """
         fastp -i {input.r1} -I {input.r2} \
