@@ -60,7 +60,7 @@ rule process_single_data:
     params:
         sra_id = SRA_ID
     log:
-        OUTPUT_DIR + "/logs/fastp_single.log"
+        OUTPUT_DIR + "/logs/{sra_id}_fastp_single.log"
     shell: 
         """
         fastp -i {input.r1} -I {input.r2} \
