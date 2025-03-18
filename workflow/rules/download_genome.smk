@@ -18,7 +18,7 @@ rule download_genome:
 #Распаковка
 rule extract_genome:
     input:
-        download_genome.output.zip
+        rules.download_genome.output.zip
     output:
         directory(f"{OUTPUT_DIR}/{TAXID}_genome")
     log:
