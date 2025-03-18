@@ -3,6 +3,9 @@ configfile: "config/config.yaml"
 
 # для выходных файлов
 OUTPUT_DIR = config["output_dir"]
+SRA_ID = config["sra"]["sra_id"]
+
+
 
 # Создаем директорию для выходных файлов, если она не существует
 import os
@@ -14,7 +17,7 @@ rule download_data:
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
         r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
     params:
-        sra_id = config["sra"]["sra_id"],
+        sra_id = SRA_ID,
         threads = config["sra"]["thread"]
     log:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
@@ -57,7 +60,7 @@ rule process_single_data:
         filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
         report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
     params:
-        sra_id = config["sra"]["sra_id"]
+        sra_id = SRA_ID
     log:
         OUTPUT_DIR + "/logs/{sra_id}_fastp_single.log"
     shell: 
@@ -77,7 +80,7 @@ rule clean_temp_files:
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
         r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
     params:
-        sra_id = config["sra"]["sra_id"]
+        sra_id = SRA_ID
     shell: 
         """
 
