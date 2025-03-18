@@ -14,6 +14,7 @@ fastp:
   qualified_quality_phred: 30
   length_required: 50
   threads: 6
+  min_length: 50
 
 # metaphlan parameters
 metaphlan:
