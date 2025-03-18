@@ -39,7 +39,7 @@ rule find_rename_genome:
         """
         # Поиск файла .fna в директории
         echo "Поиск файла .fna в директории {input}" > {log}
-        GENOME_FILE=$(find "{input.genome_dir}" -name '*.fna' -print -quit)
+        GENOME_FILE=$(find "{input}" -name '*.fna' -print -quit)
         if [[ -z "$GENOME_FILE" ]]; then
             echo "Геном для taxid {params.taxid} не найден" >> {log}
             exit 1
