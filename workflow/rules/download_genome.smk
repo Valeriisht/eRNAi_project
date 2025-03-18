@@ -32,21 +32,23 @@ rule extract_genome:
 
 rule find_rename_genome:
     input:
-        extract_genome.output,  # Используем output из правила extract_genome
-        f"{OUTPUT_DIR}/logs"
+        genome_dir = extract_genome.output,
+        logs = f"{OUTPUT_DIR}/logs"
     output:
         GENOME_FILE
     params:
         taxid = TAXID
     log:
         f"{OUTPUT_DIR}/logs/rename.log"
-    run:
-        import subprocess
-        import os
-        genome = subprocess.getoutput(f"find {input[0]} -name '*.fna' -print -quit")
-        if not genome:
-            raise ValueError(f"Геном для taxid {params.taxid} не найден")
-        subprocess.run(f"mv '{genome}' '{output}' > {log} 2>&1", shell=True)
+    shell:
+        """
+        GENOME_FILE=$(find {input.genome_dir} -name '*.fna' -print -quit)
+        if [[ -z "$GENOME_FILE" ]]; then
+            echo "Геном для taxid {params.taxid} не найден" > {log}
+            exit 1
+        fi
+        mv "$GENOME_FILE" {output} >> {log} 2>&1
+        """
 
 rule clean_temp:
     input:
