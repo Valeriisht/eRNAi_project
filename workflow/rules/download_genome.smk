@@ -8,7 +8,7 @@ GENOME_FILE = f"{OUTPUT_DIR}/{TAXID}.fna"
 #Загрузка архива
 rule download_genome:
     output:
-        zip = temp(f"{OUTPUT_DIR}/{TAXID}_genome.zip")
+        zip = f"{OUTPUT_DIR}/{TAXID}_genome.zip"
     params:
         taxid = TAXID
     log:
