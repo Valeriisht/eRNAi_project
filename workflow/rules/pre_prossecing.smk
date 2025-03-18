@@ -15,16 +15,25 @@ os.makedirs(os.path.join(OUTPUT_DIR, "logs"), exist_ok=True)
 rule download_data:
     output: 
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
-        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
+        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" if config["sra"].get("paired", False) else temp(OUTPUT_DIR + "/{sra_id}_2.fastq")
     params:
         sra_id = SRA_ID,
-        threads = config["sra"]["thread"]
+        threads = config["sra"]["thread"],
+        paired = config["sra"].get("paired", False) 
     log:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell: 
         """
-        fasterq-dump {params.sra_id} \
-        --outdir {OUTPUT_DIR}  --split-files > {log} 2>&1 # --threads 8
+        if {params.paired}; then
+            fasterq-dump {params.sra_id} \
+            --outdir {OUTPUT_DIR} \
+            --split-files \
+            --threads {params.threads} > {log} 2>&1
+        else
+            fasterq-dump {params.sra_id} \
+            --outdir {OUTPUT_DIR} \
+            --threads {params.threads} > {log} 2>&1
+        fi
         """
 
 
