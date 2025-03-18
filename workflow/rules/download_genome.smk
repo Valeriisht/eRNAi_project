@@ -5,6 +5,12 @@ TAXID = config["taxid"]
 OUTPUT_DIR = config["output_dir"]
 GENOME_FILE = f"{OUTPUT_DIR}/{TAXID}.fna"
 
+rule create_dirs:
+    output:
+        directory(f"{OUTPUT_DIR}/logs")
+    shell:
+        "mkdir -p {output}"
+
 #Загрузка архива
 rule download_genome:
     output:
