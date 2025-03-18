@@ -12,7 +12,7 @@ rule create_dirs:
 
 rule download_genome:
     output:
-        zip = temp(f"{OUTPUT_DIR}/{TAXID}_genome.zip")
+        zip = f"{OUTPUT_DIR}/{TAXID}_genome.zip"
     params:
         taxid = TAXID
     log:
