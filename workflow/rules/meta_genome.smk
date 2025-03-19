@@ -1,5 +1,5 @@
 # Snakefile
-configfile: "config.yaml"
+configfile: "config/config.yaml"
 
 # Конфигурация
 ALGO = config["algorithm"]       # "kraken2" или "metaphlan"
