@@ -11,10 +11,10 @@ sra:
 
 ##### params for specific rules ####
 fastp:
-    threads: 8
-    qualified_quality_phred: 20
-    min_length: 50
-    detect_adapters: True
+    threads=8,
+    quality_threshold=20,
+    min_length=50,
+    detect_adapters="--detect_adapter_for_pe" if config.get("detect_adapters", False) else ""
 
 # metaphlan parameters
 metaphlan:
