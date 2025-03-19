@@ -15,6 +15,7 @@ fastp:
   length_required: 50
   threads: 6
   min_length: 50
+  detect_adapters="--detect_adapter_for_pe"
 
 # metaphlan parameters
 metaphlan:
