@@ -6,7 +6,7 @@ taxid: 6239
 
 #### files
 sra:
-  sra_id: "SRX9671628"  # Идентификатор SRA 
+  sra_id: "SRR13239754"  # Идентификатор SRA 
   thread: 8  
 
 ##### params for specific rules ####
