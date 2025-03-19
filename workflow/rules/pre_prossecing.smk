@@ -73,7 +73,7 @@ rule process_paired_data:
         fastp -i {input.r1} -I {input.r2} \
         -o {output.filtered_r1} -O {output.filtered_r2} \ 
         --threads {params.threads} \
-        {params.detect_adapters} \
+        --detect_adapter_for_pe \
         -q {params.quality_threshold} \
         --length_required {params.min_length} \
         --json {output.report_json} > {log} 2>&1
