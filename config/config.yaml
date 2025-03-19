@@ -11,7 +11,7 @@ sra:
 
 ##### params for specific rules ####
 fastp:
-    threads: 8
+    thread: 8
     qualified_quality_phred: 20
     min_length: 50
     detect_adapters: True
