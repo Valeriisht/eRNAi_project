@@ -8,10 +8,6 @@ INPUT_R1, INPUT_R2 = config["input"]  # Парные fastq.gz файлы
 OUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]   # Имя образца (для выходных файлов)
 
-rule all:
-    input:
-        f"{OUT_DIR}/{SAMPLE}_report.tsv"  # Финальный отчет
-
 
 ### Вариант 1: Kraken2 + Bracken ###
 if ALGO == "kraken2":
