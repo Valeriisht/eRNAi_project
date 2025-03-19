@@ -61,27 +61,27 @@ rule process_paired_data:
         --json {output.report_json} > {log} 2>&1
         """
 
-rule process_single_data:
-    input:
-        r1 = OUTPUT_DIR + "/{sra_id}_1.fastq"
-    output: 
-        filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
-        report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
-    params:
-        sra_id = SRA_ID
-    log:
-        OUTPUT_DIR + "/logs/{sra_id}_fastp_single.log"
-    shell: 
-        """
-        fastp -i {input.r1} -I {input.r2} \
-              -o {output.filtered_r1} -O {output.filtered_r2} \ 
-              --threads 8
-              --detect_adapter_for_pe
-              -q 15
-              --length_required 50
-              --correction
-              --json {output.report_json} > {log} 2>&1
-        """
+# rule process_single_data:
+   # input:
+     #   r1 = OUTPUT_DIR + "/{sra_id}_1.fastq"
+  #  output: 
+   #     filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
+     #   report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
+  #  params:
+        # sra_id = SRA_ID
+    # log:
+        # OUTPUT_DIR + "/logs/{sra_id}_fastp_single.log"
+    # shell: 
+        # """
+        # fastp -i {input.r1} -I {input.r2} \
+              # -o {output.filtered_r1} -O {output.filtered_r2} \ 
+              # --threads 8
+              # --detect_adapter_for_pe
+              # -q 15
+              # --length_required 50
+              # --correction
+              # --json {output.report_json} > {log} 2>&1
+        # """
 
 rule clean_temp_files:
     input: 
