@@ -6,4 +6,4 @@ include: "workflow/rules/meta_genome.smk"
 
 rule all:
      input:
-         f"{OUT_DIR}/{SAMPLE}_report.tsv" 
+         f"{config["output_dir"]}/{config["sample_name"]}_report.tsv" 
