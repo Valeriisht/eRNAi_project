@@ -64,7 +64,7 @@ rule process_paired_data:
     params:
         threads = config["fastp"]["threads"],
         quality_threshold = config["fastp"]["qualified_quality_phred"],
-        min_length = config["fastp"]["min_length"]
+        min_length = config["fastp"]["min_length"],
         detect_adapters=config["fastp"]["detect_adapters"]
     log:
         OUTPUT_DIR + "/logs/{sra_id}_fastp_paired.log"
