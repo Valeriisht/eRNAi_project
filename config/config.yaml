@@ -10,7 +10,7 @@ sra:
   thread: 8  
 
 algorithm: "kraken2"  # Используемый алгоритм
-database: "kraken2"  # Путь к базе данных Kraken2 
+database: "kraken2_db"  # Путь к базе данных Kraken2 
 input:
   - "results/output/SRR13239754_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
   - "results/output/SRR13239754_filtered_2.fastq"  # Путь ко второму файлу с ридами (R2)
