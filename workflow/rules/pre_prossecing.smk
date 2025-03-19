@@ -36,7 +36,6 @@ rule download_data:
         fi
         """
 
-
 rule process_paired_data:
     input:
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
@@ -87,7 +86,7 @@ rule process_single_data:
 rule clean_temp_files:
     input: 
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
-        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
+        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" if config["sra"].get("paired", False) else []
     params:
         sra_id = SRA_ID
     shell: 
