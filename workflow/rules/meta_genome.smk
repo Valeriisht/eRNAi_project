@@ -45,6 +45,18 @@ if ALGO == "kraken2":
             bracken -d {DB} -i {input} -o {output} -l S -t 10 > {log} 2>&1
             """
 
+    # Шаг 3: Конвертация в формат Metaphlan
+    rule convert_to_mpa:
+        input:
+            rules.bracken_abundance.output
+        output:
+            f"{OUT_DIR}/{SAMPLE}_report.tsv"
+        shell:
+            """
+            # Генерация Metaphlan-подобного отчета
+            kreport2mpa.py -r {input} -o {output} --display-header
+            """
+
 
 ### Вариант 2: Metaphlan ###
 elif ALGO == "metaphlan":
@@ -61,17 +73,6 @@ elif ALGO == "metaphlan":
             # Генерация таксономического профиля
             metaphlan {input.r1},{input.r2} --input_type fastq \
                       --nproc 8 -o {output} > {log} 2>&1
-            """
-     # Шаг 3: Конвертация в формат mpa
-    rule convert_to_mpa:
-        input:
-            rules.bracken_abundance.output
-        output:
-            f"{OUT_DIR}/{SAMPLE}_report.tsv"
-        shell:
-            """
-            # Генерация Metaphlan-подобного отчета
-            kreport2mpa.py -r {input} -o {output} --display-header
             """
 
 else:
