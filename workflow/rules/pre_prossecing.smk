@@ -12,9 +12,24 @@ import os
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(os.path.join(OUTPUT_DIR, "logs"), exist_ok=True)
 
+# предварительная загрузка 
+rule prefetch_data:
+    output:
+        sra_file = "results/sra/{sra_id}.sra"
+    params:
+        sra_id = SRA_ID
+    log:
+        OUTPUT_DIR + "/logs/{sra_id}_prefetch.log"
+    shell:
+        """
+        prefetch {params.sra_id} --output-file {output.sra_file} > {log} 2>&1
+        """
+
 ruleorder: process_paired_data > download_data
 
 rule download_data:
+    input:
+        sra_file = "results/sra/{sra_id}.sra"
     output: 
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
         r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" if config["sra"].get("paired", False) else temp(OUTPUT_DIR + "/{sra_id}_2.fastq")
