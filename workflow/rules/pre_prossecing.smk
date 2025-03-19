@@ -62,7 +62,7 @@ rule process_paired_data:
         filtered_r2 = OUTPUT_DIR + "/{sra_id}_filtered_2.fastq",
         report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
     params:
-        threads = config["fastp"]["threads"],
+        threads = config["fastp"]["thread"],
         quality_threshold = config["fastp"]["qualified_quality_phred"],
         min_length = config["fastp"]["min_length"],
         detect_adapters=config["fastp"]["detect_adapters"]
