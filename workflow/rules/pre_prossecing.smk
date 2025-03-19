@@ -37,6 +37,7 @@ rule download_data:
         sra_id = SRA_ID,
         threads = config["sra"]["thread"],
         paired = config["sra"].get("paired", False) 
+        detect_adapters="--detect_adapter_for_pe"
     log:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell: 
