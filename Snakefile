@@ -3,6 +3,8 @@ configfile: "config/config.yaml"
 
 include: "workflow/rules/pre_prossecing.smk"
 
+OUTPUT_DIR = config["output_dir"]
+SRA_ID = config["sra"]["sra_id"]
 
 rule all:
      input:
