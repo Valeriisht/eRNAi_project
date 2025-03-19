@@ -82,14 +82,13 @@ rule process_paired_data:
 rule clean_temp_files:
     input: 
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
-        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" if config["sra"].get("paired", False) else []
+        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" if config["sra"].get("paired", False) else [], 
+        sra_file = "results/sra/{sra_id}.sra"
+
     params:
         sra_id = SRA_ID
     shell: 
         """
-
-        rm -f {input.r1} 
-        rm -f {input.r2} 
-
+        rm -f {input.r1} {input.r2} {input.sra_file}
         """
 
