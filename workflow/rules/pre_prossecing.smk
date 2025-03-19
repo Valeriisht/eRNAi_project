@@ -44,7 +44,7 @@ rule download_data:
         fasterq-dump {params.sra_id} \
         --outdir {OUTPUT_DIR} \
         --threads {params.threads} \
-        { "--split-files" if params.paired else "" } > {log} 2>&1
+        {{ "--split-files" if params.paired else "" }} > {log} 2>&1
         """
 
 rule process_paired_data:
