@@ -9,7 +9,7 @@ sra:
   sra_id: "SRR13239754"  # Идентификатор SRA 
   thread: 8  
 
-algorithm: "kraken2"  # Используемый алгоритм
+algorithm: "metaphlan"  # Используемый алгоритм
 database: "kraken2_db"  # Путь к базе данных Kraken2 
 input:
   - "results/output/SRR13239754_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
