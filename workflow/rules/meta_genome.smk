@@ -40,10 +40,14 @@ if ALGO == "kraken2":
         log:
             f"{OUT_DIR}/logs/bracken.log"
         shell:
-            """
+             """
             # Оценка обилия на уровне видов
             bracken -d {DB} -i {input} -o {output} -l S -t 10 > {log} 2>&1
+            # Проверка и исправление файла
+            awk 'NR == 1 || $4 ~ /^-?[0-9]+(\.[0-9]+)?$/ {print}' {output} > {output}.tmp
+            mv {output}.tmp {output}
             """
+
 
     # Шаг 3: Конвертация в формат Metaphlan
     rule convert_to_mpa:
