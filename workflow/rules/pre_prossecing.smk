@@ -5,8 +5,6 @@ configfile: "config/config.yaml"
 OUTPUT_DIR = config["output_dir"]
 SRA_ID = config["sra"]["sra_id"]
 
-
-
 # Создаем директорию для выходных файлов, если она не существует
 import os
 os.makedirs(OUTPUT_DIR, exist_ok=True)
