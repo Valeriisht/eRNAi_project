@@ -37,7 +37,6 @@ rule download_data:
         sra_id = SRA_ID,
         threads = config["sra"]["thread"],
         paired = config["sra"].get("paired", False),
-        detect_adapters="--detect_adapter_for_pe"
     log:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell: 
@@ -66,6 +65,7 @@ rule process_paired_data:
         threads = config["fastp"]["threads"],
         quality_threshold = config["fastp"]["qualified_quality_phred"],
         min_length = config["fastp"]["min_length"]
+        detect_adapters=config["fastp"]["detect_adapters"]
     log:
         OUTPUT_DIR + "/logs/{sra_id}_fastp_paired.log"
     shell: 
