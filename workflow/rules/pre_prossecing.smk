@@ -41,15 +41,15 @@ rule download_data:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell: 
         """
-        if {params.paired}; then
-            fasterq-dump {params.sra_id} \
-            --outdir {OUTPUT_DIR} \
-            --split-files \
-            --threads {params.threads} > {log} 2>&1
+        if [[ "{USE_SPLIT_FILES}" == "true" ]]; then
+            fasterq-dump SRR8265535 \
+                --outdir results/output \
+                --split-files \
+                --threads {threads} > {log} 2>&1
         else
-            fasterq-dump {params.sra_id} \
-            --outdir {OUTPUT_DIR} \
-            --threads {params.threads} > {log} 2>&1
+            fasterq-dump SRR8265535 \
+                --outdir results/output \
+                --threads {threads} > {log} 2>&1
         fi
         """
 
