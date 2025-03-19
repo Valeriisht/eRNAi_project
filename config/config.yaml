@@ -12,7 +12,7 @@ sra:
 ##### params for specific rules ####
 fastp:
     threads: 8
-    quality_threshold: 20
+    quality_threshold_phred: 20
     min_length: 50
     detect_adapters: True
 
