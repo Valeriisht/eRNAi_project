@@ -6,4 +6,6 @@ include: "workflow/rules/pre_prossecing.smk"
 
 rule all:
      input:
-         f"{config['output_dir']}/{config['sample_name']}_report.tsv" 
+         filtered_r1 = OUTPUT_DIR + f"/{SRA_ID}_filtered_1.fastq",
+         filtered_r2 = OUTPUT_DIR + f"/{SRA_ID}_filtered_2.fastq" if config["sra"].get("paired", False) else [], 
+         report_json = OUTPUT_DIR + f"/{SRA_ID}_fastp_report.json"
