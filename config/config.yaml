@@ -12,8 +12,8 @@ sra:
 algorithm: "kraken2"  # Используемый алгоритм
 database: "kraken2"  # Путь к базе данных Kraken2 
 input:
-  - "SRR13239754_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
-  - "SRR13239754_filtered_2.fastq"  # Путь ко второму файлу с ридами (R2)
+  - "results/output/SRR13239754_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
+  - "/results/output/SRR13239754_filtered_2.fastq"  # Путь ко второму файлу с ридами (R2)
 output_dir: "results/output"  # Директория для выходных файлов
 sample_name: "{sra_id}_sample1"  # Имя образца (используется для именования выходных файлов)
 
