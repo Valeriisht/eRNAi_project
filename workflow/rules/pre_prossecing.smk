@@ -88,7 +88,8 @@ rule clean_temp_files:
     shell: 
         """
 
-        rm -f {input.r1} {input.r2} 
+        rm -f {input.r1} 
+        rm -f {input.r2} 
 
         """
 
