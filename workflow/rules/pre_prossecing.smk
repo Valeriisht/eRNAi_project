@@ -36,21 +36,15 @@ rule download_data:
     params:
         sra_id = SRA_ID,
         threads = config["sra"]["thread"],
-        paired = config["sra"].get("paired", False)
+        paired = config["sra"].get("paired", False),
     log:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell: 
         """
-        if [[ "{USE_SPLIT_FILES}" == "true" ]]; then
-            fasterq-dump SRR8265535 \
-                --outdir results/output \
-                --split-files \
-                --threads {threads} > {log} 2>&1
-        else
-            fasterq-dump SRR8265535 \
-                --outdir results/output \
-                --threads {threads} > {log} 2>&1
-        fi
+        fasterq-dump {params.sra_id} \
+        --outdir {OUTPUT_DIR} \
+        --threads {params.threads} \
+        { "--split-files" if params.paired else "" } > {log} 2>&1
         """
 
 rule process_paired_data:
