@@ -10,6 +10,7 @@ import os
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(os.path.join(OUTPUT_DIR, "logs"), exist_ok=True)
 
+
 # предварительная загрузка 
 rule prefetch_data:
     output:
