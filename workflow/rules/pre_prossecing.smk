@@ -21,15 +21,13 @@ rule prefetch_data:
         """
         prefetch {params.sra_id} --output-file {output.sra_file} > {log} 2>&1
         """
-ruleorder: download_data > process_paired_data 
-
 
 rule download_data:
     input:
         sra_file = "results/sra/{sra_id}.sra"
     output: 
-        r1 = temp(OUTPUT_DIR + "/{sra_id}_1.fastq"),
-        r2 = temp(OUTPUT_DIR + "/{sra_id}_2.fastq") if config["sra"].get("paired", False) else []
+        r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
+        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" if config["sra"].get("paired", False) else []
     params:
         sra_id = "{sra_id}",
         threads = config["sra"]["thread"],
