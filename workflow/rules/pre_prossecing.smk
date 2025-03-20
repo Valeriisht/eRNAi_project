@@ -45,10 +45,9 @@ rule download_data:
         echo "Processing SRA ID: {params.sra_id}"
         fasterq-dump {params.sra_id} \
             --outdir {OUTPUT_DIR} \
-            {{"--split-files" if params.paired else ""}} \
+            --split-files \
             --threads {params.threads} > {log} 2>&1
         """
-
 rule process_paired_data:
     input:
         r1_f = OUTPUT_DIR + "/down_{sra_id}_1.fastq",
