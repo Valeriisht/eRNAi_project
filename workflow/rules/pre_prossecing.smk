@@ -37,7 +37,11 @@ rule download_data:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell:
         """
-        set -euo pipefail
+        if [ ! -f {input.sra_file} ]; then
+            echo "Error: File {input.sra_file} does not exist!" >&2
+            exit 1
+        fi
+        echo "Processing SRA ID: {params.sra_id}"
         fasterq-dump {params.sra_id} \
             --outdir {OUTPUT_DIR} \
             {{ "--split-files" if params.paired else "" }} \
