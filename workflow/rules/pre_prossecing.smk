@@ -24,8 +24,6 @@ rule prefetch_data:
         """
 
 rule download_data:
-    input:
-        sra_file = "results/sra/{sra_id}.sra"  # Файл .sra используется как зависимость, но не передается в fasterq-dump
     output: 
         r1 = temp(OUTPUT_DIR + "/down_{sra_id}_1.fastq"),
         r2 = temp(OUTPUT_DIR + "/down_{sra_id}_2.fastq") if config["sra"].get("paired", False) else []
