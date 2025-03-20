@@ -32,8 +32,7 @@ rule download_data:
         r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" 
     params:
         sra_id = SRA_ID,
-        threads = config["sra"]["thread"],
-        paired = config["sra"].get("paired", False)
+        threads = config["sra"]["thread"]
     log:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell: 
@@ -47,8 +46,8 @@ rule download_data:
 
 rule process_paired_data:
     input:
-        r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
-        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
+        r1_f = OUTPUT_DIR + "/{sra_id}_1.fastq",
+        r2_r = OUTPUT_DIR + "/{sra_id}_2.fastq"
     output: 
         filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
         filtered_r2 = OUTPUT_DIR + "/{sra_id}_filtered_2.fastq",
@@ -62,7 +61,7 @@ rule process_paired_data:
         OUTPUT_DIR + "/logs/{sra_id}_fastp_paired.log"
     shell: 
         """
-        fastp -i {input.r1} -I {input.r2} \
+        fastp -i {input.r1_f} -I {input.r2_r} \
         -o {output.filtered_r1} -O {output.filtered_r2} \
         --thread {params.threads} \
         --detect_adapter_for_pe \
