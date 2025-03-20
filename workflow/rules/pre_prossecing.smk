@@ -23,7 +23,7 @@ rule download_data:
         rules.prefetch_data.output.sra_file
     output: 
         r1 = temp(OUTPUT_DIR + "/{sra_id}_1.fastq"),
-        r2 = temp(OUTPUT_DIR + "/{sra_id}_2.fastq") if is_paired else []
+        r2 = temp(OUTPUT_DIR + "/{sra_id}_2.fastq") 
     params:
         sra_id = "{sra_id}",
         threads = config["sra"]["thread"]
