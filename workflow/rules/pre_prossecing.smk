@@ -45,8 +45,8 @@ rule download_data:
 
 rule process_paired_data:
     input:
-        r1_f = OUTPUT_DIR + "/down_{sra_id}_1.fastq",
-        r2_r = OUTPUT_DIR + "/down_{sra_id}_2.fastq" if config["sra"].get("paired", False) else []
+        r1_f = OUTPUT_DIR + "/{sra_id}_1.fastq",
+        r2_r = OUTPUT_DIR + "/{sra_id}_2.fastq" if config["sra"].get("paired", False) else []
     output: 
         filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
         filtered_r2 = OUTPUT_DIR + "/{sra_id}_filtered_2.fastq" if config["sra"].get("paired", False) else [], 
