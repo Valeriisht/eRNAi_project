@@ -30,14 +30,14 @@ rule download_data:
         r1 = temp(OUTPUT_DIR + "/down_{sra_id}_1.fastq"),
         r2 = temp(OUTPUT_DIR + "/down_{sra_id}_2.fastq") if config["sra"].get("paired", False) else []
     params:
-        sra_id = "{sra_id}",  # Идентификатор SRA передается в fasterq-dump
+        sra_id = SRA_ID,  # Идентификатор SRA передается в fasterq-dump
         threads = config["sra"]["thread"],
         paired = config["sra"].get("paired", False)
     log:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell:
         """
-        fasterq-dump sra_file \
+        fasterq-dump {params.sra_id} \
             --outdir {OUTPUT_DIR} \
             --split-files \
             --threads {params.threads} > {log} 2>&1
