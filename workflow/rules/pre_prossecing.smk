@@ -29,7 +29,7 @@ rule download_data:
         sra_file = "results/sra/{sra_id}.sra"
     output: 
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
-        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" if config["sra"].get("paired", False) else temp(OUTPUT_DIR + "/{sra_id}_2.fastq")
+        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" 
     params:
         sra_id = SRA_ID,
         threads = config["sra"]["thread"],
@@ -74,7 +74,7 @@ rule process_paired_data:
 rule clean_temp_files:
     input: 
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
-        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" if config["sra"].get("paired", False) else [], 
+        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq",
         sra_file = "results/sra/{sra_id}.sra"
  
     params:
