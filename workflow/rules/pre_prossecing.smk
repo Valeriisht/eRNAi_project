@@ -33,7 +33,6 @@ rule download_data:
         sra_id = "{sra_id}",
         threads = config["sra"]["thread"],
         paired = config["sra"].get("paired", False),
-        paired = config["sra"].get("paired", False)
     log:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell:
