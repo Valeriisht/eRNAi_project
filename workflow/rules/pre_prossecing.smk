@@ -28,8 +28,8 @@ rule download_data:
     input:
         sra_file = "results/sra/{sra_id}.sra"
     output: 
-        r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
-        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" 
+        r1 = OUTPUT_DIR + "/down_{sra_id}_1.fastq",
+        r2 = OUTPUT_DIR + "/down_{sra_id}_2.fastq" 
     params:
         sra_id = SRA_ID,
         threads = config["sra"]["thread"]
@@ -46,8 +46,8 @@ rule download_data:
 
 rule process_paired_data:
     input:
-        r1_f = OUTPUT_DIR + "/{sra_id}_1.fastq",
-        r2_r = OUTPUT_DIR + "/{sra_id}_2.fastq"
+        r1_f = OUTPUT_DIR + "/down_{sra_id}_1.fastq",
+        r2_r = OUTPUT_DIR + "/down_{sra_id}_2.fastq"
     output: 
         filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
         filtered_r2 = OUTPUT_DIR + "/{sra_id}_filtered_2.fastq",
