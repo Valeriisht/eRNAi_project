@@ -37,11 +37,12 @@ rule download_data:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell:
         """
-        fasterq-dump {params.sra_id} \
+        fasterq-dump sra_file \
             --outdir {OUTPUT_DIR} \
             --split-files \
             --threads {params.threads} > {log} 2>&1
         """
+
 rule process_paired_data:
     input:
         r1_f = OUTPUT_DIR + "/down_{sra_id}_1.fastq",
