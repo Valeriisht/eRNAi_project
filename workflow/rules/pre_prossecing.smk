@@ -4,6 +4,10 @@ configfile: "config/config.yaml"
 OUTPUT_DIR = config["output_dir"]
 SRA_ID = config["sra"]["sra_id"]
 
+import os
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+os.makedirs(os.path.join(OUTPUT_DIR, "logs"), exist_ok=True)
+
 rule prefetch_data:
     output:
         sra_file = "results/sra/{sra_id}.sra"
