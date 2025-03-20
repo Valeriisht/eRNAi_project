@@ -3,8 +3,10 @@ configfile: "config/config.yaml"
 
 # для выходных файлов
 OUTPUT_DIR = config["output_dir"]
+SRA_ID = config["sra"]["sra_id"]
 
 # Создаем директорию для выходных файлов, если она не существует
+import os
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(os.path.join(OUTPUT_DIR, "logs"), exist_ok=True)
 
