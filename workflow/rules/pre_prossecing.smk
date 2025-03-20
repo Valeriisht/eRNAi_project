@@ -1,4 +1,4 @@
-####### Configuration #######
+ ###### Configuration #######
  configfile: "config/config.yaml"
  
  # для выходных файлов
