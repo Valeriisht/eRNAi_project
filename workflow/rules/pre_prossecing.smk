@@ -37,7 +37,7 @@ rule download_data:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell:
         """
-        fasterq-dump {params.sra_id} \
+        fasterq-dump -input-file {input.sra_file} \
             --outdir {OUTPUT_DIR} \
             --split-files \
             --threads {params.threads} > {log} 2>&1
