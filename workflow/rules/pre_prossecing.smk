@@ -23,7 +23,7 @@ rule download_data:
         rules.prefetch_data.output.sra_file
     output: 
         r1 = temp(OUTPUT_DIR + "/{sra_id}_1.fastq"),
-        r2 = temp(OUTPUT_DIR + "/{sra_id}_2.fastq") if lambda w: config["sra"].get("paired", False) else []
+        r2 = temp(OUTPUT_DIR + "/{sra_id}_2.fastq") if is_paired else []
     params:
         sra_id = "{sra_id}",
         threads = config["sra"]["thread"]
@@ -36,7 +36,6 @@ rule download_data:
             --split-files \
             --threads {params.threads} > {log} 2>&1
         """
-
 rule process_paired_data:
     input:
         r1 = rules.download_data.output.r1,
