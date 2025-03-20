@@ -1,10 +1,9 @@
 ####### Configuration #######
 configfile: "config/config.yaml"
 
-include: "workflow/rules/pre_prossecing.smk"
 
-rule all:
+ include: "workflow/rules/download_genome.smk"
+ 
+ rule all:
      input:
-         filtered_r1 = OUTPUT_DIR + f"/{SRA_ID}_filtered_1.fastq",
-         filtered_r2 = OUTPUT_DIR + f"/{SRA_ID}_filtered_2.fastq" if config["sra"].get("paired", False) else [], 
-         report_json = OUTPUT_DIR + f"/{SRA_ID}_fastp_report.json"
+         GENOME_FILE
