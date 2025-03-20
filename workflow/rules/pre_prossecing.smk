@@ -15,7 +15,7 @@ rule prefetch_data:
     output:
         sra_file = "results/sra/{sra_id}.sra"
     params:
-        sra_id = "{sra.sra_id}"
+        sra_id = SRA_ID
     log:
         OUTPUT_DIR + "/logs/{sra_id}_prefetch.log"
     shell:
