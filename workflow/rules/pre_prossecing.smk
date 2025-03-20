@@ -15,7 +15,7 @@ rule prefetch_data:
     output:
         sra_file = "results/sra/{sra_id}.sra"
     params:
-        sra_id = "{sra_id}"
+        sra_id = "{sra.sra_id}"
     log:
         OUTPUT_DIR + "/logs/{sra_id}_prefetch.log"
     shell:
@@ -37,7 +37,7 @@ rule download_data:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell:
         """
-        fasterq-dump --input-file {input.sra_file} \
+        fasterq-dump {params.sra_id} \
             --outdir {OUTPUT_DIR} \
             --split-files \
             --threads {params.threads} > {log} 2>&1
