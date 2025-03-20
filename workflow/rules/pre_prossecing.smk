@@ -38,12 +38,14 @@ rule download_data:
         paired = config["sra"].get("paired", False),
     log:
         OUTPUT_DIR + "/logs/{sra_id}_download.log"
-    shell: 
+    shell:
         """
-        fasterq-dump {params.sra_id} \
-        --outdir {OUTPUT_DIR} \
-        --threads {params.threads} \
-        {{ "--split-files" if params.paired else "" }} > {log} 2>&1
+        set -euo pipefail
+        fasterq-dump {input.sra_id} \
+            --outdir {output.outdir} \
+            --threads {threads} \
+            { "--split-files" if params.paired else "" } \
+            > {output.log} 2>&1
         """
 
 rule process_paired_data:
