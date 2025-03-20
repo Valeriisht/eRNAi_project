@@ -21,6 +21,8 @@ rule prefetch_data:
         """
         prefetch {params.sra_id} --output-file {output.sra_file} > {log} 2>&1
         """
+ruleorder: download_data > process_paired_data 
+
 
 rule download_data:
     input:
