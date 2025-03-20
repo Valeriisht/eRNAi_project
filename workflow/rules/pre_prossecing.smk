@@ -51,7 +51,7 @@ rule download_data:
             --threads {params.threads} > {log} 2>&1
         fi
         """
- rule process_paired_data:
+rule process_paired_data:
     input:
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
         r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
