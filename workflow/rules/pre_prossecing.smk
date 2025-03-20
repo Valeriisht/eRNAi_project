@@ -47,10 +47,10 @@ rule download_data:
 rule process_paired_data:
     input:
         r1 = OUTPUT_DIR + "/{sra_id}_1.fastq",
-        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq"
+        r2 = OUTPUT_DIR + "/{sra_id}_2.fastq" if config["sra"].get("paired", False) else []
     output: 
         filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
-        filtered_r2 = OUTPUT_DIR + "/{sra_id}_filtered_2.fastq",
+        filtered_r2 = OUTPUT_DIR + "/{sra_id}_filtered_2.fastq" if config["sra"].get("paired", False) else [],
         report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
     params:
         threads = config["fastp"]["thread"],
