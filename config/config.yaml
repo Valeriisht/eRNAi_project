@@ -6,7 +6,7 @@ taxid: 6239
 
 #### files
 sra:
-  sra_id: "6852487"
+  sra_id: SRR8265535
   paired: True
   thread: 8 
 
