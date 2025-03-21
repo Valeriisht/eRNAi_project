@@ -40,7 +40,7 @@ rule download_data:
         set -euo pipefail
         fasterq-dump {params.sra_id} \
         --outdir {OUTPUT_DIR} \
-        { "--split-files" if params.paired else "" } \
+        --split-files  \
         --threads {params.threads} > {log} 2>&1
         """
  
