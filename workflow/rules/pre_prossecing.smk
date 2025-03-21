@@ -22,6 +22,27 @@ rule prefetch_data:
         """
         prefetch {params.sra_id} --output-file {output.sra_file} > {log} 2>&1
         """
+
+rule download_data:
+    input:
+        sra_file = "results/sra/{sra_id}.sra"
+    output: 
+        r1_f = os.path.join(OUTPUT_DIR, "down_{sra_id}_1.fastq"),
+        r2_f = os.path.join(OUTPUT_DIR, "down_{sra_id}_2.fastq") 
+    params:
+        sra_id = SRA_ID,
+        threads = config["sra"]["thread"]
+        paired = config["sra"]["paired"]
+    log:
+        OUTPUT_DIR + "/logs/{sra_id}_download.log"
+    shell: 
+        """
+        set -euo pipefail
+        fasterq-dump {params.sra_id} \
+        --outdir {OUTPUT_DIR} \
+        { {"--split-files" if params.paired else ""} } \
+        --threads {params.threads} > {log} 2>&1
+        """
  
 rule process_paired_data:
     input:
