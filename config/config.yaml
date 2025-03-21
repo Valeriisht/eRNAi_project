@@ -4,17 +4,64 @@ result_dir: "results/"
 ##### input_files
 taxid: 9031
 
-#### files
+#### for pre-files
 sra:
-  sra_id: "SRR8265535"
+  sra_id_met: ['SRR8265535', 'SRR8265536',
+ 'SRR8265537',
+ 'SRR8265538',
+ 'SRR8265543',
+ 'SRR8265544',
+ 'SRR8265545',
+ 'SRR8265546',
+ 'SRR8265547',
+ 'SRR8265551',
+ 'SRR8265552',
+ 'SRR8265563',
+ 'SRR8265564',
+ 'SRR8265565',
+ 'SRR8265566',
+ 'SRR8265567',
+ 'SRR8265568',
+ 'SRR8265569',
+ 'SRR8265570',
+ 'SRR8265571',
+ 'SRR8265572',
+ 'SRR8265641',
+ 'SRR8265642',
+ 'SRR8265643']
+  sra_id_trans: ['SRR8265548',
+ 'SRR8265549',
+ 'SRR8265550',
+ 'SRR8265553',
+ 'SRR8265554',
+ 'SRR8265555',
+ 'SRR8265556',
+ 'SRR8265557',
+ 'SRR8265558',
+ 'SRR8265559',
+ 'SRR8265560',
+ 'SRR8265561',
+ 'SRR8265562',
+ 'SRR8265591',
+ 'SRR8265592',
+ 'SRR8265593',
+ 'SRR8265594',
+ 'SRR8265595',
+ 'SRR8265596',
+ 'SRR8265597',
+ 'SRR8265598',
+ 'SRR8265599',
+ 'SRR8265600',
+ 'SRR8265611',
+ 'SRR8265612']
   paired: True
   thread: 8 
 
 algorithm: "kraken2"  # Используемый алгоритм
 database: "kraken2_db"  # Путь к базе данных Kraken2 
 input:
-  - "results/output/SRR8265535_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
-  - "results/output/SRR8265535_filtered_2.fastq"  # Путь ко второму файлу с ридами (R2)
+  - "results/output/{sra_id}_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
+  - "results/output/{sra_id}_filtered_2.fastq"  # Путь ко второму файлу с ридами (R2)
 output_dir: "results/output"  # Директория для выходных файлов
 sample_name: "sample1"  # Имя образца (используется для именования выходных файлов)
 
