@@ -26,9 +26,6 @@ rule prefetch_data:
 rule download_data:
     input:
         sra_file = "results/sra/{SRA_ID}.sra"
-    output: 
-        f1 = OUTPUT_DIR + "/{SRA_ID}_1.fastq",
-        r1 = OUTPUT_DIR + "/{SRA_ID}_2.fastq" 
     params:
         sra_id = "{SRA_ID}",
         threads = config["sra"]["thread"],
