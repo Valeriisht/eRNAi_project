@@ -29,7 +29,7 @@ rule download_data:
         f1 = os.path.join(OUTPUT_DIR, "down_{sra_id}_1.fastq"),
         r1 = os.path.join(OUTPUT_DIR, "down_{sra_id}_2.fastq") 
     params:
-        sra_id = SRA_ID,
+        sra_id = "{sra_id}",
         threads = config["sra"]["thread"],
         paired = config["sra"]["paired"]
     log:
