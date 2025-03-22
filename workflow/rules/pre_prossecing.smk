@@ -53,9 +53,9 @@ rule process_paired_data:
         f1 = OUTPUT_DIR + "/raw_{SRA_ID}_1.fastq",
         r1 = OUTPUT_DIR + "/raw_{SRA_ID}_2.fastq" 
     output: 
-        filtered_f1 = OUTPUT_DIR + "/{SRA_ID}_filtered_1.fastq",
-        filtered_r2 = OUTPUT_DIR + "/{SRA_ID}_filtered_2.fastq", 
-        report_json = OUTPUT_DIR + "/{SRA_ID}_fastp_report.json"
+        filtered_f1 = OUTPUT_DIR + "/pre_pro/{SRA_ID}_filtered_1.fastq",
+        filtered_r2 = OUTPUT_DIR + "/pre_pro/{SRA_ID}_filtered_2.fastq", 
+        report_json = OUTPUT_DIR + "pre_pro/{SRA_ID}_fastp_report.json"
     params:
         threads = config["fastp"]["thread"],
         quality_threshold = config["fastp"]["qualified_quality_phred"],
@@ -72,4 +72,6 @@ rule process_paired_data:
         -q {params.quality_threshold} \
         --length_required {params.min_length} \
         --json {output.report_json} > {log} 2>&1
+
+        rm {input.f1} {input.r1}
         """
