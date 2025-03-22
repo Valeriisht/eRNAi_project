@@ -38,8 +38,7 @@ rule download_data:
     shell: 
         """
         set -euo pipefail
-        fasterq-dump {input.sra_file} \
-        --outdir {OUTPUT_DIR} \
+        fasterq-dump {input.sra_file} --outdir {OUTPUT_DIR} \
         --split-files  \
         --threads {params.threads} > {log} 2>&1
         """
