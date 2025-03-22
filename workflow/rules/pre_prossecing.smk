@@ -38,7 +38,7 @@ rule download_data:
     shell: 
         """
         set -euo pipefail
-        strace -e trace=file fasterq-dump {input.sra_file} --outdir {OUTPUT_DIR} \
+        strace -e trace=file fasterq-dump {input.sra_file} --outdir {OUTPUT_DIR} --temp {OUTPUT_DIR} \
         --split-files  \
         --threads {params.threads} > {log} 2>&1
         """
