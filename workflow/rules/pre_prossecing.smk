@@ -25,7 +25,7 @@ rule prefetch_data:
 
 rule download_data:
     input:
-        sra_file = "results/sra/{sra_id}.sra"
+        sra_file = "results/sra/{SRA_ID}.sra"
     output: 
         r1_f = os.path.join(OUTPUT_DIR, "down_{sra_id}_1.fastq"),
         r2_f = os.path.join(OUTPUT_DIR, "down_{sra_id}_2.fastq") 
@@ -38,7 +38,7 @@ rule download_data:
     shell: 
         """
         set -euo pipefail
-        fasterq-dump {params.sra_id}.sra \
+        fasterq-dump {input.sra_file} \
         --outdir {OUTPUT_DIR} \
         --split-files  \
         --threads {params.threads} > {log} 2>&1
