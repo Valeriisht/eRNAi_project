@@ -3,7 +3,6 @@ configfile: "config/config.yaml"
  
 # для выходных файлов
 OUTPUT_DIR = config["output_dir"]
-SRA_ID = "SRR8265535"
  
 # Создаем директорию для выходных файлов, если она не существует
 import os
@@ -13,11 +12,11 @@ os.makedirs(os.path.join(OUTPUT_DIR, "logs"), exist_ok=True)
 # предварительная загрузка 
 rule prefetch_data:
     output:
-        sra_file = "results/sra/{SRA_ID}.sra"
+        sra_file = "results/sra/{sra_id}.sra"
     params:
-        sra_id = "{SRA_ID}"
+        sra_id = "{sra_id}"
     log:
-        OUTPUT_DIR + "/logs/{SRA_ID}_prefetch.log"
+        OUTPUT_DIR + "/logs/{sra_id}_prefetch.log"
     shell:
         """
         prefetch {params.sra_id} --output-file {output.sra_file} > {log} 2>&1
@@ -25,16 +24,16 @@ rule prefetch_data:
 
 rule download_data:
     input:
-        sra_file = "results/sra/{SRA_ID}.sra"
+        sra_file = "results/sra/{sra_id}.sra"
     output: 
-        r1_f = os.path.join(OUTPUT_DIR, "down_{SRA_ID}_1.fastq"),
-        r2_f = os.path.join(OUTPUT_DIR, "down_{SRA_ID}_2.fastq") 
+        f1 = os.path.join(OUTPUT_DIR, "down_{sra_id}_1.fastq"),
+        r1 = os.path.join(OUTPUT_DIR, "down_{sra_id}_2.fastq") 
     params:
         sra_id = SRA_ID,
         threads = config["sra"]["thread"],
         paired = config["sra"]["paired"]
     log:
-        OUTPUT_DIR + "/logs/{SRA_ID}_download.log"
+        OUTPUT_DIR + "/logs/{sra_id}_download.log"
     shell: 
         """
         set -euo pipefail
@@ -46,19 +45,19 @@ rule download_data:
  
 rule process_paired_data:
     input:
-        r1_f = OUTPUT_DIR + "/down_{SRA_ID}_1.fastq",
-        r2_r = OUTPUT_DIR + "/down_{SRA_ID}_2.fastq" if config["sra"].get("paired", False) else []
+        r1_f = OUTPUT_DIR + "/down_{sra_id}_1.fastq",
+        r2_r = OUTPUT_DIR + "/down_{sra_id}_2.fastq" if config["sra"].get("paired", False) else []
     output: 
-        filtered_r1 = OUTPUT_DIR + "/{SRA_ID}_filtered_1.fastq",
-        filtered_r2 = OUTPUT_DIR + "/{SRA_ID}_filtered_2.fastq" if config["sra"].get("paired", False) else [], 
-        report_json = OUTPUT_DIR + "/{SRA_ID}_fastp_report.json"
+        filtered_r1 = OUTPUT_DIR + "/{sra_id}_filtered_1.fastq",
+        filtered_r2 = OUTPUT_DIR + "/{sra_id}_filtered_2.fastq" if config["sra"].get("paired", False) else [], 
+        report_json = OUTPUT_DIR + "/{sra_id}_fastp_report.json"
     params:
         threads = config["fastp"]["thread"],
         quality_threshold = config["fastp"]["qualified_quality_phred"],
         min_length = config["fastp"]["min_length"],
         detect_adapters = config["fastp"]["detect_adapters"]
     log:
-        OUTPUT_DIR + "/logs/{SRA_ID}_fastp_paired.log"
+        OUTPUT_DIR + "/logs/{sra_id}_fastp_paired.log"
     shell: 
         """
         fastp -i {input.r1_f} -I {input.r2_r} \
