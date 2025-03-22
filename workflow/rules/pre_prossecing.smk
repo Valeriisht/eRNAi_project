@@ -39,8 +39,13 @@ rule download_data:
         """
         set -euo pipefail
         strace -e trace=file fasterq-dump {input.sra_file} \
+        --outdir {OUTPUT_DIR} \
         --split-files  \
         --threads {params.threads} > {log} 2>&1
+
+        # Переименование файлов
+        mv {OUTPUT_DIR}/{params.sra_id}_1.fastq {output.f1}
+        mv {OUTPUT_DIR}/{params.sra_id}_2.fastq {output.r1}
         """
  
 rule process_paired_data:
