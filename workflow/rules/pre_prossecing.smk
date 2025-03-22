@@ -46,8 +46,8 @@ rule download_data:
  
 rule process_paired_data:
     input:
-        f1 = rules.download_data.output.f1,
-        r1 = rules.download_data.output.r1
+        f1 = OUTPUT_DIR + "/raw_{SRA_ID}_1.fastq",
+        r1 = OUTPUT_DIR + "/raw_{SRA_ID}_2.fastq" 
     output: 
         filtered_f1 = OUTPUT_DIR + "/{SRA_ID}_filtered_1.fastq",
         filtered_r2 = OUTPUT_DIR + "/{SRA_ID}_filtered_2.fastq", 
