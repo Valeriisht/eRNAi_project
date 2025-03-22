@@ -27,8 +27,8 @@ rule download_data:
     input:
         sra_file = "results/sra/{SRA_ID}.sra"
     output: 
-        f1 = OUTPUT_DIR + "/{SRA_ID}_1.fastq",
-        r1 = OUTPUT_DIR + "/{SRA_ID}_2.fastq" 
+        f1 = OUTPUT_DIR + "/raw_{SRA_ID}_1.fastq",
+        r1 = OUTPUT_DIR + "/raw_{SRA_ID}_2.fastq" 
     params:
         sra_id = "{SRA_ID}",
         threads = config["sra"]["thread"],
@@ -38,15 +38,15 @@ rule download_data:
     shell: 
         """
         set -euo pipefail
-        strace -e trace=file fasterq-dump {input.sra_file} --outdir {OUTPUT_DIR} --temp {OUTPUT_DIR} \
+        strace -e trace=file fasterq-dump {input.sra_file} \
         --split-files  \
         --threads {params.threads} > {log} 2>&1
         """
  
 rule process_paired_data:
     input:
-        f1 = OUTPUT_DIR + "/{SRA_ID}_1.fastq",
-        r1 = OUTPUT_DIR + "/{SRA_ID}_2.fastq" 
+        f1 = OUTPUT_DIR + "/raw_{SRA_ID}_1.fastq",
+        r1 = OUTPUT_DIR + "/raw_{SRA_ID}_2.fastq" 
     output: 
         filtered_f1 = OUTPUT_DIR + "/{SRA_ID}_filtered_1.fastq",
         filtered_r2 = OUTPUT_DIR + "/{SRA_ID}_filtered_2.fastq", 
