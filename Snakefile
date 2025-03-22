@@ -7,10 +7,10 @@ rule all:
     input:
         expand(
             os.path.join(OUTPUT_DIR, "{SRA_ID}_filtered_1.fastq"),
-            sra={'SRA_ID'} 
+            sra=config["sra"]["sra_ids"] 
         ),
         expand(
             os.path.join(OUTPUT_DIR, "{SRA_ID}_filtered_2.fastq"),
-            sra={'SRA_ID'}
+            sra=config["sra"]["sra_ids"] 
         )
         
