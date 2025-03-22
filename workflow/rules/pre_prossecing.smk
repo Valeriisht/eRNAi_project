@@ -25,7 +25,7 @@ rule prefetch_data:
 
 rule download_data:
     input:
-        sra_file = "results/sra/{SRA_ID}.sra"
+        sra_file = rules.prefetch_data.output.sra_file
     output: 
         f1 = OUTPUT_DIR + "/{SRA_ID}_1.fastq",
         r1 = OUTPUT_DIR + "/{SRA_ID}_2.fastq" 
