@@ -50,7 +50,7 @@ rule process_paired_data:
         r1 = OUTPUT_DIR + "/{SRA_ID}_2.fastq" 
     output: 
         filtered_f1 = OUTPUT_DIR + "/{SRA_ID}_filtered_1.fastq",
-        filtered_r2 = OUTPUT_DIR + "/{SRA_ID}_filtered_2.fastq" if config["sra"].get("paired", False) else [], 
+        filtered_r2 = OUTPUT_DIR + "/{SRA_ID}_filtered_2.fastq", 
         report_json = OUTPUT_DIR + "/{SRA_ID}_fastp_report.json"
     params:
         threads = config["fastp"]["thread"],
