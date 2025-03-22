@@ -46,7 +46,7 @@ rule process_paired_data:
         f1 = OUTPUT_DIR + "/{SRA_ID}_1.fastq",
         r1 = OUTPUT_DIR + "/{SRA_ID}_2.fastq" 
     output: 
-        filtered_r1 = OUTPUT_DIR + "/{SRA_ID}_filtered_1.fastq",
+        filtered_f1 = OUTPUT_DIR + "/{SRA_ID}_filtered_1.fastq",
         filtered_r2 = OUTPUT_DIR + "/{SRA_ID}_filtered_2.fastq" if config["sra"].get("paired", False) else [], 
         report_json = OUTPUT_DIR + "/{SRA_ID}_fastp_report.json"
     params:
@@ -58,8 +58,8 @@ rule process_paired_data:
         OUTPUT_DIR + "/logs/{SRA_ID}_fastp_paired.log"
     shell: 
         """
-        fastp -i {input.r1_f} -I {input.r2_r} \
-        -o {output.filtered_r1} -O {output.filtered_r2} \
+        fastp -i {input.f1} -I {input.r1} \
+        -o {output.filtered_f1} -O {output.filtered_r2} \
         --thread {params.threads} \
         --detect_adapter_for_pe \
         -q {params.quality_threshold} \
