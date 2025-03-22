@@ -38,7 +38,7 @@ rule download_data:
     shell: 
         """
         set -euo pipefail
-        fasterq-dump {input.sra_file} --outdir {OUTPUT_DIR} \
+        fasterq-dump {input.sra_file} --outdir "/home/v.ishtuganova/eRNAi_project_last/eRNAi_project/results/output" \
         --split-files  \
         --threads {params.threads} > {log} 2>&1
         """
