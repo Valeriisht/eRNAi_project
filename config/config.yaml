@@ -12,7 +12,7 @@ sra:
     'SRR8265553',
     'SRR8265554']
   paired: True
-  thread: 16
+  thread: 4
 
 algorithm: "kraken2"  # Используемый алгоритм
 database: "kraken2_db"  # Путь к базе данных Kraken2 
