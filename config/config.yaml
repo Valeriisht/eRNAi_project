@@ -6,14 +6,15 @@ taxid: 9031
 
 #### for pre-files
 sra:
-  sra_id: ['SRR8265548',
-   'SRR8265549',
-   'SRR8265550',
-   'SRR8265553',
-   'SRR8265554',
-   'SRR8265555',
-   'SRR8265556',
-   'SRR8265557']
+  sra_id: ['SRR8265558',
+    'SRR8265559',
+    'SRR8265560',
+    'SRR8265561',
+    'SRR8265562',
+    'SRR8265591',
+    'SRR8265592',
+    'SRR8265593',
+    'SRR8265594']
   paired: True
   thread: 16
 
