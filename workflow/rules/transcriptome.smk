@@ -2,17 +2,7 @@ TRANSCRIPTOME_FASTA = config["output_dir"] + "/{taxid}.fna"  # Файл с тр�
 SRA_ID = config["sra"]["sra_id"]
 INPUT_FASTQ_R1 = config["output_dir"] + "/{SRA_ID}_filtered_1.fastq"  # Файл с ридами (R1)
 INPUT_FASTQ_R2 = config["output_dir"] + "/{SRA_ID}_filtered_2.fastq"  # Файл с ридами (R2) 
-OUTPUT_DIR =  "transcriptome_kallisto" # Выходная директория
-
-# Правило для создания директорий
-rule create_directories:
-    output:
-        directory(OUTPUT_DIR),
-        directory("logs_kallisto")
-    shell:
-        """
-        mkdir -p {output}
-        """
+OUTPUT_DIR =  config["output_dir"] + "transcriptome_kallisto" # Выходная директория
 
 # Индексирование транскриптома
 rule kallisto_index:
