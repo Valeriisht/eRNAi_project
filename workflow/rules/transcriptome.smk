@@ -40,7 +40,7 @@ rule kallisto_quant:
     params:
         bootstrap = 100
     log:
-        "logs_kallisto/{SRA_ID}_kallisto_quant.log"  # Лог-файл использует {taxid} и {SRA_ID}
+        "logs_kallisto/{taxid}/{SRA_ID}_kallisto_quant.log"  # Лог-файл использует {taxid} и {SRA_ID}
     run:
         if os.path.exists(input.r2):
             shell(
