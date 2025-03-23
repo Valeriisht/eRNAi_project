@@ -28,14 +28,18 @@ rule kallisto_quant:
     output:
         directory(OUTPUT_DIR + "/{taxid}/{SRA_ID}_quant_results")  # Используем {taxid} и {SRA_ID}
     params:
-        bootstrap = 100
+        bootstrap = 100,
+        fragment_length = config["kallisto"]["fragment_length"],
+        fragment_sd = config["kallisto"]["fragment_sd"]
     log:
         "logs_kallisto/{taxid}/{SRA_ID}_kallisto_quant.log"  # Лог-файл использует {taxid} и {SRA_ID}
     run:
         if os.path.exists(input.r2):
             shell(
                 """
-                kallisto quant -i {input.index} -o {output} -b {params.bootstrap} {input.r1} {input.r2} > {log} 2>&1
+                kallisto quant -i {input.index} -o {output} -b {params.bootstrap} \
+                --fragment-length {params.fragment_length} --sd {params.fragment_sd} \
+                {input.r1} {input.r2} > {log} 2>&1
                 """
             )
         else:
