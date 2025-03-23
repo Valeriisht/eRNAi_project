@@ -32,7 +32,7 @@ rule kallisto_index:
 # Квази-выравнивание
 rule kallisto_quant:
     input:
-        index = "transcriptome_kallisto/9031_transcriptome.idx",  # Используем {taxid}
+        index = OUTPUT_DIR + "/{taxid}_transcriptome.idx",  # Используем {taxid}
         r1 = INPUT_FASTQ_R1,
         r2 = INPUT_FASTQ_R2
     output:
