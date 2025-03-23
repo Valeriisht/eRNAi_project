@@ -36,11 +36,11 @@ rule kallisto_quant:
         r1 = INPUT_FASTQ_R1,
         r2 = INPUT_FASTQ_R2
     output:
-        directory(OUTPUT_DIR + "/{taxid}/{SRA_ID}_quant_results")  # Используем {taxid} и {SRA_ID}
+        directory(OUTPUT_DIR + "/{SRA_ID}_quant_results")  # Используем {taxid} и {SRA_ID}
     params:
         bootstrap = 100
     log:
-        "logs_kallisto/{taxid}/{SRA_ID}_kallisto_quant.log"  # Лог-файл использует {taxid} и {SRA_ID}
+        "logs_kallisto/{SRA_ID}_kallisto_quant.log"  # Лог-файл использует {taxid} и {SRA_ID}
     run:
         if os.path.exists(input.r2):
             shell(
