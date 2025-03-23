@@ -1,8 +1,8 @@
 TRANSCRIPTOME_FASTA = config["output_dir"] + "/{taxid}.fna"  # Файл с транскриптомом
-INPUT_FASTQ_R1 = config["output_dir"] + "/{sra_id}_filtered_1.fastq"  # Файл с ридами (R1)
-INPUT_FASTQ_R2 = config["output_dir"] + "/{sra_id}_filtered_2.fastq"  # Файл с ридами (R2) 
-OUTPUT_DIR = config["output_dir"] + "/transcriptome_kallisto" # Выходная директория
 SRA_ID = config["sra"]["sra_id"]
+INPUT_FASTQ_R1 = config["output_dir"] + "/{SRA_ID}_filtered_1.fastq"  # Файл с ридами (R1)
+INPUT_FASTQ_R2 = config["output_dir"] + "/{SRA_ID}_filtered_2.fastq"  # Файл с ридами (R2) 
+OUTPUT_DIR = config["output_dir"] + "/transcriptome_kallisto" # Выходная директория
 
 # Правило для создания директорий
 rule create_directories:
