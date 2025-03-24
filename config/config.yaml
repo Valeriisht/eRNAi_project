@@ -22,7 +22,7 @@ sra:
   'SRR8265621',
   'SRR8265629']
   paired: True
-  thread: 8
+  thread: 4
 
 kallisto:
   kmer_size: 31  # Длина k-mer (по умолчанию 31)
