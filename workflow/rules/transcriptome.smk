@@ -28,7 +28,7 @@ rule kallisto_quant:
     output:
         directory(OUTPUT_DIR + "/{taxid}/{SRA_ID}_quant_results")  # Используем {taxid} и {SRA_ID}
     params:
-        bootstrap = 100,
+        bootstrap = config["kallisto"]["bootstrap"],
         fragment_length = config["kallisto"]["fragment_length"],
         fragment_sd = config["kallisto"]["fragment_sd"]
     log:
