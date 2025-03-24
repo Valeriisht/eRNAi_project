@@ -9,7 +9,8 @@ sra:
   sra_id: ['SRR8265652',
    'SRR8265594',
    'SRR8265621',
-   'SRR8265629']
+   'SRR8265629',
+   'SRR8265658']
   paired: True
   thread: 4
 
