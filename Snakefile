@@ -1,9 +1,16 @@
 ####### Configuration #######
 configfile: "config/config.yaml"
 
-include: "workflow/rules/transcriptome.smk"
-
-rule all:
-    input:
-        expand(OUTPUT_DIR + "/{taxid}/{sra_id}_quant_results", taxid=config["taxid"], sra_id=SRA_ID)  # Результаты квази-выравнивания
+include: "workflow/rules/pre_prossecing.smk"
+ 
+ rule all:
+     input:
+         expand(
+             os.path.join(OUTPUT_DIR, "{sra}_filtered_1.fastq"),
+             sra=config["sra"]["sra_id"] 
+         ),
+         expand(
+             os.path.join(OUTPUT_DIR, "{sra}_filtered_2.fastq"),
+             sra=config["sra"]["sra_id"] 
+         )
         
