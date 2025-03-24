@@ -6,9 +6,9 @@ taxid: 9031
 
 #### for pre-files
 sra:
-  sra_id: ['SRR8265548',
+  sra_id: ['SRR8265657',
    'SRR8265622',
-   'SRR8265550']
+   'SRR8265655']
   paired: True
   thread: 4
 
