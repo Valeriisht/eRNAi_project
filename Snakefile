@@ -4,7 +4,7 @@ configfile: "config/config.yaml"
 
 include: "workflow/rules/pre_prossecing.smk"
 
-
+SRA_ID = config["sra"]["sra_id"]
 rule all:
     input:
         # Генерируем ВСЕ выходные файлы для всех SRA_ID
