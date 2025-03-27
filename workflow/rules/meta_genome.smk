@@ -8,7 +8,7 @@ DB = config.get("database", "")  # Путь к базе Kraken2 (обязате�
 # Парные fastq.gz файлы
 OUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]   # Имя образца (для выходных файлов)
-
+level = config['taxonomic_level']
 
 
 
@@ -39,7 +39,7 @@ if ALGO == "kraken2":
         input:
             rules.kraken2_classify.output.report
         output:
-            f"{OUT_DIR}/bracken_output.txt"
+            f"{OUT_DIR}/bracken_output_{level}.report"
         params:
             db = DB,
             readlen = config['read_length'],
