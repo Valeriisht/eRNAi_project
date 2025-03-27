@@ -6,11 +6,26 @@ configfile: "config/config.yaml"
 OUTPUT_DIR = config["output_dir"]
 SRA_IDS = config["sra"]["sra_id"]
 
-include: "workflow/rules/download_genome.smk"
+
+include: "workflow/rules/meta_genome.smk"
 
 rule all:
     input:
-        GENOME_FILE
+        # Для Kraken2 + Bracken требуем финальный отчет и конвертированный файл
+        expand(
+            "{OUTPUT_DIR}/bracken_output.txt",
+            out_dir=config["output_dir"]
+        ),
+        expand(
+            "{OUTPUT_DIR}/{sample}_report.tsv",
+            out_dir=config["output_dir"],
+            sample=config["sample_name"]
+        )
+
+
+#rule all:
+#    input:
+#        GENOME_FILE
 
 #rule all:
 #    input:
