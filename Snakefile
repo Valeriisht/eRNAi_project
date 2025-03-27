@@ -3,8 +3,8 @@
 configfile: "config/config.yaml"
 
 # Переменные из конфига можно загрузить глобально (опционально)
-OUTPUT_DIR = config["OUTPUT_DIR"]
-SRA_IDS = config["SRA_IDS"]
+OUTPUT_DIR = config["output_dir"]
+SRA_IDS = config["sra"]["sra_id"]
 
 include: "workflow/rules/pre_prossecing.smk"
 
