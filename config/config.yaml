@@ -2,7 +2,7 @@
 output_dir: "results/output"  # результаты работы программ
 
 ##### input_files
-taxid: 9031
+taxid: 97693
 
 #### for pre-files
 sra:
