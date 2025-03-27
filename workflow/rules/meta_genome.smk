@@ -2,6 +2,7 @@
 configfile: "config/config.yaml"
 
 # Конфигурация
+SRA_ID = config["sra"]["sra_id"]
 ALGO = config["algorithm"]       # "kraken2" или "metaphlan"
 DB = config.get("database", "")  # Путь к базе Kraken2 (обязательно для алгоритма kraken2)
 INPUT_R1, INPUT_R2 = config["input"]  # Парные fastq.gz файлы
