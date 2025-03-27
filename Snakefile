@@ -9,11 +9,11 @@ SAMPLE = config["sample_name"]
 
 
 include: "workflow/rules/meta_genome.smk"
+
 rule all:
     input:
-        expand("{OUT_DIR}/bracken_output.txt", out_dir=OUT_DIR),
-        expand("{OUT_DIR}/{sample}_report.tsv", out_dir=OUT_DIR, sample=SAMPLE)
-
+        expand("{out_dir}/bracken_output.txt", out_dir=OUT_DIR),
+        expand("{out_dir}/{sample}_report.tsv", out_dir=OUT_DIR, sample=SAMPLE)
 
 
 #rule all:
