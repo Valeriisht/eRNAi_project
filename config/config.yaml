@@ -37,6 +37,9 @@ fastp:
 # metaphlan parameters
 metaphlan:
   threads: 8
+# bracken parameters
+read_length: 150
+taxonomic_level: [S, G, P]
 
 # humann parameters
 humann:
