@@ -5,7 +5,7 @@ configfile: "config/config.yaml"
 # Переменные из конфига можно загрузить глобально (опционально)
 OUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]
-#SRA_IDS = config["sra"]["sra_id"]
+SRA_IDS = config["sra"]["sra_id"]
 
 
 include: "workflow/rules/meta_genome.smk"
