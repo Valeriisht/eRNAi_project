@@ -7,13 +7,6 @@ OUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]
 SRA_IDS = config["sra"]["sra_id"]
 
-input = expand(
-    "{out_dir}/{sra_id}_filtered_1.fastq",
-    "{out_dir}/{sra_id}_filtered_2.fastq",
-    out_dir=OUT_DIR, 
-    sra_id=SRA_IDS
-)
-
 
 include: "workflow/rules/meta_genome.smk"
 rule all:
