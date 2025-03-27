@@ -8,19 +8,11 @@ SRA_IDS = config["sra"]["sra_id"]
 
 
 include: "workflow/rules/meta_genome.smk"
-
 rule all:
     input:
-        # Для Kraken2 + Bracken требуем финальный отчет и конвертированный файл
-        expand(
-            "{OUTPUT_DIR}/bracken_output.txt",
-            out_dir=config["output_dir"]
-        ),
-        expand(
-            "{OUTPUT_DIR}/{sample}_report.tsv",
-            out_dir=config["output_dir"],
-            sample=config["sample_name"]
-        )
+        expand("{out_dir}/bracken_output.txt", out_dir=OUT_DIR),
+        expand("{out_dir}/{sample}_report.tsv", out_dir=OUT_DIR, sample=SAMPLE)
+
 
 
 #rule all:
