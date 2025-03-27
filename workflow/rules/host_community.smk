@@ -21,7 +21,7 @@ rule bwa_index:
 rule bwa_align:
     input: 
         metagenome = config["metagenome"]
-        refference_host_genome = config["host_genome"]  
+        reference_host_genome = config["host_genome"]  
         index_files = expand("{host_genome}.{ext}", host_genome=config["host_genome"], ext=["amb", "ann", "bwt", "pac", "sa"])
     threads: config["num_threads"]
     output:
