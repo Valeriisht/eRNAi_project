@@ -23,8 +23,8 @@ if ALGO == "kraken2":
             r1 = INPUT_R1,
             r2 = INPUT_R2
         output:
-            report = temp(f"{OUT_DIR}/kraken2_report.txt"),
-            raw = temp(f"{OUT_DIR}/kraken2_output.txt")
+            report = temp(f"{OUT_DIR}/kraken2.report"),
+            raw = temp(f"{OUT_DIR}/kraken2_output.report")
         log:
             f"{OUT_DIR}/logs/kraken2.log"
         shell:
@@ -47,7 +47,7 @@ if ALGO == "kraken2":
             # Оценка обилия на уровне видов
             bracken -d {DB} -i {input} -o {output} -l S -t 10 > {log} 2>&1
             # Проверка и исправление файла
-            awk 'NR == 1 || $4 ~ /^-?[0-9]+(\\.[0-9]+)?$/ {{print}}' {output} > {output}.tmp
+            # awk 'NR == 1 || $4 ~ /^-?[0-9]+(\\.[0-9]+)?$/ {{print}}' {output} > {output}.tmp
             mv {output}.tmp {output}
             """
 
