@@ -11,8 +11,16 @@ SRA_ID = config["sra"]["sra_id"]
 include: "workflow/rules/meta_genome.smk"
 rule all:
     input:
+        expand(
+            "{out_dir}/{sra_id}_filtered_1.fastq.gz",
+            "{out_dir}/{sra_id}_filtered_2.fastq.gz",
+            out_dir=OUT_DIR,
+            sra_id=SRA_IDS
+        ),
         expand("{out_dir}/bracken_output.txt", out_dir=OUT_DIR),
         expand("{out_dir}/{sample}_report.tsv", out_dir=OUT_DIR, sample=SAMPLE)
+        
+
 
 
 #rule all:
