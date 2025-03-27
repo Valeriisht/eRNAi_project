@@ -5,10 +5,18 @@ configfile: "config/config.yaml"
 SRA_ID = config["sra"]["sra_id"]
 ALGO = config["algorithm"]       # "kraken2" или "metaphlan"
 DB = config.get("database", "")  # Путь к базе Kraken2 (обязательно для алгоритма kraken2)
-INPUT_R1, INPUT_R2 = config["input"]  # Парные fastq.gz файлы
+ # Парные fastq.gz файлы
 OUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]   # Имя образца (для выходных файлов)
 
+input = expand(
+    "{out_dir}/{sra_id}_filtered_1.fastq",
+    "{out_dir}/{sra_id}_filtered_2.fastq",
+    out_dir=OUT_DIR, 
+    sra_id=SRA_IDS
+)
+
+INPUT_R1, INPUT_R2 = config["input"] 
 
 ### Вариант 1: Kraken2 + Bracken ###
 if ALGO == "kraken2":
