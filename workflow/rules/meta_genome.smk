@@ -8,14 +8,14 @@ DB = config.get("database", "")  # Путь к базе Kraken2 (обязате�
  # Парные fastq.gz файлы
 OUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]   # Имя образца (для выходных файлов)
-#INPUT_R1, INPUT_R2 = config["input"] 
+INPUT_R1, INPUT_R2 = config["input"] 
 
-INPUT_R1, INPUT_R2 = expand(
-    "{out_dir}/{sra_id}_filtered_1.fastq",
-    "{out_dir}/{sra_id}_filtered_2.fastq",
-    out_dir=OUT_DIR, 
-    sra_id=SRA_ID
-)
+#INPUT_R1, INPUT_R2 = expand(
+#    "{out_dir}/{sra_id}_filtered_1.fastq",
+#    "{out_dir}/{sra_id}_filtered_2.fastq",
+#    out_dir=OUT_DIR, 
+#    sra_id=SRA_ID
+#)
 
 
 
