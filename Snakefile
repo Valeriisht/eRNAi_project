@@ -7,7 +7,7 @@ OUT_DIR = config["output_dir"]
 # OUTPUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]
 SRA_ID = config["sra"]["sra_id"]
-
+level = config['taxonomic_level']
 
 INPUT_R1 = expand(
     "{out_dir}/{sra_id}_filtered_1.fastq",
@@ -24,7 +24,7 @@ include: "workflow/rules/meta_genome.smk"
 
 rule all:
     input:
-        expand("{out_dir}/bracken_output.txt", out_dir=OUT_DIR),
+        expand("{out_dir}/bracken_{level}.report", out_dir=OUT_DIR),
         expand("{out_dir}/{sample}_report.tsv", 
               out_dir=OUT_DIR,
               sample=SAMPLE)
