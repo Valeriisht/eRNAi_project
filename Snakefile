@@ -7,8 +7,6 @@ OUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]
 SRA_ID = config["sra"]["sra_id"]
 
-
-include: "workflow/rules/meta_genome.smk"
 rule all:
     input:
         expand(
@@ -22,7 +20,7 @@ rule all:
               out_dir=OUT_DIR,
               sample=SAMPLE)
         
-
+include: "workflow/rules/meta_genome.smk"
 
 
 #rule all:
