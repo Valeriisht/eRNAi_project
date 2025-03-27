@@ -1,11 +1,6 @@
 # Конфигурация
 configfile: "config.yaml"
 
-rule all:
-    input:
-        host_reads = expand("{output_dir}/host_reads.fastq.gz", output_dir=config["output_dir"]),
-        metagenome_reads = expand("{output_dir}/metagenome_reads.fastq.gz", output_dir=config["output_dir"])
-
 
 # индексирование генома хозяина 
 rule bwa_index:
