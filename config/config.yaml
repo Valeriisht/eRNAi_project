@@ -21,9 +21,9 @@ kallisto:
 
 algorithm: "kraken2"  # Используемый алгоритм
 database: "kraken2_db"  # Путь к базе данных Kraken2 
-input:
-  - "results/output/{sra_id}_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
-  - "results/output/{sra_id}_filtered_2.fastq"  # Путь ко второму файлу с ридами (R2)
+#input:
+#  - "results/output/{sra.sra_id}_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
+#  - "results/output/{sra.sra_id}_filtered_2.fastq"  # Путь ко второму файлу с ридами (R2)
 output_dir: "results/output"  # Директория для выходных файлов
 sample_name: "sample1"  # Имя образца (используется для именования выходных файлов)
 
