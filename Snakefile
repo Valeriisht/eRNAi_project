@@ -43,4 +43,9 @@ rule all:
 #rule all:
 #    input:
 #        expand(OUTPUT_DIR + "/{taxid}/{sra_id}_quant_results", taxid=config["taxid"], sra_id=SRA_ID)
+
+# rule all:
+#    input:
+#        host_reads = expand("{output_dir}/host_reads.fastq.gz", output_dir=config["output_dir"]),
+#        metagenome_reads = expand("{output_dir}/metagenome_reads.fastq.gz", output_dir=config["output_dir"])
         
