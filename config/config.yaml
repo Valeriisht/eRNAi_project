@@ -1,5 +1,5 @@
 ##### directories
-output_dir: "results/ourput"  # результаты работы программ
+output_dir: "results/output"  # результаты работы программ
 
 ##### input_files
 taxid: 9031
