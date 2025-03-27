@@ -14,7 +14,7 @@ rule all:
         expand(
             "{out_dir}/{sra_id}_filtered_{read}.fastq.gz",
             out_dir=OUT_DIR,
-            sra_id=SRA_IDS,
+            sra_id=SRA_ID,
             read=["1", "2"]
         ),
         expand("{out_dir}/bracken_output.txt", out_dir=OUT_DIR),
