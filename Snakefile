@@ -15,7 +15,7 @@ rule all:
             "{out_dir}/{sra_id}_filtered_1.fastq.gz",
             "{out_dir}/{sra_id}_filtered_2.fastq.gz",
             out_dir=OUT_DIR,
-            sra_id=SRA_IDS
+            sra_id=SRA_ID
         ),
         expand("{out_dir}/bracken_output.txt", out_dir=OUT_DIR),
         expand("{out_dir}/{sample}_report.tsv", out_dir=OUT_DIR, sample=SAMPLE)
