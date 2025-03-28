@@ -35,7 +35,7 @@ if ALGO == "kraken2":
                     --output {output.raw} --report {output.report} > {log} 2>&1
             """
 
-     # Шаг 2: Оценка обилия Bracken
+      # Шаг 2: Оценка обилия Bracken
      rule bracken_abundance:
          input:
              rules.kraken2_classify.output.report
@@ -51,6 +51,7 @@ if ALGO == "kraken2":
              """
              # Оценка обилия на уровне видов
              bracken -d {params.db} -i {input} -o {output}  -r {params.readlen} -l {wildcards.level}  -t {params.threshold} > {log} 2>&1
+
 
              # Проверка и исправление файла
              # awk 'NR == 1 || $4 ~ /^-?[0-9]+(\\.[0-9]+)?$/ {{print}}' {output} > {output}.tmp
