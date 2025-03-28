@@ -35,27 +35,27 @@ if ALGO == "kraken2":
                     --output {output.raw} --report {output.report} > {log} 2>&1
             """
 
-    # Шаг 2: Оценка обилия Bracken
-    rule bracken_abundance:
-        input:
-            rules.kraken2_classify.output.report
-        output:
-            f"{OUT_DIR}/bracken_{SRA_ID}_output_{{level}}.report"
-        params:
-            db = DB,
-            readlen = config['read_length'],
-            threshold = 10
-        log:
-            f"{OUT_DIR}/logs/bracken_{SRA_ID}_{{level}}.log"
-        shell:
-            """
-            # Оценка обилия на уровне видов
-            bracken -d {params.db} -i {input} -o {output}  -r {params.readlen} -l {wildcards.level}  -t {params.threshold} > {log} 2>&1
+     # Шаг 2: Оценка обилия Bracken
+     rule bracken_abundance:
+         input:
+             rules.kraken2_classify.output.report
+         output:
+             f"{OUT_DIR}/bracken_{SRA_ID}_output_{{level}}.report"
+         params:
+             db = DB,
+             readlen = config['read_length'],
+             threshold = 10
+         log:
+             f"{OUT_DIR}/logs/bracken_{SRA_ID}_{{level}}.log"
+         shell:
+             """
+             # Оценка обилия на уровне видов
+             bracken -d {params.db} -i {input} -o {output}  -r {params.readlen} -l {wildcards.level}  -t {params.threshold} > {log} 2>&1
 
-            # Проверка и исправление файла
-            # awk 'NR == 1 || $4 ~ /^-?[0-9]+(\\.[0-9]+)?$/ {{print}}' {output} > {output}.tmp
-            # mv {output}.tmp {output}
-            """
+             # Проверка и исправление файла
+             # awk 'NR == 1 || $4 ~ /^-?[0-9]+(\\.[0-9]+)?$/ {{print}}' {output} > {output}.tmp
+             # mv {output}.tmp {output}
+             """
 
 
     # Шаг 3: Конвертация в формат Metaphlan
