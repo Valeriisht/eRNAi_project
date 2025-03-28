@@ -40,13 +40,13 @@ if ALGO == "kraken2":
         input:
             rules.kraken2_classify.output.report
         output:
-            f"{OUT_DIR}/bracken_{SRA_ID}_output_{level}.report"
+            f"{OUT_DIR}/bracken_{SRA_ID}_output_{{level}}.report"
         params:
             db = DB,
             readlen = config['read_length'],
             threshold = 10
         log:
-            f"{OUT_DIR}/logs/bracken_{SRA_ID}_{level}.log"
+            f"{OUT_DIR}/logs/bracken_{SRA_ID}_{{level}}.log"
         shell:
             """
             # Оценка обилия на уровне видов
