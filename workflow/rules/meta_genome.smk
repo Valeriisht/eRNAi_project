@@ -64,11 +64,14 @@ if ALGO == "kraken2":
             rules.bracken_abundance.output
         output:
             f"{OUT_DIR}/{SAMPLE}_report.tsv"
-        shell:
-            """
-            # Генерация Metaphlan-подобного отчета
-            kreport2mpa.py -r {input} -o {output} --display-header
-            """
+        scripts:
+            "scripts/convert_report_mpa_style.py"
+
+        #shell:
+        #    """
+        #    # Генерация Metaphlan-подобного отчета
+        #    kreport2mpa.py -r {input} -o {output} --display-header
+        #    """
 
 
 ### Вариант 2: Metaphlan ###
