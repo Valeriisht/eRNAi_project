@@ -24,8 +24,8 @@ if ALGO == "kraken2":
             r1 = INPUT_R1,
             r2 = INPUT_R2
         output:
-            report = temp(f"{OUT_DIR}/kraken2_{SRA_ID}.report"),
-            raw = temp(f"{OUT_DIR}/kraken2_output_{SRA_ID}.report")
+            report = (f"{OUT_DIR}/kraken2_{SRA_ID}.report"),
+            raw = (f"{OUT_DIR}/kraken2_output_{SRA_ID}.report")
         log:
             f"{OUT_DIR}/logs/kraken2.log"
         shell:
