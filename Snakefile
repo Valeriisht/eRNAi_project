@@ -24,10 +24,12 @@ include: "workflow/rules/meta_genome.smk"
 
 rule all:
     input:
-        expand("{out_dir}/bracken_output_{level}.report", out_dir=OUT_DIR,level = LEVEL),
-        expand("{out_dir}/{sample}_report.tsv", 
-              out_dir=OUT_DIR,
-              sample=SAMPLE)
+        expand("{out_dir}/bracken_output_{level}.report", out_dir=OUT_DIR,level = LEVEL)
+
+
+        #expand("{out_dir}/{sample}_report.tsv", 
+        #      out_dir=OUT_DIR,
+        #      sample=SAMPLE)
         
 
 
