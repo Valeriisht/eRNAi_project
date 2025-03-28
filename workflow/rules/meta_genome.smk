@@ -24,8 +24,8 @@ if ALGO == "kraken2":
             r1 = INPUT_R1,
             r2 = INPUT_R2
         output:
-            report = temp(f"{OUT_DIR}/kraken2_{SRA_ID}.report"),
-            raw = temp(f"{OUT_DIR}/kraken2_output_{SRA_ID}.report")
+            report = temp(f"{OUT_DIR}/kraken2_{sra_id}.report"),
+            raw = temp(f"{OUT_DIR}/kraken2_output_{sra_id}.report")
         log:
             f"{OUT_DIR}/logs/kraken2.log"
         shell:
@@ -40,13 +40,13 @@ if ALGO == "kraken2":
         input:
             rules.kraken2_classify.output.report
         output:
-            f"{OUT_DIR}/bracken_{SRA_ID}_output_{{level}}.report"
+            f"{OUT_DIR}/bracken_{sra_id}_output_{{level}}.report"
         params:
             db = DB,
             readlen = config['read_length'],
             threshold = 10
         log:
-            f"{OUT_DIR}/logs/bracken_{SRA_ID}_{{level}}.log"
+            f"{OUT_DIR}/logs/bracken_{sra_id}_{{level}}.log"
         shell:
             """
             # Оценка обилия на уровне видов
