@@ -24,8 +24,8 @@ if ALGO == "kraken2":
             r1 = INPUT_R1,
             r2 = INPUT_R2
         output:
-            report = f"{OUT_DIR}/kraken2_{SRA_ID}.report",
-            raw = f"{OUT_DIR}/kraken2_output_{SRA_ID}.report"
+            report = temp(f"{OUT_DIR}/kraken2_{SRA_ID}.report"),
+            raw = temp(f"{OUT_DIR}/kraken2_output_{SRA_ID}.report")
         log:
             f"{OUT_DIR}/logs/kraken2.log"
         shell:
@@ -35,44 +35,40 @@ if ALGO == "kraken2":
                     --output {output.raw} --report {output.report} > {log} 2>&1
             """
 
-      # Шаг 2: Оценка обилия Bracken
-     rule bracken_abundance:
-         input:
-             rules.kraken2_classify.output.report
-         output:
-             f"{OUT_DIR}/bracken_{SRA_ID}_output_{{level}}.report"
-         params:
-             db = DB,
-             readlen = config['read_length'],
-             threshold = 10
-         log:
-             f"{OUT_DIR}/logs/bracken_{SRA_ID}_{{level}}.log"
-         shell:
-             """
-             # Оценка обилия на уровне видов
-             bracken -d {params.db} -i {input} -o {output}  -r {params.readlen} -l {wildcards.level}  -t {params.threshold} > {log} 2>&1
+    # Шаг 2: Оценка обилия Bracken
+    rule bracken_abundance:
+        input:
+            rules.kraken2_classify.output.report
+        output:
+            f"{OUT_DIR}/bracken_{SRA_ID}_output_{{level}}.report"
+        params:
+            db = DB,
+            readlen = config['read_length'],
+            threshold = 10
+        log:
+            f"{OUT_DIR}/logs/bracken_{SRA_ID}_{{level}}.log"
+        shell:
+            """
+            # Оценка обилия на уровне видов
+            bracken -d {params.db} -i {input} -o {output}  -r {params.readlen} -l {wildcards.level}  -t {params.threshold} > {log} 2>&1
 
-
-             # Проверка и исправление файла
-             # awk 'NR == 1 || $4 ~ /^-?[0-9]+(\\.[0-9]+)?$/ {{print}}' {output} > {output}.tmp
-             # mv {output}.tmp {output}
-             """
+            # Проверка и исправление файла
+            # awk 'NR == 1 || $4 ~ /^-?[0-9]+(\\.[0-9]+)?$/ {{print}}' {output} > {output}.tmp
+            # mv {output}.tmp {output}
+            """
 
 
     # Шаг 3: Конвертация в формат Metaphlan
-     rule convert_to_mpa:
-         input:
-             rules.bracken_abundance.output
-         output:
-             f"{OUT_DIR}/{SAMPLE}_report.tsv"
-         scripts:
-             "scripts/convert_report_mpa_style.py"
-
-         #shell:
-         #    """
-         #    # Генерация Metaphlan-подобного отчета
-         #    kreport2mpa.py -r {input} -o {output} --display-header
-         #    """
+    rule convert_to_mpa:
+        input:
+            rules.bracken_abundance.output
+        output:
+            f"{OUT_DIR}/{SAMPLE}_report.tsv"
+        shell:
+            """
+            # Генерация Metaphlan-подобного отчета
+            kreport2mpa.py -r {input} -o {output} --display-header
+            """
 
 
 ### Вариант 2: Metaphlan ###
