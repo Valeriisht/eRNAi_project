@@ -43,14 +43,13 @@ if ALGO == "kraken2":
         params:
             db = DB,
             readlen = config['read_length'],
-            level = config['taxonomic_level'],
             threshold = 10
         log:
-            f"{OUT_DIR}/logs/bracken.log"
+            f"{OUT_DIR}/logs/bracken_{level}.log"
         shell:
             """
             # Оценка обилия на уровне видов
-            bracken -d {params.db} -i {input} -o {output}  -r {params.readlen} -l {params.level}  -t {params.threshold} > {log} 2>&1
+            bracken -d {params.db} -i {input} -o {output}  -r {params.readlen} -l {wildcards.level}  -t {params.threshold} > {log} 2>&1
 
             # Проверка и исправление файла
             # awk 'NR == 1 || $4 ~ /^-?[0-9]+(\\.[0-9]+)?$/ {{print}}' {output} > {output}.tmp
