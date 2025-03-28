@@ -54,7 +54,7 @@ if ALGO == "kraken2":
 
             # Проверка и исправление файла
             # awk 'NR == 1 || $4 ~ /^-?[0-9]+(\\.[0-9]+)?$/ {{print}}' {output} > {output}.tmp
-            mv {output}.tmp {output}
+            # mv {output}.tmp {output}
             """
 
 
