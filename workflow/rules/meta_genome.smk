@@ -12,17 +12,9 @@ SAMPLE = config["sample_name"]   # Имя образца (для выходны�
 wildcard_constraints:
     level="S|G|P"  # Разрешаем только уровни S, G, P
 
-INPUT_R1 = expand(
-    "{out_dir}/{sra_id}_filtered_1.fastq",
-    out_dir=OUT_DIR,
-    sra_id=SRA_ID
-)
+INPUT_R1 = "{OUT_DIR}/{SRA_ID}_filtered_1.fastq"
 
-INPUT_R2 = expand(
-    "{out_dir}/{sra_id}_filtered_2.fastq",
-    out_dir=OUT_DIR,
-    sra_id=SRA_ID
-)
+INPUT_R2 = "{OUT_DIR}/{SRA_ID}_filtered_2.fastq"
 
 
 ### Вариант 1: Kraken2 + Bracken ###
