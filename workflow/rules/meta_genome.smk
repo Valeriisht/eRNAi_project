@@ -59,19 +59,19 @@ if ALGO == "kraken2":
 
 
     # Шаг 3: Конвертация в формат Metaphlan
-    rule convert_to_mpa:
-        input:
-            rules.bracken_abundance.output
-        output:
-            f"{OUT_DIR}/{SAMPLE}_report.tsv"
-        scripts:
-            "scripts/convert_report_mpa_style.py"
+     rule convert_to_mpa:
+         input:
+             rules.bracken_abundance.output
+         output:
+             f"{OUT_DIR}/{SAMPLE}_report.tsv"
+         scripts:
+             "scripts/convert_report_mpa_style.py"
 
-        #shell:
-        #    """
-        #    # Генерация Metaphlan-подобного отчета
-        #    kreport2mpa.py -r {input} -o {output} --display-header
-        #    """
+         #shell:
+         #    """
+         #    # Генерация Metaphlan-подобного отчета
+         #    kreport2mpa.py -r {input} -o {output} --display-header
+         #    """
 
 
 ### Вариант 2: Metaphlan ###
