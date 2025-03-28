@@ -8,8 +8,9 @@ DB = config.get("database", "")  # Путь к базе Kraken2 (обязате�
 # Парные fastq.gz файлы
 OUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]   # Имя образца (для выходных файлов)
-level = config['taxonomic_level']
-
+#level = config['taxonomic_level']
+wildcard_constraints:
+    level="S|G|P"  # Разрешаем только уровни S, G, P
 
 
 ### Вариант 1: Kraken2 + Bracken ###
@@ -39,13 +40,13 @@ if ALGO == "kraken2":
         input:
             rules.kraken2_classify.output.report
         output:
-            f"{OUT_DIR}/bracken_output_{level}.report"
+            f"{OUT_DIR}/bracken_output_{{level}}.report"
         params:
             db = DB,
             readlen = config['read_length'],
             threshold = 10
         log:
-            f"{OUT_DIR}/logs/bracken_{level}.log"
+            f"{OUT_DIR}/logs/bracken_{{level}}.log"
         shell:
             """
             # Оценка обилия на уровне видов
