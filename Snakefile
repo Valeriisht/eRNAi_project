@@ -21,11 +21,13 @@ INPUT_R2 = expand(
     sra_id=SRA_ID
 )
 include: "workflow/rules/meta_genome.smk"
+
 rule all:
     input:
-        temp(expand("{OUT_DIR}/kraken2_{sra_id}.report"),sra_id=SRA_ID,out_dir=OUT_DIR),
-        temp(expand("{OUT_DIR}/kraken2_output_{sra_id}.report"),sra_id=SRA_ID,out_dir=OUT_DIR),
-        expand("{OUT_DIR}/bracken_{sra_id}_output_{level}.report", out_dir=OUT_DIR,level = LEVEL,sra_id=SRA_ID)
+        expand(OUT_DIR + "/kraken2_{sra_id}.report",sra_id=SRA_ID),
+        expand(OUT_DIR + "/kraken2_output_{sra_id}.report",sra_id=SRA_ID),
+        expand(OUT_DIR + "/bracken_{sra_id}_output_{level}.report",level = LEVEL,sra_id=SRA_ID)
+        
 
 
 
