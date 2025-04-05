@@ -20,13 +20,21 @@ INPUT_R2 = expand(
     out_dir=OUT_DIR,
     sra_id=SRA_ID
 )
-include: "workflow/rules/meta_genome.smk"
+include: "workflow/rules/transcriptome.smk"
 
 rule all:
     input:
-        expand(OUT_DIR + "/kraken2_{sra_id}.report",sra_id=SRA_ID),
-        expand(OUT_DIR + "/kraken2_output_{sra_id}.report",sra_id=SRA_ID),
-        expand(OUT_DIR + "/bracken_{sra_id}_output_{level}.report",level = LEVEL,sra_id=SRA_ID)
+        expand(
+            OUTPUT_DIR + "/{taxid}/{sra_id}_quant_results",
+            taxid=config["taxids"],
+            sra_id=config["sra"]["sra_ids"]  # Используем список ID из конфига
+        )
+
+#rule all:
+#    input:
+#        expand(OUT_DIR + "/kraken2_{sra_id}.report",sra_id=SRA_ID),
+#        expand(OUT_DIR + "/kraken2_output_{sra_id}.report",sra_id=SRA_ID),
+#        expand(OUT_DIR + "/bracken_{sra_id}_output_{level}.report",level = LEVEL,sra_id=SRA_ID)
         
 
 
