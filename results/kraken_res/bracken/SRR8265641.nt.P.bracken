@@ -1,0 +1,20 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Bacteroidota	976	P	145379	26867	172246	0.87700
+Rhodothermaeota	1853220	P	3	0	3	0.00002
+Candidatus Latescibacteria	74015	P	19	0	19	0.00010
+Candidatus Cloacimonetes	456828	P	1	0	1	0.00001
+Coprothermobacterota	2138240	P	3	0	3	0.00002
+Uroviricota	2731618	P	17944	1192	19136	0.09743
+Peploviricota	2731361	P	4	2963	2967	0.01511
+Preplasmiviricota	2732008	P	210	0	210	0.00107
+Nucleocytoviricota	2732007	P	35	2	37	0.00019
+Negarnaviricota	2497569	P	24	0	24	0.00012
+Pisuviricota	2732408	P	23	0	23	0.00012
+Kitrinoviricota	2732406	P	17	0	17	0.00009
+Duplornaviricota	2732405	P	6	0	6	0.00003
+Lenarviricota	2732407	P	1	0	1	0.00001
+Artverviricota	2732409	P	18	80	98	0.00050
+Cressdnaviricota	2732416	P	17	0	17	0.00009
+Cossaviricota	2732415	P	4	0	4	0.00002
+Hofneiviricota	2732410	P	12	0	12	0.00006
+Phixviricota	2732412	P	5	1569	1574	0.00801

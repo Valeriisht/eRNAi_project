@@ -1,0 +1,14 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Firmicutes	1239	P	134176	50335	184511	0.64891
+Uroviricota	2731618	P	64989	12249	77238	0.27164
+Peploviricota	2731361	P	19	18754	18773	0.06602
+Phixviricota	2732412	P	91	3	94	0.00033
+Hofneiviricota	2732410	P	26	6	32	0.00011
+Pisuviricota	2732408	P	55	1	56	0.00020
+Negarnaviricota	2497569	P	54	27	81	0.00028
+Kitrinoviricota	2732406	P	40	2	42	0.00015
+Duplornaviricota	2732405	P	8	0	8	0.00003
+Lenarviricota	2732407	P	4	0	4	0.00001
+Artverviricota	2732409	P	20	8	28	0.00010
+Preplasmiviricota	2732008	P	81	0	81	0.00028
+Nucleocytoviricota	2732007	P	64	3323	3387	0.01191

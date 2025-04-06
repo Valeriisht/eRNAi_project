@@ -1,0 +1,11 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Firmicutes	1239	P	16	0	16	0.29091
+Actinobacteria	201174	P	3	0	3	0.05455
+Proteobacteria	1224	P	15	0	15	0.27273
+Bacteroidota	976	P	3	0	3	0.05455
+Planctomycetota	203682	P	1	0	1	0.01818
+Chordata	7711	P	8	0	8	0.14545
+Arthropoda	6656	P	2	0	2	0.03636
+Platyhelminthes	6157	P	1	0	1	0.01818
+Annelida	6340	P	1	0	1	0.01818
+Uroviricota	2731618	P	4	0	4	0.07273

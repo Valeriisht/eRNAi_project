@@ -1,0 +1,37 @@
+100.00	181054	0	R	1	root
+87.88	159104	0	R1	131567	  cellular organisms
+87.88	159104	0	D	2	    Bacteria
+87.84	159045	0	D1	1783272	      Terrabacteria group
+87.84	159045	0	P	1239	        Firmicutes
+0.03	47	0	D1	1783270	      FCB group
+0.03	47	47	P	1379697	        candidate division Zixibacteria
+0.01	12	12	P	1930617	      Calditrichaeota
+12.12	21950	0	D	10239	  Viruses
+10.51	19034	0	D1	2731341	    Duplodnaviria
+10.51	19034	0	K	2731360	      Heunggongvirae
+8.80	15930	0	P	2731618	        Uroviricota
+1.71	3103	0	P	2731361	        Peploviricota
+1.26	2278	0	D1	2840022	    Adnaviria
+1.26	2278	0	K	2840023	      Zilligvirae
+1.26	2278	0	P	2840024	        Taleaviricota
+0.16	282	0	D1	2731342	    Monodnaviria
+0.09	156	0	K	2732090	      Loebvirae
+0.09	156	0	P	2732410	        Hofneiviricota
+0.05	95	0	K	2732091	      Sangervirae
+0.05	95	0	P	2732412	        Phixviricota
+0.02	29	0	K	2732092	      Shotokuvirae
+0.01	20	0	P	2732416	        Cressdnaviricota
+0.01	9	0	P	2732415	        Cossaviricota
+0.11	206	0	D1	2559587	    Riboviria
+0.10	172	0	K	2732396	      Orthornavirae
+0.04	74	0	P	2732408	        Pisuviricota
+0.02	38	38	P	2497569	        Negarnaviricota
+0.02	35	0	P	2732406	        Kitrinoviricota
+0.01	12	0	P	2732405	        Duplornaviricota
+0.01	11	0	P	2732407	        Lenarviricota
+0.02	34	0	K	2732397	      Pararnavirae
+0.02	34	0	P	2732409	        Artverviricota
+0.08	147	0	D1	2732004	    Varidnaviria
+0.08	147	0	K	2732005	      Bamfordvirae
+0.04	74	0	P	2732007	        Nucleocytoviricota
+0.04	73	0	P	2732008	        Preplasmiviricota
