@@ -36,6 +36,10 @@ To run it, execute the command:
 ```
 ```
 
+## Issues 
+
+Metatransriptomics rule is in the development stage.
+
 ## Contributing 
 
 [Contributing.md](docs/CONTRIBUTING.md).
