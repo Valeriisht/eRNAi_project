@@ -72,7 +72,7 @@ def test_kallisto_quant_rule(config):
             "bootstrap": config["kallisto"]["bootstrap"]
         },
         "log": f"logs_kallisto/{{taxid}}/{{SRA_ID}}_kallisto_quant.log",
-        "run": None  # Заполним ниже
+        "run": None 
     }
     
      # Mock the run behavior for paired-end and single-end modes
