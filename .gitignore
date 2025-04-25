@@ -19,6 +19,6 @@ share/python-wheels/
 .installed.cfg
 *.egg
 
-test/__pychache__
-test/unit/__pychache__
-
+__pycache__
+tests/__pycache__
+tests/unit/__pycache__

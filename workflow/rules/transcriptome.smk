@@ -1,4 +1,4 @@
-TRANSCRIPTOME_FASTA = config["output_dir"] + "/{taxid}.fna"  # Файл с транскриптомом
+TRANSCRIPTOME_FASTA = config['ref_dir'] + "/{taxid}.fa"  # Файл с транскриптомом
 SRA_ID = config["sra"]["sra_id"]
 INPUT_FASTQ_R1 = config["output_dir"] + "/{SRA_ID}_filtered_1.fastq"  # Файл с ридами (R1)
 INPUT_FASTQ_R2 = config["output_dir"] + "/{SRA_ID}_filtered_2.fastq"  # Файл с ридами (R2) 

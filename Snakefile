@@ -1,34 +1,36 @@
 ####### Configuration #######
-
 configfile: "config/config.yaml"
 
-# Переменные из конфига можно загрузить глобально (опционально)
-OUT_DIR = config["output_dir"]
-# OUTPUT_DIR = config["output_dir"]
-SAMPLE = config["sample_name"]
-SRA_ID = config["sra"]["sra_id"]
-LEVEL = config['taxonomic_level']
-
-INPUT_R1 = expand(
-    "{out_dir}/{sra_id}_filtered_1.fastq",
-    out_dir=OUT_DIR,
-    sra_id=SRA_ID
-)
-
-INPUT_R2 = expand(
-    "{out_dir}/{sra_id}_filtered_2.fastq",
-    out_dir=OUT_DIR,
-    sra_id=SRA_ID
-)
 include: "workflow/rules/transcriptome.smk"
+
+
+OUT_DIR = config["output_dir"]
+SAMPLE = config["sample_name"]
+SRA_ID = config["sra"]["sra_id"] 
+
+
+# include: "workflow/rules/transcriptome.smk"
+include: "workflow/rules/host_community.smk"
 
 rule all:
     input:
         expand(
-            OUTPUT_DIR + "/{taxid}/{sra_id}_quant_results",
-            taxid=config["taxids"],
-            sra_id=config["sra"]["sra_ids"]  # Используем список ID из конфига
+            "{out_dir}/{sra_id}_{type}_reads.fastq.gz",
+            out_dir=OUT_DIR,
+            sra_id=SRA_ID,
+            type=["host", "metagenome"]
         )
+# rule all:
+#     input:
+#         expand(
+#             os.path.join(OUTPUT_DIR, "{SRA_ID}_filtered_1.fastq"),
+#             SRA_ID=config["sra"]["sra_id"]  # Список SRA_ID из config.yaml
+#         ),
+#         expand(
+#             os.path.join(OUTPUT_DIR, "{SRA_ID}_filtered_2.fastq"),
+#             SRA_ID=config["sra"]["sra_id"]
+#         )
+
 
 #rule all:
 #    input:
@@ -63,4 +65,16 @@ rule all:
 #    input:
 #        host_reads = expand("{output_dir}/host_reads.fastq.gz", output_dir=config["output_dir"]),
 #        metagenome_reads = expand("{output_dir}/metagenome_reads.fastq.gz", output_dir=config["output_dir"])
+
+# # INPUT_R1 = expand(
+#      "{out_dir}/{sra_id}_filtered_1.fastq",
+#      out_dir=OUT_DIR,
+#      sra_id=SRA_ID
+#      )
+
+# INPUT_R2 = expand(
+#      "{out_dir}/{sra_id}_filtered_2.fastq",
+#      out_dir=OUT_DIR,
+#      sra_id=SRA_ID
+#      )
         
