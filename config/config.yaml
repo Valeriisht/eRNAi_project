@@ -1,31 +1,34 @@
-##### directories
-output_dir: "results/output"  # результаты работы программ
+output_dir: "metagenome_gallus/dehost"
+input_dir: "metagenome_gallus/old"
+ref_dir: "data/data_ggallus/genome_reference"
+taxid: "galGal6"
+sample_name: "gallus_sample"
 
-###### dir for transcriptome
-ref_dir: 'data/data_ggallus/genome_reference'
-
-##### input_files
-taxid: galGal6
-
-#### for pre-files
 sra:
-  sra_id: ['SRR8265535',
- 'SRR8265536',
- 'SRR8265537',
- 'SRR8265538',
- 'SRR8265543',
- 'SRR8265545',
- 'SRR8265546',
- 'SRR8265547',
- 'SRR8265551',
- 'SRR8265552',
- 'SRR8265563',
- 'SRR8265568',
- 'SRR8265641',
- 'SRR8265643']
-  
+  sra_id:
+  - "SRR8265535"
+  - "SRR8265536"
+  - "SRR8265537"
+  - "SRR8265538"
+  - "SRR8265543"
+  - "SRR8265545"
+  - "SRR8265546"
+  - "SRR8265547"
+  - "SRR8265551"
+  - "SRR8265552"
+  - "SRR8265563"
+  - "SRR8265564"
+  - "SRR8265568"
+  - "SRR8265641"
+  - "SRR8265643"
   paired: True
   thread: 2
+
+threads:
+  bwa_index: 2
+  bwa_align: 2
+  sam_to_bam: 2
+  split_reads: 2
 
 # transcriptome
 #==================
@@ -53,7 +56,7 @@ database: "kraken2_db"  # Путь к базе данных Kraken2
 #input:
 #  - "results/output/{sra.sra_id}_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
 #  - "results/output/{sra.sra_id}_filtered_2.fastq"  # Путь ко второму файлу с ридами (R2)
-output_dir: "results/output"  # Директория для выходных файлов
+# output_dir: "results/output"  # Директория для выходных файлов
 sample_name: "gallus_gallus"  # Имя образца (используется для именования выходных файлов)
 
 # bracken parameters

@@ -1,16 +1,19 @@
 configfile: "config/config.yaml"
 
 # Глобальные переменные
-SRA_ID = config["sra"]["sra_id"]
+SRA_ID = config["sra"]["sra_id"]  # Список SRA ID
 OUT_DIR = config["output_dir"]
-SAMPLE = config["sample_name"] 
+INP_DIR = config["input_dir"]
 TAXID = config["taxid"]
 REFERENCE = config["ref_dir"]
 
-# Правило для индексирования генома
+# Создаем директории
+os.makedirs(f"{OUT_DIR}/logs", exist_ok=True)
+
+# Правило для индексирования (один раз)
 rule bwa_index:
     input:
-        host_genome = "{REFERENCE}/{TAXID}.fa".format(REFERENCE=REFERENCE, TAXID=TAXID)
+        host_genome = f"{REFERENCE}/{TAXID}.fa"
     output: 
         expand("{reference}/{taxid}.fa.{ext}",
                reference=REFERENCE,
@@ -19,59 +22,65 @@ rule bwa_index:
     params:
         threads = config["threads"]["bwa_index"]
     log:
-        "{OUT_DIR}/logs/bwa_index.log".format(OUT_DIR=OUT_DIR)
+        f"{OUT_DIR}/logs/bwa_index.log"
     shell:
-        "bwa index -p {input.host_genome} 2> {log}"
+        "bwa index  {input.host_genome} 2> {log}"
 
-# Правило для выравнивания
+# Правило для выравнивания (для каждого SRA ID)
 rule bwa_align:
     input:
-        r1 = "{OUT_DIR}/{SRA_ID}_filtered_1.fastq".format(OUT_DIR=OUT_DIR, SRA_ID=SRA_ID),
-        r2 = "{OUT_DIR}/{SRA_ID}_filtered_2.fastq".format(OUT_DIR=OUT_DIR, SRA_ID=SRA_ID),
-        reference_host_genome = "{REFERENCE}/{TAXID}.fa".format(REFERENCE=REFERENCE, TAXID=TAXID),
+        r1 = f"{INP_DIR}/{{sra_id}}_filtered_1.fastq",
+        r2 = f"{INP_DIR}/{{sra_id}}_filtered_2.fastq",
+        reference_host_genome = f"{REFERENCE}/{TAXID}.fa",
         index_files = rules.bwa_index.output
     output:
-        alignment_file = "{OUT_DIR}/{SRA_ID}_aligned.sam".format(OUT_DIR=OUT_DIR, SRA_ID=SRA_ID)
+        alignment_file = f"{OUT_DIR}/{{sra_id}}_aligned.sam"
     params:
         threads = config["threads"]["bwa_align"],
         extra_params = "-v 1"
     log:
-        "{OUT_DIR}/logs/{SRA_ID}_bwa_align.log".format(OUT_DIR=OUT_DIR, SRA_ID=SRA_ID)
+        f"{OUT_DIR}/logs/{{sra_id}}_bwa_align.log"
     shell:
         "bwa mem -t {params.threads} {params.extra_params} {input.reference_host_genome} {input.r1} {input.r2} > {output.alignment_file} 2> {log}"
 
-# Конвертация и сортировка
 rule sam_to_bam:
     input:
-        sam = rules.bwa_align.output.alignment_file
+        sam = f"{OUT_DIR}/{{sra_id}}_aligned.sam"
     output:
-        bam = "{OUT_DIR}/{SRA_ID}_aligned_sorted.bam".format(OUT_DIR=OUT_DIR, SRA_ID=SRA_ID),
-        bai = "{OUT_DIR}/{SRA_ID}_aligned_sorted.bam.bai".format(OUT_DIR=OUT_DIR, SRA_ID=SRA_ID)
+        bam = f"{OUT_DIR}/{{sra_id}}_aligned_sorted.bam",
+        bai = f"{OUT_DIR}/{{sra_id}}_aligned_sorted.bam.bai"
     params:
-        threads = config["threads"]["sam_to_bam"],
-        memory = "2G"
+        threads = 4,  # Используем 4 потока, как в рабочем тесте
+        memory = "2G"  # Консервативный объем памяти
     log:
-        "{OUT_DIR}/logs/{SRA_ID}_sam_to_bam.log".format(OUT_DIR=OUT_DIR, SRA_ID=SRA_ID)
+        f"{OUT_DIR}/logs/{{sra_id}}_sam_to_bam.log"
     shell:
         """
-        samtools view -@ {params.threads} -b -o temp.bam {input.sam} 2>> {log}
-        samtools sort -@ {params.threads} -m {params.memory} -o {output.bam} temp.bam 2>> {log}
-        samtools index -@ {params.threads} {output.bam} 2>> {log}
-        rm -f temp.bam
+        # Шаг 1: Конвертация SAM → BAM (как в рабочем тесте)
+        samtools view -@ {params.threads} -b -o {OUT_DIR}/temp_{wildcards.sra_id}.bam {input.sam} 2>> {log} || exit 1
+
+        # Шаг 2: Сортировка BAM
+        samtools sort -@ {params.threads} -m {params.memory} \
+            -o {output.bam} {OUT_DIR}/temp_{wildcards.sra_id}.bam 2>> {log} || exit 1
+
+        # Шаг 3: Индексация
+        samtools index -@ {params.threads} {output.bam} 2>> {log} || exit 1
+
+        # Очистка временного файла
+        rm -f {OUT_DIR}/temp_{wildcards.sra_id}.bam
         """
 
-# Разделение чтений
 rule split_reads:
     input:
-        bam = rules.sam_to_bam.output.bam,
-        bai = rules.sam_to_bam.output.bai
+        bam = f"{OUT_DIR}/{{sra_id}}_aligned_sorted.bam",
+        bai = f"{OUT_DIR}/{{sra_id}}_aligned_sorted.bam.bai"
     output:
-        host_reads = "{OUT_DIR}/{SRA_ID}_host_reads.fastq.gz".format(OUT_DIR=OUT_DIR, SRA_ID=SRA_ID),
-        metagenome_reads = "{OUT_DIR}/{SRA_ID}_metagenome_reads.fastq.gz".format(OUT_DIR=OUT_DIR, SRA_ID=SRA_ID)
+        host_reads = f"{OUT_DIR}/{{sra_id}}_host_reads.fastq.gz",
+        metagenome_reads = f"{OUT_DIR}/{{sra_id}}_metagenome_reads.fastq.gz"
     params:
         threads = config["threads"]["split_reads"]
     log:
-        "{OUT_DIR}/logs/{SRA_ID}_split_reads.log".format(OUT_DIR=OUT_DIR, SRA_ID=SRA_ID)
+        f"{OUT_DIR}/logs/{{sra_id}}_split_reads.log"
     shell:
         """
         samtools fastq -@ {params.threads} -f 4 -1 {output.metagenome_reads} -2 /dev/null {input.bam} 2>> {log}

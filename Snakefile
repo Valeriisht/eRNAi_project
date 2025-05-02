@@ -1,25 +1,40 @@
 ####### Configuration #######
 configfile: "config/config.yaml"
 
-include: "workflow/rules/transcriptome.smk"
 
 
 OUT_DIR = config["output_dir"]
+INP_DIR = config["input_dir"]
 SAMPLE = config["sample_name"]
-SRA_ID = config["sra"]["sra_id"] 
+SRA_IDS = config["sra"]["sra_id"] 
 
 
-# include: "workflow/rules/transcriptome.smk"
+# rule for host 
 include: "workflow/rules/host_community.smk"
-
 rule all:
     input:
         expand(
             "{out_dir}/{sra_id}_{type}_reads.fastq.gz",
             out_dir=OUT_DIR,
-            sra_id=SRA_ID,
-            type=["host", "metagenome"]
-        )
+            sra_id=SRA_IDS,
+            type=["host", "metagenome"])
+
+# =============================================
+#  rule for pre_prossecing
+# include: "workflow/rules/pre_prossecing.smk"
+# rule all:
+#     input:
+#         expand(
+#             os.path.join(OUTPUT_DIR, "{SRA_ID}_filtered_1.fastq"),
+#             SRA_ID=config["sra"]["sra_id"]  # Список SRA_ID из config.yaml
+#             ),
+#             expand(
+#                 os.path.join(OUTPUT_DIR, "{SRA_ID}_filtered_2.fastq"),
+#                 SRA_ID=config["sra"]["sra_id"]
+#                 )
+
+
+# include: "workflow/rules/transcriptome.smk"
 # rule all:
 #     input:
 #         expand(
@@ -32,6 +47,7 @@ rule all:
 #         )
 
 
+# rule for kraken
 #rule all:
 #    input:
 #        expand(OUT_DIR + "/kraken2_{sra_id}.report",sra_id=SRA_ID),
@@ -60,6 +76,8 @@ rule all:
 #rule all:
 #    input:
 #        expand(OUTPUT_DIR + "/{taxid}/{sra_id}_quant_results", taxid=config["taxid"], sra_id=SRA_ID)
+
+
 
 # rule all:
 #    input:
