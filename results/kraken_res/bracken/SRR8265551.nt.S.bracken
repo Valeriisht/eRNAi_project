@@ -1,0 +1,23 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Enterobacter cancerogenus	69218	S	1	2	3	0.04762
+Escherichia coli	562	S	3	25	28	0.44444
+Kosakonia pseudosacchari	1646340	S	1	0	1	0.01587
+Alcanivorax sp.	1872427	S	1	0	1	0.01587
+Lactobacillus crispatus	47770	S	2	0	2	0.03175
+Ligilactobacillus salivarius	1624	S	2	0	2	0.03175
+Staphylococcus pseudoxylosus	2282419	S	1	0	1	0.01587
+Dorea longicatena	88431	S	1	0	1	0.01587
+Lachnoclostridium phocaeense	1871021	S	1	0	1	0.01587
+Oscillibacter sp. PEA192	2109687	S	1	0	1	0.01587
+Subdoligranulum variabile	214851	S	1	0	1	0.01587
+Nostoc sp. PCC 7524	28072	S	1	0	1	0.01587
+Lutibacter sp. A80	2918453	S	1	0	1	0.01587
+Gallus gallus	9031	S	5	0	5	0.07937
+Meleagris gallopavo	9103	S	2	0	2	0.03175
+Gavia stellata	37040	S	1	0	1	0.01587
+Macrobrachium nipponense	159736	S	1	0	1	0.01587
+Pulicaria dysenterica	56535	S	1	0	1	0.01587
+Zea mays	4577	S	2	0	2	0.03175
+CrAss-like virus sp.	2831617	S	1	1	2	0.03175
+Myoviridae sp.	2202564	S	1	0	1	0.01587
+Bacteriophage sp.	38018	S	1	0	1	0.01587

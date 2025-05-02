@@ -1,7 +1,86 @@
 ##### directories
-result_dir:  results/ 
+output_dir: "results/output"  # результаты работы программ
 
-##### params for specific rules
-# read quality trimming
+###### dir for transcriptome
+ref_dir: 'data/data_ggallus/genome_reference'
+
+##### input_files
+taxid: galGal6
+
+#### for pre-files
+sra:
+  sra_id: ['SRR8265535',
+ 'SRR8265536',
+ 'SRR8265537',
+ 'SRR8265538',
+ 'SRR8265543',
+ 'SRR8265545',
+ 'SRR8265546',
+ 'SRR8265547',
+ 'SRR8265551',
+ 'SRR8265552',
+ 'SRR8265563',
+ 'SRR8265568',
+ 'SRR8265641',
+ 'SRR8265643']
+  
+  paired: True
+  thread: 2
+
+# transcriptome
+#==================
+
+kallisto:
+  kmer_size: 31  # Длина k-mer (по умолчанию 31)
+  bootstrap: 30  # Количество бутстрап-повторов для оценки неопределённости
+
+
+# host_genome 
+#==========================
+
+threads:
+  bwa_index: 8
+  bwa_align: 8
+  sam_to_bam: 8  
+  split_reads: 4    
+
+
+#kraken2
+#============================
+
+algorithm: "kraken2"  # Используемый алгоритм
+database: "kraken2_db"  # Путь к базе данных Kraken2 
+#input:
+#  - "results/output/{sra.sra_id}_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
+#  - "results/output/{sra.sra_id}_filtered_2.fastq"  # Путь ко второму файлу с ридами (R2)
+output_dir: "results/output"  # Директория для выходных файлов
+sample_name: "gallus_gallus"  # Имя образца (используется для именования выходных файлов)
+
+# bracken parameters
+read_length: 150
+taxonomic_level: ['S','G', 'P']
+
+
+# preprocessing
+#=================
+##### params for specific rules ####
 fastp:
-  qualified_quality_phred: 30
+    thread: 8
+    qualified_quality_phred: 20
+    min_length: 50
+    detect_adapters: True
+
+
+#===============================
+# metaphlan parameters
+metaphlan:
+  threads: 8
+
+# humann parameters
+humann:
+  threads: 8
+
+# входные файлы
+metagenome: "metagenome.fastq.gz"
+host_genome: "host_genome.fna"  # референс
+

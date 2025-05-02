@@ -1,0 +1,110 @@
+100.00	271421	0	R	1	root
+91.21	247570	0	R1	131567	  cellular organisms
+90.61	245937	0	D	2	    Bacteria
+68.01	184597	0	D1	1783272	      Terrabacteria group
+62.27	169005	0	P	1239	        Firmicutes
+4.33	11744	0	P	201174	        Actinobacteria
+0.58	1568	0	D2	1798711	        Cyanobacteria/Melainabacteria group
+0.58	1568	1568	P	1798710	          Candidatus Melainabacteria
+0.64	1729	0	P	544448	        Tenericutes
+0.09	247	0	P	200795	        Chloroflexi
+0.09	232	0	P	1297	        Deinococcus-Thermus
+0.02	56	0	P	67819	        Armatimonadetes
+0.00	10	10	P	1154676	        Candidatus Eremiobacteraeota
+0.00	3	3	P	2109258	        Abditibacteriota
+20.89	56696	0	P	1224	      Proteobacteria
+0.59	1597	0	D1	1783257	      PVC group
+0.26	693	0	P	203682	        Planctomycetota
+0.20	554	0	P	74201	        Verrucomicrobia
+0.09	254	0	P	256845	        Lentisphaerae
+0.02	56	0	P	204428	        Chlamydiae
+0.01	20	0	P	67812	        Candidatus Omnitrophica
+0.01	17	0	P	134625	        Kiritimatiellaeota
+0.55	1497	0	P	203691	      Spirochaetes
+0.27	730	0	P	32066	      Fusobacteria
+0.07	185	0	D1	2323	      Bacteria incertae sedis
+0.07	185	0	D2	1783234	        Bacteria candidate phyla
+0.02	54	0	D3	1783273	          Patescibacteria group
+0.01	28	0	D4	1794811	            Parcubacteria group
+0.00	8	0	P	1752737	              Candidatus Moranbacteria
+0.00	5	0	P	1752729	              Candidatus Nomurabacteria
+0.00	4	0	P	1752727	              Candidatus Campbellbacteria
+0.00	3	0	P	1752734	              Candidatus Kaiserbacteria
+0.00	3	3	P	221216	              Candidatus Parcubacteria
+0.00	3	0	P	1752728	              Candidatus Falkowbacteria
+0.00	1	0	P	1752732	              Candidatus Uhrbacteria
+0.00	1	0	P	1752738	              Candidatus Giovannonibacteria
+0.01	24	0	D4	1794810	            Microgenomates group
+0.01	16	0	P	1752723	              Candidatus Roizmanbacteria
+0.00	6	0	P	1752722	              Candidatus Woesebacteria
+0.00	1	0	P	1752719	              Candidatus Levybacteria
+0.00	1	0	P	1752718	              Candidatus Daviesbacteria
+0.00	2	2	P	363464	            Candidatus Gracilibacteria
+0.02	61	0	P	95818	          Candidatus Saccharibacteria
+0.00	13	0	P	1703755	          candidate division WOR-3
+0.00	11	0	P	1619053	          Candidatus Peregrinibacteria
+0.00	9	9	P	67817	          Candidatus Aminicenantes
+0.00	7	0	P	422282	          candidate division WWE3
+0.00	7	0	P	221235	          Candidatus Absconditabacteria
+0.00	5	0	P	67810	          Candidatus Bipolaricaulota
+0.00	6	0	P	1618330	          Candidatus Berkelbacteria
+0.00	4	0	P	1052815	          Candidatus Aerophobetes
+0.00	2	0	P	1817801	          Candidatus Eisenbacteria
+0.00	2	0	P	1817797	          Candidatus Coatesbacteria
+0.00	2	0	P	1752716	          Candidatus Dadabacteria
+0.07	197	0	P	57723	      Acidobacteria
+0.09	230	0	P	200918	      Thermotogae
+0.03	83	0	P	40117	      Nitrospirae
+0.02	59	0	P	74152	      Elusimicrobia
+0.01	24	0	P	200940	      Thermodesulfobacteria
+0.01	14	0	P	68297	      Dictyoglomi
+0.00	10	0	P	67818	      Atribacterota
+0.00	8	8	P	200938	      Chrysiogenetes
+0.00	4	0	P	1930617	      Calditrichaeota
+0.00	2	0	D1	2498710	      Caldiserica/Cryosericota group
+0.00	2	0	P	67814	        Caldiserica
+0.60	1632	0	D	2157	    Archaea
+0.34	921	0	P	28890	      Euryarchaeota
+0.11	307	0	D1	1783276	      DPANN group
+0.00	6	0	P	192989	        Nanoarchaeota
+0.00	5	0	P	1801616	        Candidatus Woesearchaeota
+0.00	2	2	P	743724	        Candidatus Aenigmarchaeota
+0.11	292	0	P	1801631	        Candidatus Micrarchaeota
+0.00	1	0	P	1462430	        Candidatus Nanohaloarchaeota
+0.00	1	0	P	743725	        Candidatus Diapherotrites
+0.08	224	0	P	2283796	      Candidatus Thermoplasmatota
+0.06	164	0	D1	1783275	      TACK group
+0.03	93	93	P	28889	        Crenarchaeota
+0.02	58	0	P	651137	        Thaumarchaeota
+0.00	12	12	P	928852	        Candidatus Bathyarchaeota
+0.01	14	0	D1	1935183	      Asgard group
+0.00	11	0	P	1936272	        Candidatus Heimdallarchaeota
+0.00	3	0	P	1706441	        Candidatus Thorarchaeota
+8.79	23850	0	D	10239	  Viruses
+6.87	18640	0	D1	2731341	    Duplodnaviria
+6.87	18640	0	K	2731360	      Heunggongvirae
+6.11	16570	0	P	2731618	        Uroviricota
+0.76	2069	0	P	2731361	        Peploviricota
+1.73	4697	0	D1	2840022	    Adnaviria
+1.73	4697	0	K	2840023	      Zilligvirae
+1.73	4697	0	P	2840024	        Taleaviricota
+0.09	238	0	D1	2732004	    Varidnaviria
+0.09	238	0	K	2732005	      Bamfordvirae
+0.04	111	0	P	2732007	        Nucleocytoviricota
+0.05	127	0	P	2732008	        Preplasmiviricota
+0.07	179	0	D1	2559587	    Riboviria
+0.05	135	0	K	2732396	      Orthornavirae
+0.03	68	0	P	2732408	        Pisuviricota
+0.01	37	37	P	2497569	        Negarnaviricota
+0.01	18	0	P	2732406	        Kitrinoviricota
+0.00	12	0	P	2732405	        Duplornaviricota
+0.02	43	0	K	2732397	      Pararnavirae
+0.02	43	0	P	2732409	        Artverviricota
+0.04	95	0	D1	2731342	    Monodnaviria
+0.01	37	0	K	2732090	      Loebvirae
+0.01	37	0	P	2732410	        Hofneiviricota
+0.01	30	0	K	2732091	      Sangervirae
+0.01	30	0	P	2732412	        Phixviricota
+0.01	28	0	K	2732092	      Shotokuvirae
+0.01	16	0	P	2732415	        Cossaviricota
+0.00	12	0	P	2732416	        Cressdnaviricota

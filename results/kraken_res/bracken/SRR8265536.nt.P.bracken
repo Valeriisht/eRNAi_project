@@ -1,0 +1,19 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Firmicutes	1239	P	127846	31199	159045	0.87844
+candidate division Zixibacteria	1379697	P	47	0	47	0.00026
+Calditrichaeota	1930617	P	12	0	12	0.00007
+Uroviricota	2731618	P	14389	1541	15930	0.08798
+Peploviricota	2731361	P	11	3092	3103	0.01714
+Pisuviricota	2732408	P	74	0	74	0.00041
+Negarnaviricota	2497569	P	38	0	38	0.00021
+Kitrinoviricota	2732406	P	35	0	35	0.00019
+Duplornaviricota	2732405	P	12	0	12	0.00007
+Lenarviricota	2732407	P	11	0	11	0.00006
+Artverviricota	2732409	P	25	9	34	0.00019
+Phixviricota	2732412	P	95	0	95	0.00052
+Cressdnaviricota	2732416	P	20	0	20	0.00011
+Cossaviricota	2732415	P	9	0	9	0.00005
+Hofneiviricota	2732410	P	20	136	156	0.00086
+Nucleocytoviricota	2732007	P	66	8	74	0.00041
+Preplasmiviricota	2732008	P	7	66	73	0.00040
+Taleaviricota	2840024	P	1	2277	2278	0.01258

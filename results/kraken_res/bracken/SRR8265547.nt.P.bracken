@@ -1,0 +1,15 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Chordata	7711	P	709335	26809	736144	0.99564
+Cossaviricota	2732415	P	1382	0	1382	0.00187
+Cressdnaviricota	2732416	P	5	0	5	0.00001
+Phixviricota	2732412	P	6	0	6	0.00001
+Uroviricota	2731618	P	731	364	1095	0.00148
+Peploviricota	2731361	P	3	0	3	0.00000
+Preplasmiviricota	2732008	P	173	0	173	0.00023
+Nucleocytoviricota	2732007	P	32	1	33	0.00004
+Pisuviricota	2732408	P	76	4	80	0.00011
+Negarnaviricota	2497569	P	36	1	37	0.00005
+Kitrinoviricota	2732406	P	18	0	18	0.00002
+Duplornaviricota	2732405	P	10	0	10	0.00001
+Lenarviricota	2732407	P	3	0	3	0.00000
+Artverviricota	2732409	P	52	321	373	0.00050

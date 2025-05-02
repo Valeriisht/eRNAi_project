@@ -1,0 +1,1681 @@
+name	taxonomy_id	taxonomy_lvl	kraken_assigned_reads	added_reads	new_est_reads	fraction_total_reads
+Escherichia coli	562	S	327472	1005660	1333132	0.92447
+Escherichia albertii	208962	S	3513	278	3791	0.00263
+Escherichia fergusonii	564	S	3287	746	4033	0.00280
+Escherichia marmotae	1499973	S	518	498	1016	0.00070
+Escherichia sp. E4742	2044467	S	173	114	287	0.00020
+Escherichia sp. SCLE84	2725997	S	52	557	609	0.00042
+Escherichia sp.	1884818	S	10	70	80	0.00006
+Escherichia sp. TM-G17TGC	2860337	S	2	5766	5768	0.00400
+Escherichia sp. E471	754316	S	1	0	1	0.00000
+Escherichia sp. UIWRF1152	1645090	S	1	1	2	0.00000
+Escherichia sp. UIWRF0647	1678478	S	1	0	1	0.00000
+Escherichia sp. E807	754319	S	1	1	2	0.00000
+Escherichia sp. E472	754317	S	1	2	3	0.00000
+Escherichia sp. NCCP-1731	2003206	S	1	17	18	0.00001
+Escherichia sp. Souza-273	126124	S	1	0	1	0.00000
+Escherichia sp. TC-EC600-tetX4	2857061	S	1	739	740	0.00051
+uncultured Escherichia sp.	237777	S	17	42	59	0.00004
+Shigella dysenteriae	622	S	2919	4137	7056	0.00489
+Shigella flexneri	623	S	2857	21388	24245	0.01681
+Shigella boydii	621	S	1644	5940	7584	0.00526
+Shigella sonnei	624	S	869	4030	4899	0.00340
+Shigella sp. PIB	2906475	S	24	354	378	0.00026
+Shigella sp. YAAJ-10	345864	S	4	6	10	0.00001
+Shigella sp. PAMC 28760	1813821	S	3	3001	3004	0.00208
+Shigella sp. 09-M2	1379319	S	1	2	3	0.00000
+Citrobacter freundii	546	S	1111	1032	2143	0.00149
+Citrobacter portucalensis	1639133	S	219	305	524	0.00036
+Citrobacter werkmanii	67827	S	189	69	258	0.00018
+Citrobacter braakii	57706	S	92	166	258	0.00018
+Citrobacter freundii complex sp. CFNIH2	2066049	S	34	4	38	0.00003
+Citrobacter sp. BIDMC108	1686385	S	16	126	142	0.00010
+Citrobacter freundii complex sp. CFNIH9	2077149	S	12	17	29	0.00002
+Citrobacter sp. ABFQG	2529121	S	8	527	535	0.00037
+Citrobacter sp. MGH103	1686378	S	2	64	66	0.00005
+Citrobacter sp. MGH110	1686383	S	1	0	1	0.00000
+Citrobacter sedlakii	67826	S	56	10	66	0.00005
+Citrobacter youngae	133448	S	25	27	52	0.00004
+Citrobacter sp. R56	1573676	S	336	4	340	0.00024
+Citrobacter sp. RHB25-C09	2742624	S	291	4	295	0.00020
+Citrobacter sp. XT1-2-2	2942480	S	175	593	768	0.00053
+Citrobacter sp. BDA59-3	2781952	S	22	2	24	0.00002
+Citrobacter sp. RHBSTW-00986	2742675	S	21	31	52	0.00004
+Citrobacter sp. S39	2660638	S	19	155	174	0.00012
+Citrobacter sp. Colony219	2861802	S	10	8	18	0.00001
+Citrobacter sp. FDAARGOS_156	1702170	S	9	7	16	0.00001
+Citrobacter sp. RHBSTW-00887	2742668	S	8	9	17	0.00001
+Citrobacter sp. CFNIH10	1920110	S	6	8	14	0.00001
+Citrobacter sp. RHBSTW-00599	2742657	S	6	9	15	0.00001
+Citrobacter sp. MGH 55	1439319	S	6	2	8	0.00001
+Citrobacter sp. H12-3-2	2664853	S	6	6	12	0.00001
+Citrobacter sp. RHBSTW-00524	2742653	S	5	7	12	0.00001
+Citrobacter sp. ChDC B352	1444719	S	5	629	634	0.00044
+Citrobacter sp. MY-5	308866	S	5	2	7	0.00000
+Citrobacter sp. LUTT5	2697370	S	5	12	17	0.00001
+Citrobacter sp. RHBSTW-00678	2742661	S	5	84	89	0.00006
+Citrobacter sp. RHBSTW-01013	2742677	S	4	32	36	0.00002
+Citrobacter sp. CRE-46	1703250	S	4	4	8	0.00001
+Citrobacter sp. RHBSTW-00821	2742663	S	4	238	242	0.00017
+Citrobacter sp. Colony322	2861801	S	4	11	15	0.00001
+Citrobacter sp. RHBSTW-00570	2742655	S	4	12	16	0.00001
+Citrobacter sp. 172116965	2683822	S	3	5	8	0.00001
+Citrobacter sp. RHB36-C18	2742627	S	3	4	7	0.00000
+Citrobacter sp. RHB35-C21	2742626	S	3	3	6	0.00000
+Citrobacter sp. CF971	2566012	S	3	6	9	0.00001
+Citrobacter sp. RHBSTW-00667	2742659	S	3	155	158	0.00011
+Citrobacter sp. TSA-1	184912	S	3	6	9	0.00001
+Citrobacter sp. SL156	2079228	S	2	142	144	0.00010
+Citrobacter sp. RHBSTW-00053	2742632	S	2	44	46	0.00003
+Citrobacter sp. RHB35-C17	2742625	S	2	2	4	0.00000
+Citrobacter sp. TBCP-5362	2576406	S	1	15	16	0.00001
+Citrobacter sp. Y3	2716879	S	1	7	8	0.00001
+Citrobacter sp. Colony475	2861800	S	1	3	4	0.00000
+Citrobacter sp. RHBSTW-00848	2742665	S	1	127	128	0.00009
+Citrobacter sp. RHBSTW-00903	2742670	S	1	19	20	0.00001
+Citrobacter rodentium	67825	S	275	7	282	0.00020
+Citrobacter farmeri	67824	S	221	13	234	0.00016
+Citrobacter amalonaticus	35703	S	197	84	281	0.00019
+Citrobacter koseri	545	S	168	30	198	0.00014
+Citrobacter tructae	2562449	S	147	3	150	0.00010
+Citrobacter telavivensis	2653932	S	138	11	149	0.00010
+Citrobacter cronae	1748967	S	56	108	164	0.00011
+Citrobacter pasteurii	1563222	S	55	11	66	0.00005
+Citrobacter arsenatis	2546350	S	27	8	35	0.00002
+Citrobacter europaeus	1914243	S	10	9	19	0.00001
+Klebsiella pneumoniae	573	S	3247	14241	17488	0.01213
+Klebsiella sp. WP8-S18-ESBL-06	2675726	S	42	37	79	0.00005
+Klebsiella sp. STW0522-44	2681387	S	40	17	57	0.00004
+Klebsiella sp. WP3-S18-ESBL-05	2675711	S	16	191	207	0.00014
+Klebsiella sp. A52	2834819	S	12	1	13	0.00001
+Klebsiella sp.	576	S	9	65	74	0.00005
+Klebsiella sp. PO552	1972757	S	7	7	14	0.00001
+Klebsiella sp. BDA134-6	2787706	S	5	3	8	0.00001
+Klebsiella sp. WP3-W18-ESBL-02	2675710	S	5	37	42	0.00003
+Klebsiella sp. LY	2015795	S	4	43	47	0.00003
+Klebsiella sp. NCCP-142	742841	S	4	168	172	0.00012
+Klebsiella sp. MPUS7	2697371	S	3	4	7	0.00000
+Klebsiella sp. KPN54798	2897413	S	3	143	146	0.00010
+Klebsiella sp. LTGPAF-6F	1905288	S	2	10	12	0.00001
+Klebsiella sp. 8588	1497815	S	2	0	2	0.00000
+Klebsiella sp. WP4-W18-ESBL-05	2675713	S	2	11	13	0.00001
+Klebsiella sp. NT18-21	1778872	S	2	0	2	0.00000
+Klebsiella sp. FDAARGOS_511	2488567	S	1	3	4	0.00000
+Klebsiella sp. VN59	1172947	S	1	0	1	0.00000
+Klebsiella sp. PL-2018	2851540	S	1	1	2	0.00000
+Klebsiella sp. CTHL.F3a	2873296	S	1	0	1	0.00000
+Klebsiella quasipneumoniae	1463165	S	362	618	980	0.00068
+Klebsiella aerogenes	548	S	329	31	360	0.00025
+Klebsiella oxytoca	571	S	325	55	380	0.00026
+Klebsiella michiganensis	1134687	S	226	136	362	0.00025
+Klebsiella variicola	244366	S	165	143	308	0.00021
+Klebsiella huaxiensis	2153354	S	122	4	126	0.00009
+Klebsiella africana	2489010	S	43	2	45	0.00003
+Klebsiella grimontii	2058152	S	34	64	98	0.00007
+Klebsiella pasteurii	2587529	S	29	27	56	0.00004
+uncultured Klebsiella sp.	284011	S	8	23	31	0.00002
+Klebsiella quasivariicola	2026240	S	6	4	10	0.00001
+Raoultella planticola	575	S	206	31	237	0.00016
+Raoultella ornithinolytica	54291	S	157	316	473	0.00033
+Raoultella terrigena	577	S	65	21	86	0.00006
+Raoultella sp. XY-1	2799495	S	3	35	38	0.00003
+Raoultella sp. X13	2259647	S	2	14	16	0.00001
+Raoultella electrica	1259973	S	1	0	1	0.00000
+Enterobacter oligotrophicus	2478464	S	100	593	693	0.00048
+Enterobacter huaxiensis	2494702	S	62	518	580	0.00040
+Shimwellia blattae	563	S	122	0	122	0.00008
+Thiotrichales bacterium	2026796	S	4	0	4	0.00000
+Alligator mississippiensis	8496	S	2	1	3	0.00000
+Alligator sinensis	38654	S	1	0	1	0.00000
+Gavialis gangeticus	94835	S	3	1	4	0.00000
+Gopherus flavomarginatus	286002	S	4	0	4	0.00000
+Gopherus evgoodei	1825980	S	1	0	1	0.00000
+Chelonoidis abingdonii	106734	S	1	0	1	0.00000
+Chrysemys picta	8479	S	1	0	1	0.00000
+Trachemys scripta	34903	S	1	0	1	0.00000
+Terrapene carolina	158814	S	1	0	1	0.00000
+Mauremys mutica	74926	S	1	0	1	0.00000
+Caretta caretta	8467	S	4	2	6	0.00000
+Chelonia mydas	8469	S	1	0	1	0.00000
+Dermochelys coriacea	27794	S	1	0	1	0.00000
+Pelodiscus sinensis	13735	S	2	0	2	0.00000
+Vipera ursinii	103942	S	10	0	10	0.00001
+Crotalus tigris	88082	S	1	0	1	0.00000
+Thamnophis elegans	35005	S	8	0	8	0.00001
+Pantherophis guttatus	94885	S	1	0	1	0.00000
+Pseudonaja textilis	8673	S	1	0	1	0.00000
+Achalinus spinalis	1748395	S	1	0	1	0.00000
+Python bivittatus	176946	S	4	0	4	0.00000
+Anolis carolinensis	28377	S	5	0	5	0.00000
+Anolis chlorocyanus	235299	S	1	0	1	0.00000
+Sceloporus undulatus	8520	S	3	0	3	0.00000
+Pogona vitticeps	103695	S	2	0	2	0.00000
+Varanus komodoensis	61221	S	1	0	1	0.00000
+Podarcis muralis	64176	S	3	1	4	0.00000
+Zootoca vivipara	8524	S	3	1	4	0.00000
+Lacerta agilis	80427	S	2	1	3	0.00000
+Sphaerodactylus townsendi	933632	S	6	0	6	0.00000
+Mus musculus	10090	S	79	15	94	0.00007
+Mus spretus	10096	S	5	1	6	0.00000
+Apodemus sylvaticus	10129	S	26	0	26	0.00002
+Rattus norvegicus	10116	S	2	2	4	0.00000
+Mastomys coucha	35658	S	3	1	4	0.00000
+Arvicanthis niloticus	61156	S	1	0	1	0.00000
+Acomys russatus	60746	S	37	1	38	0.00003
+Acomys dimidiatus	60744	S	6	2	8	0.00001
+Acomys kempi	83762	S	4	1	5	0.00000
+Onychomys torridus	38674	S	40	2	42	0.00003
+Arvicola amphibius	1047088	S	19	2	21	0.00001
+Microtus fortis	100897	S	1	0	1	0.00000
+Microtus ochrogaster	79684	S	1	0	1	0.00000
+Myodes glareolus	447135	S	1	0	1	0.00000
+Mesocricetus auratus	10036	S	2	0	2	0.00000
+Phodopus roborovskii	109678	S	2	0	2	0.00000
+Nannospalax galili	1026970	S	1	0	1	0.00000
+Jaculus jaculus	51337	S	3	0	3	0.00000
+Heterocephalus glaber	10181	S	59	0	59	0.00004
+Fukomys damarensis	885580	S	1	0	1	0.00000
+Cavia porcellus	10141	S	2	0	2	0.00000
+Chinchilla lanigera	34839	S	1	0	1	0.00000
+Sciurus carolinensis	30640	S	13	3	16	0.00001
+Sciurus vulgaris	55149	S	7	1	8	0.00001
+Marmota monax	9995	S	1	2	3	0.00000
+Ictidomys tridecemlineatus	43179	S	3	2	5	0.00000
+Dipodomys spectabilis	105255	S	1	3	4	0.00000
+Perognathus longimembris	38669	S	1	0	1	0.00000
+Oryctolagus cuniculus	9986	S	6	0	6	0.00000
+Ochotona curzoniae	130825	S	1	0	1	0.00000
+Homo sapiens	9606	S	191	254	445	0.00031
+Pan troglodytes	9598	S	7	2	9	0.00001
+Gorilla gorilla	9593	S	1	0	1	0.00000
+Pongo abelii	9601	S	1	0	1	0.00000
+Nomascus leucogenys	61853	S	2	1	3	0.00000
+Macaca mulatta	9544	S	4	1	5	0.00000
+Macaca nemestrina	9545	S	1	1	2	0.00000
+Macaca thibetana	54602	S	1	1	2	0.00000
+Chlorocebus sabaeus	60711	S	1	0	1	0.00000
+Rhinopithecus bieti	61621	S	2	1	3	0.00000
+Trachypithecus francoisi	54180	S	1	0	1	0.00000
+Cebus imitator	2715852	S	1	1	2	0.00000
+Callithrix jacchus	9483	S	1	0	1	0.00000
+Aotus nancymaae	37293	S	1	0	1	0.00000
+Carlito syrichta	1868482	S	3	0	3	0.00000
+Microcebus murinus	30608	S	2	0	2	0.00000
+Lemur catta	9447	S	1	0	1	0.00000
+Propithecus coquereli	379532	S	1	0	1	0.00000
+Otolemur crassicaudatus	9463	S	2	0	2	0.00000
+Otolemur garnettii	30611	S	2	0	2	0.00000
+Tupaia belangeri	37347	S	2	0	2	0.00000
+Canis lupus	9612	S	76	2	78	0.00005
+Meles meles	9662	S	30	1	31	0.00002
+Lutra lutra	9657	S	24	2	26	0.00002
+Neogale vison	452646	S	1	0	1	0.00000
+Zalophus californianus	9704	S	3	2	5	0.00000
+Callorhinus ursinus	34884	S	2	1	3	0.00000
+Leptonychotes weddellii	9713	S	1	0	1	0.00000
+Phoca vitulina	9720	S	1	0	1	0.00000
+Neomonachus schauinslandi	29088	S	1	0	1	0.00000
+Ursus arctos	9644	S	1	0	1	0.00000
+Ailuropoda melanoleuca	9646	S	1	0	1	0.00000
+Felis catus	9685	S	25	3	28	0.00002
+Leopardus geoffroyi	46844	S	2	0	2	0.00000
+Puma yagouaroundi	1608482	S	1	0	1	0.00000
+Panthera leo	9689	S	1	0	1	0.00000
+Panthera tigris	9694	S	1	0	1	0.00000
+Suricata suricatta	37032	S	3	0	3	0.00000
+Hyaena hyaena	95912	S	2	0	2	0.00000
+Bos taurus	9913	S	8	14	22	0.00002
+Bos mutus	72004	S	6	1	7	0.00000
+Bos gaurus x Bos taurus	1705790	S	1	5	6	0.00000
+Bos indicus	9915	S	1	7	8	0.00001
+Bison bison	9901	S	1	0	1	0.00000
+Ovis canadensis	37174	S	19	3	22	0.00002
+Ovis aries	9940	S	1	1	2	0.00000
+Oryx dammah	59534	S	1	0	1	0.00000
+Odocoileus virginianus	9874	S	2	0	2	0.00000
+Orcinus orca	9733	S	18	0	18	0.00001
+Tursiops truncatus	9739	S	1	0	1	0.00000
+Monodon monoceros	40151	S	2	1	3	0.00000
+Delphinapterus leucas	9749	S	1	0	1	0.00000
+Physeter catodon	9755	S	3	0	3	0.00000
+Phocoena sinus	42100	S	1	0	1	0.00000
+Balaenoptera acutorostrata	9767	S	1	0	1	0.00000
+Phacochoerus africanus	41426	S	2	0	2	0.00000
+Camelus bactrianus	9837	S	2	2	4	0.00000
+Vicugna pacos	30538	S	2	0	2	0.00000
+Pipistrellus pipistrellus	59474	S	27	1	28	0.00002
+Pipistrellus kuhlii	59472	S	1	0	1	0.00000
+Myotis davidii	225400	S	2	1	3	0.00000
+Myotis lucifugus	59463	S	1	1	2	0.00000
+Miniopterus natalensis	291302	S	2	1	3	0.00000
+Artibeus jamaicensis	9417	S	2	1	3	0.00000
+Desmodus rotundus	9430	S	2	1	3	0.00000
+Phyllostomus discolor	89673	S	1	1	2	0.00000
+Pteropus alecto	9402	S	5	2	7	0.00000
+Rousettus aegyptiacus	9407	S	4	1	5	0.00000
+Erinaceus europaeus	9365	S	5	0	5	0.00000
+Sorex araneus	42254	S	3	0	3	0.00000
+Suncus etruscus	109475	S	2	0	2	0.00000
+Condylura cristata	143302	S	1	0	1	0.00000
+Talpa occidentalis	50954	S	1	0	1	0.00000
+Equus caballus	9796	S	2	3	5	0.00000
+Equus quagga	89248	S	1	1	2	0.00000
+Ceratotherium simum	9807	S	2	0	2	0.00000
+Manis javanica	9974	S	2	0	2	0.00000
+Manis pentadactyla	143292	S	2	0	2	0.00000
+Loxodonta africana	9785	S	2	1	3	0.00000
+Elephas maximus	9783	S	1	0	1	0.00000
+Choloepus didactylus	27675	S	2	0	2	0.00000
+Dasypus novemcinctus	9361	S	1	0	1	0.00000
+Monodelphis domestica	13616	S	5	2	7	0.00000
+Gracilinanus agilis	191870	S	1	0	1	0.00000
+Sarcophilus harrisii	9305	S	7	0	7	0.00000
+Vombatus ursinus	29139	S	3	0	3	0.00000
+Phascolarctos cinereus	38626	S	2	0	2	0.00000
+Trichosurus vulpecula	9337	S	1	0	1	0.00000
+Dromiciops gliroides	33562	S	2	0	2	0.00000
+Ornithorhynchus anatinus	9258	S	4	0	4	0.00000
+Tachyglossus aculeatus	9261	S	1	0	1	0.00000
+Geotrypetes seraphini	260995	S	20	0	20	0.00001
+Rhinatrema bivittatum	194408	S	15	0	15	0.00001
+Microcaecilia unicolor	1415580	S	4	0	4	0.00000
+Ichthyophis bannanicus	8453	S	2	0	2	0.00000
+Nanorana parkeri	125878	S	4	0	4	0.00000
+Rana temporaria	8407	S	2	0	2	0.00000
+Cornufer guentheri	58517	S	1	2	3	0.00000
+Bufo bufo	8384	S	1	0	1	0.00000
+Adenomera martinezi	1302379	S	1	0	1	0.00000
+Protopterus annectens	7888	S	6	0	6	0.00000
+Epinephelus moara	300413	S	1	4	5	0.00000
+Plectropomus leopardus	160734	S	24	1	25	0.00002
+Cottoperca gobio	56716	S	34	1	35	0.00002
+Pseudochaenichthys georgianus	52239	S	22	0	22	0.00002
+Notothenia coriiceps	8208	S	1	0	1	0.00000
+Trematomus bernacchii	40690	S	1	0	1	0.00000
+Gymnodraco acuticeps	8218	S	1	0	1	0.00000
+Pholis gunnellus	56726	S	18	0	18	0.00001
+Anarrhichthys ocellatus	433405	S	3	0	3	0.00000
+Taurulus bubalis	61643	S	15	0	15	0.00001
+Cyclopterus lumpus	8103	S	4	0	4	0.00000
+Gasterosteus aculeatus	69293	S	2	0	2	0.00000
+Pungitius pungitius	134920	S	1	0	1	0.00000
+Perca fluviatilis	8168	S	3	0	3	0.00000
+Etheostoma cragini	417921	S	2	1	3	0.00000
+Sander lucioperca	283035	S	1	0	1	0.00000
+Sebastes umbrosus	72105	S	3	0	3	0.00000
+Sparus aurata	8175	S	31	1	32	0.00002
+Acanthopagrus latus	8177	S	27	1	28	0.00002
+Larimichthys crocea	215358	S	17	1	18	0.00001
+Nibea albiflora	240163	S	12	0	12	0.00001
+Dicentrarchus labrax	13489	S	7	1	8	0.00001
+Scatophagus argus	75038	S	2	0	2	0.00000
+Lateolabrax maculatus	315492	S	25	1	26	0.00002
+Takifugu rubripes	31033	S	10	0	10	0.00001
+Notolabrus celidotus	1203425	S	5	0	5	0.00000
+Labrus bergylta	56723	S	4	0	4	0.00000
+Cheilinus undulatus	241271	S	1	0	1	0.00000
+Micropterus dolomieu	147949	S	2	1	3	0.00000
+Micropterus salmoides	27706	S	1	0	1	0.00000
+Siniperca chuatsi	119488	S	3	1	4	0.00000
+Chelmon rostratus	109905	S	2	0	2	0.00000
+Neostethus bicornis	300306	S	24	0	24	0.00002
+Telmatherina bonti	446457	S	23	0	23	0.00002
+Melanotaenia boesemani	1250792	S	6	0	6	0.00000
+Poecilia reticulata	8081	S	25	0	25	0.00002
+Poecilia formosa	48698	S	1	1	2	0.00000
+Poecilia latipinna	48699	S	1	0	1	0.00000
+Poecilia mexicana	48701	S	1	0	1	0.00000
+Xiphophorus maculatus	8083	S	1	1	2	0.00000
+Fundulus heteroclitus	8078	S	2	0	2	0.00000
+Lucania goodei	232977	S	2	0	2	0.00000
+Girardinichthys multiradiatus	208333	S	3	0	3	0.00000
+Nothobranchius furzeri	105023	S	3	0	3	0.00000
+Austrofundulus limnaeus	52670	S	1	0	1	0.00000
+Kryptolebias marmoratus	37003	S	1	0	1	0.00000
+Oryzias latipes	8090	S	37	0	37	0.00003
+Oryzias melastigma	30732	S	1	0	1	0.00000
+Gouania willdenowi	441366	S	21	0	21	0.00001
+Salarias fasciatus	181472	S	18	0	18	0.00001
+Parambassis ranga	210632	S	12	0	12	0.00001
+Acanthochromis polyacanthus	80966	S	1	0	1	0.00000
+Mugil cephalus	48193	S	1	3	4	0.00000
+Echeneis naucrates	173247	S	28	0	28	0.00002
+Trachurus trachurus	36212	S	19	0	19	0.00001
+Solea senegalensis	28829	S	17	0	17	0.00001
+Scophthalmus maximus	52904	S	8	0	8	0.00001
+Cynoglossus semilaevis	244447	S	3	0	3	0.00000
+Paralichthys olivaceus	8255	S	1	1	2	0.00000
+Lates calcarifer	8187	S	2	0	2	0.00000
+Toxotes jaculatrix	941984	S	2	0	2	0.00000
+Xiphias gladius	8245	S	2	0	2	0.00000
+Mastacembelus armatus	205130	S	25	0	25	0.00002
+Monopterus albus	43700	S	2	0	2	0.00000
+Anabas testudineus	64144	S	16	0	16	0.00001
+Betta splendens	158456	S	11	0	11	0.00001
+Sphaeramia orbicularis	375764	S	42	0	42	0.00003
+Boleophthalmus pectinirostris	150288	S	1	0	1	0.00000
+Thunnus maccoyii	8240	S	8	8	16	0.00001
+Thunnus albacares	8236	S	6	6	12	0.00001
+Thalassophryne amazonica	390379	S	26	0	26	0.00002
+Syngnathus acus	161584	S	8	0	8	0.00001
+Syngnathus scovelli	161590	S	1	0	1	0.00000
+Hippocampus comes	109280	S	1	0	1	0.00000
+Myripristis murdjan	586833	S	44	2	46	0.00003
+Salmo trutta	8032	S	51	6	57	0.00004
+Salmo salar	8030	S	1	0	1	0.00000
+Oncorhynchus keta	8018	S	2	0	2	0.00000
+Oncorhynchus gorbuscha	8017	S	1	0	1	0.00000
+Oncorhynchus kisutch	8019	S	1	0	1	0.00000
+Oncorhynchus tshawytscha	74940	S	1	0	1	0.00000
+Salvelinus namaycush	8040	S	1	0	1	0.00000
+Coregonus sp. 'balchen'	861768	S	40	15	55	0.00004
+Esox lucius	8010	S	3	0	3	0.00000
+Hypomesus transpacificus	137520	S	7	0	7	0.00000
+Danio rerio	7955	S	45	2	47	0.00003
+Danio aesculapii	1142201	S	41	3	44	0.00003
+Danio kyathit	242068	S	23	2	25	0.00002
+Barbus barbus	40830	S	32	8	40	0.00003
+Labeo rohita	84645	S	3	2	5	0.00000
+Puntigrus tetrazona	1606681	S	1	0	1	0.00000
+Megalobrama amblycephala	75352	S	5	2	7	0.00000
+Pimephales promelas	90988	S	2	0	2	0.00000
+Barbatula barbatula	135647	S	18	0	18	0.00001
+Silurus aristotelis	933932	S	22	2	24	0.00002
+Silurus meridionalis	175797	S	1	0	1	0.00000
+Pangasianodon hypophthalmus	310915	S	4	1	5	0.00000
+Ictalurus punctatus	7998	S	2	0	2	0.00000
+Tachysurus fulvidraco	1234273	S	1	0	1	0.00000
+Electrophorus electricus	8005	S	6	0	6	0.00000
+Pygocentrus nattereri	42514	S	2	0	2	0.00000
+Colossoma macropomum	42526	S	1	0	1	0.00000
+Astyanax mexicanus	7994	S	1	0	1	0.00000
+Brycon falcatus	1529838	S	1	0	1	0.00000
+Denticeps clupeoides	299321	S	10	0	10	0.00001
+Scleropages formosus	113540	S	43	0	43	0.00003
+Brienomyrus brachyistius	42636	S	2	1	3	0.00000
+Paramormyrops kingsleyae	1676925	S	1	0	1	0.00000
+Anguilla anguilla	7936	S	3	2	5	0.00000
+Megalops cyprinoides	118141	S	2	0	2	0.00000
+Lepisosteus oculatus	7918	S	4	0	4	0.00000
+Acipenser ruthenus	7906	S	32	1	33	0.00002
+Polyodon spathula	7913	S	4	0	4	0.00000
+Polypterus senegalus	55291	S	3	1	4	0.00000
+Erpetoichthys calabaricus	27687	S	3	0	3	0.00000
+Rhincodon typus	259920	S	7	0	7	0.00000
+Chiloscyllium plagiosum	36176	S	4	0	4	0.00000
+Stegostoma fasciatum	378071	S	2	0	2	0.00000
+Scyliorhinus canicula	7830	S	10	0	10	0.00001
+Carcharodon carcharias	13397	S	3	0	3	0.00000
+Amblyraja radiata	386614	S	2	0	2	0.00000
+Callorhinchus milii	7868	S	2	0	2	0.00000
+Petromyzon marinus	7757	S	5	0	5	0.00000
+Branchiostoma lanceolatum	7740	S	22	0	22	0.00002
+Branchiostoma floridae	7739	S	6	0	6	0.00000
+Aplidium turbinatum	2771288	S	16	0	16	0.00001
+Styela clava	7725	S	2	0	2	0.00000
+Ciona intestinalis	7719	S	1	0	1	0.00000
+Oikopleura dioica	34765	S	3	0	3	0.00000
+Acanthaster planci	133434	S	3	0	3	0.00000
+Patiria miniata	46514	S	2	0	2	0.00000
+Lytechinus variegatus	7654	S	2	0	2	0.00000
+Strongylocentrotus purpuratus	7668	S	1	0	1	0.00000
+Anneissia japonica	1529436	S	2	0	2	0.00000
+Xestia sexstrigata	997545	S	18	2	20	0.00001
+Xestia c-nigrum	987431	S	14	1	15	0.00001
+Xestia xanthographa	988049	S	12	1	13	0.00001
+Noctua pronuba	214277	S	11	1	12	0.00001
+Noctua fimbriata	753202	S	11	1	12	0.00001
+Noctua janthe	987995	S	11	2	13	0.00001
+Diarsia rubi	987925	S	18	3	21	0.00001
+Agrotis puta	1857961	S	13	0	13	0.00001
+Ochropleura plecta	320037	S	11	1	12	0.00001
+Apamea sordens	689061	S	13	1	14	0.00001
+Apamea monoglypha	875885	S	8	1	9	0.00001
+Hydraecia micacea	214171	S	13	2	15	0.00001
+Amphipoea oculea	987876	S	9	1	10	0.00001
+Luperina testacea	988174	S	4	0	4	0.00000
+Caradrina clavipalpis	987895	S	14	0	14	0.00001
+Mythimna impura	987985	S	32	3	35	0.00002
+Mythimna albipuncta	987983	S	15	2	17	0.00001
+Mythimna ferrago	997540	S	13	2	15	0.00001
+Tholera decimalis	988041	S	30	3	33	0.00002
+Hecatera dysodea	988125	S	17	1	18	0.00001
+Mamestra brassicae	55057	S	16	1	17	0.00001
+Anorthoa munda	988060	S	13	1	14	0.00001
+Phlogophora meticulosa	875884	S	13	1	14	0.00001
+Euplexia lucipara	987933	S	13	1	14	0.00001
+Agrochola macilenta	987872	S	19	2	21	0.00001
+Agrochola circellaris	987866	S	14	2	16	0.00001
+Aporophyla lueneburgensis	1337163	S	18	3	21	0.00001
+Atethmia centrago	988071	S	17	3	20	0.00001
+Dryobotodes eremita	988106	S	15	2	17	0.00001
+Mesoligia furuncula	997551	S	14	2	16	0.00001
+Brachylomia viminalis	988081	S	12	2	14	0.00001
+Omphaloscelis lunosa	2492375	S	10	1	11	0.00001
+Griposia aprilina	1101106	S	9	1	10	0.00001
+Chrysodeixis includens	689277	S	24	0	24	0.00002
+Diachrysia chrysitis	179674	S	18	1	19	0.00001
+Autographa pulchrina	987893	S	11	1	12	0.00001
+Autographa gamma	254363	S	5	0	5	0.00000
+Trichoplusia ni	7111	S	7	0	7	0.00000
+Amphipyra tragopoginis	689058	S	15	1	16	0.00001
+Amphipyra berbera	987877	S	9	0	9	0.00001
+Spodoptera littoralis	7109	S	10	0	10	0.00001
+Spodoptera exigua	7107	S	6	0	6	0.00000
+Spodoptera frugiperda	7108	S	4	3	7	0.00000
+Spodoptera litura	69820	S	2	1	3	0.00000
+Allophyes oxyacanthae	988056	S	15	0	15	0.00001
+Xylocampa areola	1870430	S	9	0	9	0.00001
+Cosmia pyralina	987909	S	19	9	28	0.00002
+Cosmia trapezina	116126	S	18	4	22	0.00002
+Eupsilia transversa	116130	S	15	1	16	0.00001
+Acronicta aceris	987859	S	18	1	19	0.00001
+Acronicta psi	987865	S	8	0	8	0.00001
+Craniophora ligustri	938226	S	13	0	13	0.00001
+Protodeltote pygarga	708063	S	15	0	15	0.00001
+Helicoverpa zea	7113	S	7	0	7	0.00000
+Helicoverpa armigera	29058	S	1	0	1	0.00000
+Cybosia mesomella	987918	S	31	1	32	0.00002
+Eilema sororculum	987424	S	21	2	23	0.00002
+Eilema depressum	987419	S	8	0	8	0.00001
+Miltochrista miniata	987980	S	23	1	24	0.00002
+Spilosoma lubricipeda	875880	S	21	0	21	0.00001
+Spilarctia lutea	875881	S	18	1	19	0.00001
+Phragmatobia fuliginosa	214311	S	17	0	17	0.00001
+Euclidia mi	938167	S	35	0	35	0.00002
+Catocala fraxini	423510	S	25	0	25	0.00002
+Laspeyria flexula	938238	S	13	0	13	0.00001
+Lymantria monacha	78897	S	16	1	17	0.00001
+Orgyia antiqua	335469	S	11	0	11	0.00001
+Euproctis similis	987935	S	11	1	12	0.00001
+Hypena proboscidalis	753189	S	17	0	17	0.00001
+Schrankia costaestrigalis	411963	S	11	0	11	0.00001
+Herminia tarsipennalis	987440	S	24	5	29	0.00002
+Pheosia tremula	988019	S	8	2	10	0.00001
+Pheosia gnoma	988018	S	5	1	6	0.00000
+Notodonta ziczac	988002	S	6	0	6	0.00000
+Notodonta dromedarius	753204	S	4	0	4	0.00000
+Clostera curtula	987902	S	18	0	18	0.00001
+Furcula furcula	987943	S	17	1	18	0.00001
+Ptilodon capucinus	987449	S	17	0	17	0.00001
+Phalera bucephala	753216	S	17	0	17	0.00001
+Nycteola revayana	988004	S	21	2	23	0.00002
+Meganola albula	987977	S	11	0	11	0.00001
+Pararge aegeria	116150	S	21	1	22	0.00002
+Lasiommata megera	111917	S	15	0	15	0.00001
+Maniola hyperantus	2795564	S	18	0	18	0.00001
+Maniola jurtina	191418	S	5	0	5	0.00000
+Bicyclus anynana	110368	S	13	0	13	0.00001
+Melanargia galathea	111923	S	9	0	9	0.00001
+Hipparchia semele	111912	S	9	0	9	0.00001
+Erebia ligea	111903	S	10	2	12	0.00001
+Erebia aethiops	447833	S	5	0	5	0.00000
+Nymphalis io	171585	S	23	2	25	0.00002
+Nymphalis urticae	111881	S	8	0	8	0.00001
+Nymphalis polychloros	171594	S	6	0	6	0.00000
+Vanessa atalanta	42275	S	13	2	15	0.00001
+Vanessa cardui	171605	S	11	0	11	0.00001
+Melitaea cinxia	113334	S	16	2	18	0.00001
+Mellicta athalia	113330	S	10	1	11	0.00001
+Fabriciana adippe	405009	S	15	0	15	0.00001
+Brenthis ino	405034	S	8	0	8	0.00001
+Heliconius sara	33443	S	17	0	17	0.00001
+Melinaea marsaeus	331299	S	7	5	12	0.00001
+Melinaea menophilus	304554	S	2	1	3	0.00000
+Danaus plexippus	13037	S	4	0	4	0.00000
+Limenitis camilla	270466	S	13	0	13	0.00001
+Glaucopsyche alexis	203781	S	24	2	26	0.00002
+Celastrina argiolus	203782	S	15	0	15	0.00001
+Aricia artaxerxes	91738	S	8	3	11	0.00001
+Aricia agestis	91739	S	3	0	3	0.00000
+Polyommatus icarus	265386	S	13	2	15	0.00001
+Lysandra bellargus	138070	S	4	2	6	0.00000
+Lysandra coridon	268709	S	3	2	5	0.00000
+Cyaniris semiargus	988025	S	11	2	13	0.00001
+Plebejus argus	242267	S	6	0	6	0.00000
+Lycaena phlaeas	282391	S	12	0	12	0.00001
+Pieris napi	78633	S	19	2	21	0.00001
+Pieris rapae	64459	S	7	1	8	0.00001
+Pieris brassicae	7116	S	3	0	3	0.00000
+Aporia crataegi	129397	S	16	0	16	0.00001
+Anthocharis cardamines	227532	S	14	0	14	0.00001
+Leptidea sinapis	189913	S	23	1	24	0.00002
+Colias croceus	72248	S	21	2	23	0.00002
+Iphiclides podalirius	110791	S	11	0	11	0.00001
+Papilio machaon	76193	S	7	0	7	0.00000
+Papilio xuthus	66420	S	1	0	1	0.00000
+Eupithecia centaureata	934844	S	15	0	15	0.00001
+Eupithecia exiguata	934847	S	15	0	15	0.00001
+Eupithecia vulgata	934866	S	13	0	13	0.00001
+Eupithecia abbreviata	934840	S	9	1	10	0.00001
+Eupithecia dodoneata	934845	S	8	1	9	0.00001
+Gymnoscelis rufifasciata	934940	S	22	1	23	0.00002
+Philereme vetulata	934888	S	17	2	19	0.00001
+Operophtera brumata	104452	S	13	0	13	0.00001
+Xanthorhoe spadicearia	934904	S	13	0	13	0.00001
+Lobophora halterata	934876	S	12	0	12	0.00001
+Ecliptopera silaceata	104457	S	11	0	11	0.00001
+Thera britannica	987013	S	11	0	11	0.00001
+Hydriomena furcata	104460	S	10	0	10	0.00001
+Chloroclysta siterata	934828	S	7	0	7	0.00000
+Eulithis prunata	934839	S	6	0	6	0.00000
+Electrophaes corylata	934936	S	6	0	6	0.00000
+Aplocera efformata	934917	S	5	0	5	0.00000
+Ennomos fuscantarius	722662	S	26	0	26	0.00002
+Ennomos quercinarius	875883	S	7	0	7	0.00000
+Agriopis marginaria	190331	S	13	1	14	0.00001
+Selenia dentaria	934894	S	23	1	24	0.00002
+Opisthograptis luteolata	934882	S	14	0	14	0.00001
+Peribatodes rhomboidaria	190356	S	14	0	14	0.00001
+Crocallis elinguaria	934829	S	13	0	13	0.00001
+Ligdia adustata	934875	S	12	0	12	0.00001
+Macaria notata	688445	S	11	0	11	0.00001
+Hylaea fasciaria	722673	S	11	0	11	0.00001
+Biston betularia	82595	S	10	0	10	0.00001
+Apeira syringaria	934915	S	10	0	10	0.00001
+Erannis defoliaria	104474	S	9	0	9	0.00001
+Campaea margaritaria	934813	S	6	0	6	0.00000
+Hemistola chrysoprasaria	934942	S	21	0	21	0.00001
+Alsophila aescularia	104486	S	20	0	20	0.00001
+Idaea aversata	104447	S	11	0	11	0.00001
+Agriphila geniculea	1660579	S	23	2	25	0.00002
+Agriphila tristella	1594226	S	13	1	14	0.00001
+Chrysoteuchia culmella	1594250	S	34	0	34	0.00002
+Chilo suppressalis	168631	S	22	3	25	0.00002
+Calamotropha paludella	1371681	S	21	9	30	0.00002
+Diatraea saccharalis	40085	S	14	0	14	0.00001
+Acentria ephemerella	1666818	S	17	0	17	0.00001
+Parapoynx stratiotata	1594321	S	10	0	10	0.00001
+Ostrinia furnacalis	93504	S	2	0	2	0.00000
+Hypsopygia costalis	1101110	S	21	0	21	0.00001
+Endotricha flammealis	1101095	S	15	0	15	0.00001
+Acrobasis suavella	1857951	S	16	1	17	0.00001
+Apomyelois bistriatella	1666458	S	9	0	9	0.00001
+Galleria mellonella	7137	S	3	0	3	0.00000
+Thymelicus sylvestris	272628	S	19	0	19	0.00001
+Hesperia comma	291688	S	16	0	16	0.00001
+Ochlodes sylvanus	876063	S	9	0	9	0.00001
+Pyrgus malvae	218760	S	21	0	21	0.00001
+Erynnis tages	520884	S	7	0	7	0.00000
+Carterocephalus palaemon	218720	S	14	0	14	0.00001
+Deilephila porcellus	644661	S	14	0	14	0.00001
+Hemaris fuciformis	987953	S	10	0	10	0.00001
+Mimas tiliae	522848	S	12	0	12	0.00001
+Laothoe populi	522836	S	11	0	11	0.00001
+Manduca sexta	7130	S	4	0	4	0.00000
+Bombyx mori	7091	S	12	3	15	0.00001
+Stenoptilia bipunctidactyla	1660692	S	24	0	24	0.00002
+Marasmarcha lunaedactyla	1594453	S	21	0	21	0.00001
+Emmelina monodactyla	467774	S	9	0	9	0.00001
+Habrosyne pyritoides	721137	S	13	0	13	0.00001
+Thyatira batis	721163	S	11	0	11	0.00001
+Drepana falcataria	104428	S	8	0	8	0.00001
+Watsonalla binaria	721165	S	5	0	5	0.00000
+Apotomis turbidana	1100916	S	12	6	18	0.00001
+Apotomis betuletana	1100915	S	10	6	16	0.00001
+Hedya salicella	1869985	S	17	0	17	0.00001
+Eudemis profundana	1100989	S	15	0	15	0.00001
+Pammene aurita	1870148	S	14	1	15	0.00001
+Pammene fasciana	1101027	S	13	0	13	0.00001
+Grapholita molesta	192188	S	12	0	12	0.00001
+Cydia splendana	1100963	S	6	0	6	0.00000
+Leguminivora glycinivorella	1035111	S	1	0	1	0.00000
+Acleris sparsana	758717	S	15	2	17	0.00001
+Acleris literana	1100899	S	10	1	11	0.00001
+Acleris emargana	758706	S	9	0	9	0.00001
+Pandemis cinnamomeana	753214	S	21	0	21	0.00001
+Sesia apiformis	748215	S	28	9	37	0.00003
+Sesia bembeciformis	287197	S	9	1	10	0.00001
+Synanthedon vespiformis	1660703	S	6	0	6	0.00000
+Synanthedon formicaeformis	301036	S	5	0	5	0.00000
+Synanthedon myopaeformis	1108570	S	5	0	5	0.00000
+Synanthedon andrenaeformis	1108569	S	4	0	4	0.00000
+Bembecia ichneumoniformis	301037	S	12	0	12	0.00001
+Apoda limacodes	287200	S	19	0	19	0.00001
+Zygaena filipendulae	287375	S	15	0	15	0.00001
+Carposina sasakii	252295	S	11	0	11	0.00001
+Zeuzera pyrina	1101072	S	9	0	9	0.00001
+Agonopterix arenella	1594222	S	15	1	16	0.00001
+Agonopterix subpropinquella	1857958	S	12	1	13	0.00001
+Carcina quercana	116121	S	10	0	10	0.00001
+Blastobasis lacticolella	2561016	S	11	0	11	0.00001
+Blastobasis adustella	1869501	S	11	0	11	0.00001
+Esperia sulphurella	2870497	S	16	0	16	0.00001
+Ypsolopha scabrella	1870435	S	20	1	21	0.00001
+Ypsolopha sequella	1870436	S	14	0	14	0.00001
+Yponomeuta sedellus	263933	S	13	0	13	0.00001
+Plutella xylostella	51655	S	8	4	12	0.00001
+Tinea semifulvella	1101063	S	17	0	17	0.00001
+Tinea trinotella	1594354	S	12	0	12	0.00001
+Incurvaria masculella	101737	S	15	1	16	0.00001
+Limnephilus rhombicus	692089	S	34	4	38	0.00003
+Limnephilus lunatus	1218281	S	15	1	16	0.00001
+Limnephilus marmoratus	1271730	S	15	2	17	0.00001
+Glyphotaelius pellucidus	1271742	S	18	0	18	0.00001
+Cerceris rybyensis	1167272	S	17	0	17	0.00001
+Mimumesa dahlbomi	2495085	S	8	0	8	0.00001
+Pemphredon lugubris	2495172	S	7	0	7	0.00000
+Ectemnius lituratus	2495015	S	7	0	7	0.00000
+Ectemnius continuus	1126389	S	4	0	4	0.00000
+Nysson spinosus	2495127	S	8	0	8	0.00001
+Bombus hypnorum	30191	S	5	3	8	0.00001
+Bombus pratorum	30194	S	3	1	4	0.00000
+Bombus pascuorum	65598	S	6	2	8	0.00001
+Bombus campestris	207624	S	3	1	4	0.00000
+Bombus sylvestris	30201	S	2	0	2	0.00000
+Bombus hortorum	85660	S	3	0	3	0.00000
+Bombus terrestris	30195	S	2	1	3	0.00000
+Apis cerana	7461	S	2	1	3	0.00000
+Apis mellifera	7460	S	1	0	1	0.00000
+Frieseomelitta varia	561572	S	2	0	2	0.00000
+Eufriesea mexicana	516756	S	1	0	1	0.00000
+Nomada fabriciana	601510	S	4	0	4	0.00000
+Lasioglossum morio	88514	S	9	1	10	0.00001
+Lasioglossum lativentre	88531	S	6	0	6	0.00000
+Lasioglossum pauxillum	88516	S	3	0	3	0.00000
+Seladonia tumulorum	115100	S	1	0	1	0.00000
+Sphecodes monilicornis	1190790	S	16	1	17	0.00001
+Megalopta genalis	115081	S	2	0	2	0.00000
+Nomia melanderi	2448451	S	1	0	1	0.00000
+Dufourea novaeangliae	178035	S	1	0	1	0.00000
+Andrena hattorfiana	1126402	S	9	2	11	0.00001
+Andrena minutula	1190802	S	5	1	6	0.00000
+Andrena fulva	1411667	S	6	2	8	0.00001
+Andrena haemorrhoa	444401	S	4	1	5	0.00000
+Andrena dorsata	1411666	S	2	0	2	0.00000
+Megachile willughbiella	481575	S	9	1	10	0.00001
+Megachile ligniseca	1542540	S	5	0	5	0.00000
+Megachile rotundata	143995	S	2	0	2	0.00000
+Stelis phaeoptera	2249760	S	8	0	8	0.00001
+Osmia bicornis	1437190	S	1	2	3	0.00000
+Colletes gigas	935657	S	1	0	1	0.00000
+Cyphomyrmex costatus	456900	S	3	0	3	0.00000
+Trachymyrmex zeteki	64791	S	1	0	1	0.00000
+Trachymyrmex cornetzi	471704	S	1	0	1	0.00000
+Temnothorax curvispinosus	300111	S	4	0	4	0.00000
+Tetramorium bicarinatum	219812	S	4	0	4	0.00000
+Vollenhovia emeryi	411798	S	3	0	3	0.00000
+Monomorium pharaonis	307658	S	1	0	1	0.00000
+Solenopsis invicta	13686	S	1	1	2	0.00000
+Pogonomyrmex barbatus	144034	S	1	0	1	0.00000
+Odontomachus brunneus	486640	S	6	1	7	0.00000
+Cataglyphis hispanica	1086592	S	2	0	2	0.00000
+Camponotus floridanus	104421	S	2	0	2	0.00000
+Nylanderia fulva	613905	S	1	0	1	0.00000
+Pseudomyrmex gracilis	219809	S	2	0	2	0.00000
+Ooceraea biroi	2015173	S	2	0	2	0.00000
+Linepithema humile	83485	S	1	0	1	0.00000
+Dolichovespula media	881891	S	4	1	5	0.00000
+Dolichovespula saxonica	85443	S	2	1	3	0.00000
+Dolichovespula sylvestris	85444	S	2	1	3	0.00000
+Vespa velutina	202808	S	4	1	5	0.00000
+Vespa crabro	7445	S	3	1	4	0.00000
+Vespula germanica	30212	S	3	1	4	0.00000
+Ancistrocerus nigricornis	76990	S	11	2	13	0.00001
+Polistes canadensis	91411	S	1	0	1	0.00000
+Anoplius nigerrimus	1667466	S	6	0	6	0.00000
+Tiphia femorata	330862	S	3	0	3	0.00000
+Amblyteles armatorius	231887	S	52	5	57	0.00004
+Ichneumon xanthorius	2795680	S	3	0	3	0.00000
+Alloplasta piceator	2870495	S	13	1	14	0.00001
+Ophion luteus	1539398	S	9	1	10	0.00001
+Venturia canescens	32260	S	8	0	8	0.00001
+Netelia dilatata	2866289	S	6	0	6	0.00000
+Buathra laborator	1419289	S	6	0	6	0.00000
+Fopius arisanus	64838	S	3	0	3	0.00000
+Diachasma alloeum	454923	S	3	0	3	0.00000
+Aphidius gifuensis	684658	S	4	0	4	0.00000
+Microctonus brassicae	2738948	S	3	0	3	0.00000
+Chelonus insularis	460826	S	3	0	3	0.00000
+Cotesia glomerata	32391	S	1	0	1	0.00000
+Belonocnema kinseyi	2817044	S	4	0	4	0.00000
+Leptopilina boulardi	63433	S	2	0	2	0.00000
+Leptopilina heterotoma	63436	S	1	0	1	0.00000
+Copidosoma floridanum	29053	S	1	0	1	0.00000
+Tenthredo notha	362091	S	10	0	10	0.00001
+Tenthredo mesomela	222778	S	4	0	4	0.00000
+Rhogogaster chlorosoma	1385029	S	10	0	10	0.00001
+Euura vittata group sp. ZMUO 034495	2888149	S	1	0	1	0.00000
+Diprion similis	362088	S	4	0	4	0.00000
+Neodiprion virginianus	2961670	S	1	1	2	0.00000
+Athalia rosae	37344	S	2	0	2	0.00000
+Cephus cinctus	211228	S	2	0	2	0.00000
+Orussus abietinus	222816	S	2	0	2	0.00000
+Eristalis pertinax	1572519	S	11	0	11	0.00001
+Eristalis tenax	198635	S	9	0	9	0.00001
+Eristalis arbustorum	1124515	S	7	0	7	0.00000
+Eristalinus sepulchralis	2725509	S	27	0	27	0.00002
+Cheilosia pagana	273407	S	8	0	8	0.00001
+Cheilosia urbana	173985	S	5	0	5	0.00000
+Cheilosia vulpina	273409	S	5	0	5	0.00000
+Rhingia campestris	226161	S	2	0	2	0.00000
+Xylota sylvarum	374264	S	8	0	8	0.00001
+Blera fallax	226147	S	7	0	7	0.00000
+Syritta pipiens	34682	S	2	0	2	0.00000
+Criorhina berberina	2663927	S	1	0	1	0.00000
+Scaeva pyrastri	219539	S	4	0	4	0.00000
+Dasysyrphus albostriatus	414801	S	3	1	4	0.00000
+Epistrophella euchroma	414814	S	3	0	3	0.00000
+Xanthogramma pedissequum	414876	S	2	0	2	0.00000
+Episyrphus balteatus	286459	S	2	0	2	0.00000
+Leucozona laternaria	323312	S	2	0	2	0.00000
+Sphaerophoria taeniata	2735243	S	1	0	1	0.00000
+Eupeodes latifasciatus	1124558	S	1	0	1	0.00000
+Epistrophe grossulariae	1352479	S	1	0	1	0.00000
+Platycheirus albimanus	414846	S	2	1	3	0.00000
+Drosophila melanogaster	7227	S	8	2	10	0.00001
+Drosophila erecta	7220	S	1	0	1	0.00000
+Drosophila sechellia	7238	S	1	0	1	0.00000
+Drosophila teissieri	7243	S	1	0	1	0.00000
+Drosophila ananassae	7217	S	2	0	2	0.00000
+Drosophila bipectinata	42026	S	1	0	1	0.00000
+Drosophila eugracilis	29029	S	2	0	2	0.00000
+Drosophila kikkawai	30033	S	1	0	1	0.00000
+Drosophila subpulchrella	1486046	S	1	1	2	0.00000
+Drosophila takahashii	29030	S	1	0	1	0.00000
+Drosophila miranda	7229	S	2	0	2	0.00000
+Drosophila willistoni	7260	S	2	0	2	0.00000
+Drosophila virilis	7244	S	1	0	1	0.00000
+Drosophila novamexicana	47314	S	1	0	1	0.00000
+Drosophila navojoa	7232	S	2	1	3	0.00000
+Drosophila albomicans	7291	S	3	0	3	0.00000
+Drosophila busckii	30019	S	5	0	5	0.00000
+Drosophila grimshawi	7222	S	1	0	1	0.00000
+Scaptodrosophila lebanonensis	7225	S	2	0	2	0.00000
+Stegana antha	1348314	S	1	0	1	0.00000
+Myopa tessellatipennis	2829445	S	9	0	9	0.00001
+Thecophora atra	1219171	S	8	0	8	0.00001
+Sicus ferrugineus	1219204	S	7	0	7	0.00000
+Bactrocera oleae	104688	S	2	0	2	0.00000
+Bactrocera latifrons	174628	S	1	0	1	0.00000
+Rhagoletis zephyria	28612	S	1	0	1	0.00000
+Rhagoletis pomonella	28610	S	1	0	1	0.00000
+Sarcophaga rosellei	1206372	S	6	0	6	0.00000
+Sarcophaga caerulescens	596942	S	3	0	3	0.00000
+Epicampocera succincta	569040	S	7	0	7	0.00000
+Cistogaster globosa	1918221	S	2	0	2	0.00000
+Lucilia sericata	13632	S	1	0	1	0.00000
+Lucilia cuprina	7375	S	1	0	1	0.00000
+Phyto melanocephala	1262321	S	1	0	1	0.00000
+Pollenia angustigena	1266490	S	1	0	1	0.00000
+Stomoxys calcitrans	35570	S	2	0	2	0.00000
+Musca domestica	7370	S	2	0	2	0.00000
+Glossina fuscipes	7396	S	1	0	1	0.00000
+Bombylius discolor	2741128	S	10	0	10	0.00001
+Machimus atricapillus	2794001	S	7	0	7	0.00000
+Hermetia illucens	343691	S	5	0	5	0.00000
+Contarinia nasturtii	265458	S	4	0	4	0.00000
+Bradysia coprophila	38358	S	1	0	1	0.00000
+Bibio marci	189979	S	4	0	4	0.00000
+Lutzomyia longipalpis	7200	S	2	0	2	0.00000
+Nephrotoma flavescens	2719080	S	1	0	1	0.00000
+Chrysolina oricalcia	1587174	S	35	0	35	0.00002
+Psylliodes chrysocephala	2598218	S	11	0	11	0.00001
+Phyllotreta striolata	444603	S	6	0	6	0.00000
+Phyllotreta cruciferae	224133	S	2	0	2	0.00000
+Diabrotica balteata	107213	S	2	0	2	0.00000
+Cryptocephalus moraei	204949	S	13	0	13	0.00001
+Anoplophora glabripennis	217634	S	2	0	2	0.00000
+Harmonia axyridis	115357	S	16	12	28	0.00002
+Adalia bipunctata	7084	S	11	0	11	0.00001
+Coccinella septempunctata	41139	S	9	0	9	0.00001
+Halyzia sedecimguttata	347359	S	10	0	10	0.00001
+Ceutorhynchus assimilis	467358	S	16	0	16	0.00001
+Polydrusus cervinus	202137	S	14	0	14	0.00001
+Sitophilus oryzae	7048	S	2	0	2	0.00000
+Dendroctonus ponderosae	77166	S	1	0	1	0.00000
+Apoderus coryli	201766	S	3	0	3	0.00000
+Pyrochroa serraticornis	346838	S	8	0	8	0.00001
+Malachius bipustulatus	295700	S	14	0	14	0.00001
+Brassicogethes aeneus	1431903	S	5	0	5	0.00000
+Ocypus olens	662956	S	19	0	19	0.00001
+Philonthus cognatus	346820	S	8	0	8	0.00001
+Phosphuga atrata	414934	S	27	2	29	0.00002
+Cantharis rustica	195172	S	9	0	9	0.00001
+Podabrus alpinus	1553677	S	8	0	8	0.00001
+Rhagonycha fulva	41101	S	6	0	6	0.00000
+Agriotes lineatus	292458	S	9	0	9	0.00001
+Agrilus planipennis	224129	S	1	0	1	0.00000
+Onthophagus taurus	166361	S	4	0	4	0.00000
+Melolontha melolontha	7061	S	1	0	1	0.00000
+Anomala antiqua	2055703	S	1	0	1	0.00000
+Ophonus ardosiacus	247415	S	29	0	29	0.00002
+Pterostichus madidus	767470	S	13	0	13	0.00001
+Nebria brevicollis	110024	S	3	1	4	0.00000
+Nebria salina	878211	S	2	0	2	0.00000
+Leistus spinibarbis	878056	S	6	0	6	0.00000
+Chrysoperla carnea	189513	S	9	0	9	0.00001
+Ctenocephalides felis	7515	S	3	0	3	0.00000
+Timema cristinae	61476	S	14	4	18	0.00001
+Timema genevievae	629358	S	12	0	12	0.00001
+Timema californicum	61474	S	8	11	19	0.00001
+Timema shepardi	629360	S	8	12	20	0.00001
+Timema douglasi	61478	S	7	8	15	0.00001
+Timema monikensis	170555	S	7	2	9	0.00001
+Timema poppensis	170557	S	5	5	10	0.00001
+Timema tahoe	61484	S	4	6	10	0.00001
+Timema bartmani	61472	S	3	4	7	0.00000
+Brachyptera putata	2065413	S	15	0	15	0.00001
+Nemoura dubitans	2014036	S	7	0	7	0.00000
+Nemurella pictetii	143722	S	6	0	6	0.00000
+Leuctra nigra	143735	S	12	0	12	0.00001
+Isoperla grammatica	552050	S	16	0	16	0.00001
+Schistocerca gregaria	7010	S	4	8	12	0.00001
+Schistocerca serialis	2023354	S	1	7	8	0.00001
+Schistocerca americana	7009	S	1	9	10	0.00001
+Schistocerca piceifrons	274613	S	1	7	8	0.00001
+Gryllus bimaculatus	6999	S	9	0	9	0.00001
+Cryptotermes secundus	105785	S	7	0	7	0.00000
+Bemisia tabaci	7038	S	19	0	19	0.00001
+Aphis gossypii	80765	S	9	0	9	0.00001
+Sipha flava	143950	S	2	0	2	0.00000
+Daktulosphaira vitifoliae	58002	S	2	0	2	0.00000
+Adelges cooleyi	133065	S	1	0	1	0.00000
+Gonocerus acuteangulatus	1545138	S	8	0	8	0.00001
+Aelia acuminata	1511221	S	4	0	4	0.00000
+Nezara viridula	85310	S	3	0	3	0.00000
+Nilaparvata lugens	108931	S	1	0	1	0.00000
+Homalodisca vitripennis	197043	S	1	0	1	0.00000
+Frankliniella occidentalis	133901	S	4	0	4	0.00000
+Pediculus humanus	121225	S	1	0	1	0.00000
+Ischnura elegans	197161	S	7	0	7	0.00000
+Platycnemis pennipes	126231	S	1	0	1	0.00000
+Allacma fusca	39272	S	12	0	12	0.00001
+Folsomia candida	158441	S	4	0	4	0.00000
+Homidia sp. 7 FZ-2014	1529901	S	1	0	1	0.00000
+Dicranocentrus wangi	1302322	S	1	0	1	0.00000
+Macrobrachium nipponense	159736	S	58	1	59	0.00004
+Procambarus clarkii	6728	S	3	0	3	0.00000
+Homarus americanus	6706	S	1	0	1	0.00000
+Portunus trituberculatus	210409	S	1	0	1	0.00000
+Eriocheir sinensis	95602	S	1	0	1	0.00000
+Penaeus monodon	6687	S	3	1	4	0.00000
+Penaeus vannamei	6689	S	1	0	1	0.00000
+Penaeus japonicus	27405	S	1	0	1	0.00000
+Hyalella azteca	294128	S	3	0	3	0.00000
+Lepeophtheirus salmonis	72036	S	21	0	21	0.00001
+Caligus rogercresseyi	217165	S	15	0	15	0.00001
+Eurytemora affinis	88015	S	1	0	1	0.00000
+Sacculina carcini	51650	S	8	0	8	0.00001
+Pollicipes pollicipes	41117	S	5	0	5	0.00000
+Amphibalanus amphitrite	1232801	S	2	0	2	0.00000
+Darwinula stevensoni	69355	S	22	0	22	0.00002
+Notodromas monacha	399045	S	10	0	10	0.00001
+Cyprideis torosa	163714	S	7	0	7	0.00000
+Daphnia pulex	6669	S	8	2	10	0.00001
+Daphnia magna	35525	S	1	0	1	0.00000
+Daphnia lumholtzi	42856	S	1	0	1	0.00000
+Oppiella nova	334625	S	7	0	7	0.00000
+Medioppia subpectinata	1979941	S	5	0	5	0.00000
+Dermatophagoides pteronyssinus	6956	S	5	0	5	0.00000
+Tetranychus urticae	32264	S	1	0	1	0.00000
+Dermacentor silvarum	543639	S	3	0	3	0.00000
+Dermacentor andersoni	34620	S	2	0	2	0.00000
+Rhipicephalus sanguineus	34632	S	1	0	1	0.00000
+Ixodes scapularis	6945	S	4	1	5	0.00000
+Varroa jacobsoni	62625	S	1	2	3	0.00000
+Galendromus occidentalis	34638	S	1	0	1	0.00000
+Parasteatoda tepidariorum	114398	S	1	0	1	0.00000
+Speocera xuanson	2507346	S	1	3	4	0.00000
+Centruroides sculpturatus	218467	S	1	0	1	0.00000
+Limulus polyphemus	6850	S	1	0	1	0.00000
+Caenorhabditis inopinata	1978547	S	9	0	9	0.00001
+Caenorhabditis briggsae	6238	S	4	0	4	0.00000
+Caenorhabditis elegans	6239	S	2	0	2	0.00000
+Caenorhabditis remanei	31234	S	1	0	1	0.00000
+Oscheius sp. JU1382	2879419	S	4	0	4	0.00000
+Oscheius sp. DF5120	2879420	S	1	0	1	0.00000
+Oscheius dolichura	473156	S	3	0	3	0.00000
+Oscheius onirici	1559960	S	3	0	3	0.00000
+Oscheius tipulae	141969	S	2	0	2	0.00000
+Strongyloides papillosus	174720	S	3	0	3	0.00000
+Strongyloides ratti	34506	S	1	0	1	0.00000
+Parastrongyloides trichosuri	131310	S	2	0	2	0.00000
+Heterodera glycines	51029	S	3	0	3	0.00000
+Haemonchus contortus	6289	S	19	0	19	0.00001
+Trichinella spiralis	6334	S	2	0	2	0.00000
+Priapulus caudatus	37621	S	3	0	3	0.00000
+Tridacna gigas	80829	S	32	2	34	0.00002
+Tridacna crocea	80833	S	7	0	7	0.00000
+Hippopus hippopus	80818	S	27	3	30	0.00002
+Fragum fragum	80821	S	31	0	31	0.00002
+Gari tellinella	2589376	S	33	0	33	0.00002
+Spisula solida	31201	S	37	0	37	0.00003
+Mercenaria mercenaria	6596	S	4	0	4	0.00000
+Pecten maximus	6579	S	41	0	41	0.00003
+Mizuhopecten yessoensis	6573	S	2	0	2	0.00000
+Crassostrea gigas	29159	S	31	0	31	0.00002
+Crassostrea virginica	6565	S	2	0	2	0.00000
+Ostrea edulis	37623	S	1	0	1	0.00000
+Limnoperna fortunei	356393	S	30	0	30	0.00002
+Gibbula magus	703304	S	43	0	43	0.00003
+Phorcus lineatus	1620919	S	36	0	36	0.00002
+Steromphala cineraria	216125	S	29	0	29	0.00002
+Biomphalaria glabrata	6526	S	40	1	41	0.00003
+Pythia sp. PER-2015	1628052	S	1	20	21	0.00001
+Aplysia californica	6500	S	2	0	2	0.00000
+Patella vulgata	6465	S	15	1	16	0.00001
+Patella pellucida	88005	S	15	0	15	0.00001
+Pomacea canaliculata	400727	S	5	0	5	0.00000
+Gigantopelta aegis	1735272	S	4	0	4	0.00000
+Octopus bimaculoides	37653	S	3	0	3	0.00000
+Octopus sinensis	2607531	S	1	0	1	0.00000
+Schistosoma turkestanicum	1163369	S	15	0	15	0.00001
+Schistosoma spindale	6189	S	11	0	11	0.00001
+Schistosoma margrebowiei	48269	S	10	0	10	0.00001
+Schistosoma bovis	6184	S	7	4	11	0.00001
+Schistosoma mansoni	6183	S	6	10	16	0.00001
+Schistosoma haematobium	6185	S	4	3	7	0.00000
+Schistosoma intercalatum	6187	S	3	1	4	0.00000
+Schistosoma rodhaini	6188	S	3	2	5	0.00000
+Schistosoma guineensis	393876	S	2	1	3	0.00000
+Schistosoma curassoni	6186	S	2	1	3	0.00000
+Schistosoma mattheei	31246	S	1	0	1	0.00000
+Heterobilharzia americana	39320	S	14	0	14	0.00001
+Trichobilharzia szidati	157070	S	4	0	4	0.00000
+Trichobilharzia regenti	157069	S	2	0	2	0.00000
+Dicrocoelium dendriticum	57078	S	23	0	23	0.00002
+Spirometra erinaceieuropaei	99802	S	45	1	46	0.00003
+Hymenolepis microstoma	85433	S	3	0	3	0.00000
+Lepidonotus clava	1210411	S	42	0	42	0.00003
+Alitta virens	880429	S	17	2	19	0.00001
+Sthenelais limicola	1210413	S	1	0	1	0.00000
+Lumbricus rubellus	35632	S	23	2	25	0.00002
+Piscicola geometra	60958	S	6	1	7	0.00000
+Helobdella robusta	6412	S	1	0	1	0.00000
+Cryptosula pallasiana	558755	S	18	0	18	0.00001
+Bugulina stolonifera	192920	S	9	0	9	0.00001
+Membranipora membranacea	95170	S	11	0	11	0.00001
+Lineus longissimus	88925	S	10	0	10	0.00001
+Lingula anatina	7574	S	6	0	6	0.00000
+Adineta vaga	104782	S	6	0	6	0.00000
+Diadumene lineata	1789172	S	11	0	11	0.00001
+Actinia tenebrosa	6105	S	10	0	10	0.00001
+Nematostella vectensis	45351	S	4	0	4	0.00000
+Exaiptasia diaphana	2652724	S	2	0	2	0.00000
+Acropora millepora	45264	S	9	2	11	0.00001
+Acropora digitifera	70779	S	1	0	1	0.00000
+Stylophora pistillata	50429	S	2	0	2	0.00000
+Pocillopora damicornis	46731	S	1	0	1	0.00000
+Orbicella faveolata	48498	S	4	0	4	0.00000
+Xenia sp. Carnegie-2017	2897299	S	4	0	4	0.00000
+Dendronephthya gigantea	151771	S	2	0	2	0.00000
+Haliclystus octoradiatus	313498	S	7	0	7	0.00000
+Hydra vulgaris	6087	S	1	0	1	0.00000
+Petrosia ficiformis	68564	S	11	0	11	0.00001
+Amphimedon queenslandica	400682	S	1	0	1	0.00000
+Chondrosia reniformis	68574	S	3	0	3	0.00000
+Fusarium asiaticum	282267	S	2	4	6	0.00000
+Fusarium venenatum	56646	S	1	0	1	0.00000
+Fusarium pseudograminearum	101028	S	1	0	1	0.00000
+Fusarium subglutinans	42677	S	3	0	3	0.00000
+Fusarium fujikuroi	5127	S	2	0	2	0.00000
+Fusarium proliferatum	948311	S	1	0	1	0.00000
+Fusarium oxysporum	5507	S	4	0	4	0.00000
+Fusarium solani-melongenae	2747967	S	3	0	3	0.00000
+Fusarium coffeatum	231269	S	1	0	1	0.00000
+Fusarium flagelliforme	2675880	S	1	0	1	0.00000
+Calonectria ilicicola	182845	S	7	0	7	0.00000
+Neonectria neomacrospora	78403	S	3	0	3	0.00000
+Epichloe typhina	5113	S	3	0	3	0.00000
+Epichloe festucae	35717	S	3	0	3	0.00000
+Epichloe gansuensis	447254	S	1	0	1	0.00000
+Epichloe scottii	2834323	S	1	0	1	0.00000
+Metarhizium album	92629	S	1	2	3	0.00000
+Pochonia chlamydosporia	280754	S	3	0	3	0.00000
+Ustilaginoidea virens	1159556	S	2	0	2	0.00000
+Trichoderma virens	29875	S	2	0	2	0.00000
+Trichoderma atroviride	63577	S	1	0	1	0.00000
+Trichoderma asperellum	101201	S	1	0	1	0.00000
+Cordyceps militaris	73501	S	2	0	2	0.00000
+Beauveria bassiana	176275	S	2	0	2	0.00000
+Acremonium chrysogenum	5044	S	1	0	1	0.00000
+Purpureocillium takamizusanense	2060973	S	1	0	1	0.00000
+Colletotrichum karsti	1095194	S	3	0	3	0.00000
+Colletotrichum gigasporum	1543685	S	3	0	3	0.00000
+Colletotrichum lupini	145971	S	1	0	1	0.00000
+Colletotrichum scovillei	1209932	S	1	0	1	0.00000
+Colletotrichum higginsianum	80884	S	2	0	2	0.00000
+Colletotrichum truncatum	5467	S	1	0	1	0.00000
+Colletotrichum graminicola	31870	S	1	0	1	0.00000
+Scedosporium apiospermum	563466	S	1	0	1	0.00000
+Neurospora pannonica	83678	S	3	1	4	0.00000
+Neurospora tetrasperma	40127	S	2	0	2	0.00000
+Thermothielavioides terrestris	2587410	S	2	0	2	0.00000
+Thermochaetoides thermophila	209285	S	1	0	1	0.00000
+Thermothelomyces thermophilus	78579	S	1	0	1	0.00000
+Podospora comata	48703	S	2	0	2	0.00000
+Cryphonectria parasitica	5116	S	1	0	1	0.00000
+Chrysoporthe sp. MAF-2017a	2029752	S	1	0	1	0.00000
+Immersiporthe knoxdaviesiana	1276217	S	1	0	1	0.00000
+Diaporthe batatas	748121	S	2	0	2	0.00000
+Pyricularia oryzae	318829	S	1	0	1	0.00000
+Pyricularia grisea	148305	S	1	0	1	0.00000
+Grosmannia clavigera	226899	S	2	0	2	0.00000
+Hypoxylon fragiforme	63214	S	5	0	5	0.00000
+Daldinia loculata	103429	S	1	0	1	0.00000
+Annulohypoxylon truncatum	327061	S	1	0	1	0.00000
+Pseudomassariella vexata	1141098	S	2	0	2	0.00000
+Thyridium curvatum	1093900	S	2	0	2	0.00000
+Botrytis porri	87229	S	1	0	1	0.00000
+Botrytis cinerea	40559	S	1	0	1	0.00000
+Botrytis fragariae	1964551	S	1	0	1	0.00000
+Sclerotinia sclerotiorum	5180	S	3	0	3	0.00000
+Monilinia vaccinii-corymbosi	61207	S	1	0	1	0.00000
+Mollisia scopiformis	149040	S	3	0	3	0.00000
+Hyaloscypha bicolor	2482752	S	1	0	1	0.00000
+Amorphotheca resinae	5101	S	1	0	1	0.00000
+Lachnellula hyalina	1316788	S	1	0	1	0.00000
+Pseudogymnoascus destructans	655981	S	4	1	5	0.00000
+Blumeria graminis	34373	S	2	0	2	0.00000
+Allantophomopsis lycopodina	334518	S	1	0	1	0.00000
+Alternaria arborescens	156630	S	2	0	2	0.00000
+Alternaria alternata	5599	S	2	0	2	0.00000
+Alternaria burnsii	1187904	S	1	0	1	0.00000
+Alternaria solani	48100	S	3	0	3	0.00000
+Alternaria rosae	1187941	S	1	0	1	0.00000
+Alternaria triticimaculans	297637	S	1	0	1	0.00000
+Bipolaris sorokiniana	45130	S	3	0	3	0.00000
+Bipolaris maydis	5016	S	3	0	3	0.00000
+Bipolaris victoriae	40125	S	1	0	1	0.00000
+Bipolaris oryzae	101162	S	1	0	1	0.00000
+Pyrenophora teres	53485	S	3	0	3	0.00000
+Pyrenophora tritici-repentis	45151	S	2	0	2	0.00000
+Curvularia clavata	95742	S	1	0	1	0.00000
+Exserohilum turcicum	93612	S	1	0	1	0.00000
+Juxtiphoma eupyrena	297020	S	5	99	104	0.00007
+Ascochyta rabiei	5454	S	2	0	2	0.00000
+Parastagonospora nodorum	13684	S	2	0	2	0.00000
+Phaeopoacea festucae	2015925	S	1	5	6	0.00000
+Leptosphaeria biglobosa	220672	S	2	1	3	0.00000
+Cucurbitaria berberidis	45142	S	2	0	2	0.00000
+Trematosphaeria pertusa	390896	S	3	0	3	0.00000
+Paraphaeosphaeria sporulosa	1460663	S	1	0	1	0.00000
+Aaosphaeria arxii	1450171	S	2	0	2	0.00000
+Lindgomyces ingoldianus	673940	S	1	0	1	0.00000
+Venturia effusa	50376	S	2	0	2	0.00000
+Verruconis gallopava	253628	S	1	0	1	0.00000
+Mytilinidion resinicola	574789	S	1	0	1	0.00000
+Cercospora beticola	122368	S	4	0	4	0.00000
+Cercospora kikuchii	84275	S	2	0	2	0.00000
+Cercospora sojina	438356	S	1	0	1	0.00000
+Pseudocercospora fijiensis	1873960	S	2	0	2	0.00000
+Septoria linicola	215465	S	1	0	1	0.00000
+Fulvia fulva	5499	S	1	0	1	0.00000
+Ramularia collo-cygni	112498	S	1	0	1	0.00000
+Zymoseptoria tritici	1047171	S	1	0	1	0.00000
+Sphaerulina musiva	85929	S	1	0	1	0.00000
+Baudoinia panamericana	1709381	S	2	0	2	0.00000
+Aureobasidium melanogenum	46634	S	3	0	3	0.00000
+Aureobasidium pullulans	5580	S	1	0	1	0.00000
+Hormonema carpetanum	284138	S	1	0	1	0.00000
+Cladosporium anthropophilum	1970646	S	1	5	6	0.00000
+Neofusicoccum parvum	310453	S	4	0	4	0.00000
+Diplodia corticola	236234	S	2	0	2	0.00000
+Lasiodiplodia theobromae	45133	S	2	0	2	0.00000
+Peltaster fructicola	286661	S	1	0	1	0.00000
+Aspergillus nidulans	162425	S	3	0	3	0.00000
+Aspergillus sydowii	75750	S	2	0	2	0.00000
+Aspergillus puulaauensis	1220207	S	3	0	3	0.00000
+Aspergillus chevalieri	182096	S	2	0	2	0.00000
+Aspergillus thermomutatus	41047	S	2	0	2	0.00000
+Aspergillus viridinutans	75553	S	2	0	2	0.00000
+Aspergillus candidus	41067	S	2	0	2	0.00000
+Aspergillus uvarum	446911	S	2	0	2	0.00000
+Aspergillus ibericus	301854	S	2	0	2	0.00000
+Aspergillus lentulus	293939	S	1	0	1	0.00000
+Aspergillus vadensis	288669	S	1	0	1	0.00000
+Aspergillus homomorphus	319626	S	1	0	1	0.00000
+Aspergillus sclerotioniger	319627	S	1	0	1	0.00000
+Aspergillus luchuensis	1069201	S	1	1	2	0.00000
+Aspergillus felis	1287682	S	1	0	1	0.00000
+Aspergillus caelatus	61420	S	1	0	1	0.00000
+Aspergillus pseudonomiae	1506151	S	1	0	1	0.00000
+Aspergillus alliaceus	209559	S	1	0	1	0.00000
+Aspergillus melleus	138277	S	1	0	1	0.00000
+Aspergillus bombycis	109264	S	1	0	1	0.00000
+Penicillium oxalicum	69781	S	3	0	3	0.00000
+Penicillium rubens	1108849	S	1	0	1	0.00000
+Penicillium janthinellum	5079	S	1	0	1	0.00000
+Penicillium digitatum	36651	S	1	0	1	0.00000
+Talaromyces marneffei	37727	S	2	0	2	0.00000
+Talaromyces stipitatus	28564	S	1	0	1	0.00000
+Talaromyces amestolkiae	1196081	S	1	0	1	0.00000
+Talaromyces pinophilus	128442	S	1	0	1	0.00000
+Talaromyces atroroseus	1441469	S	1	0	1	0.00000
+Talaromyces rugulosus	121627	S	1	0	1	0.00000
+Paecilomyces variotii	264951	S	1	0	1	0.00000
+Histoplasma capsulatum	5037	S	5	0	5	0.00000
+Uncinocarpus reesii	33188	S	1	0	1	0.00000
+Coccidioides posadasii	199306	S	1	0	1	0.00000
+Ophidiomyces ophidiicola	1387563	S	1	0	1	0.00000
+Nannizzia gypsea	63402	S	1	0	1	0.00000
+Exophiala aquamarina	1033840	S	3	0	3	0.00000
+Exophiala oligosperma	215243	S	3	0	3	0.00000
+Exophiala dermatitidis	5970	S	1	0	1	0.00000
+Exophiala mesophila	212818	S	1	0	1	0.00000
+Exophiala spinifera	91928	S	1	0	1	0.00000
+Exophiala lecanii-corni	91925	S	1	0	1	0.00000
+Fonsecaea pedrosoi	40355	S	1	0	1	0.00000
+Fonsecaea monophora	254056	S	1	0	1	0.00000
+Cladophialophora carrionii	86049	S	1	0	1	0.00000
+Cladophialophora immunda	569365	S	1	0	1	0.00000
+Endocarpon pusillum	364733	S	2	0	2	0.00000
+Cladonia uncialis	174080	S	1	0	1	0.00000
+Cladonia metacorallifera	195773	S	1	0	1	0.00000
+Morchella importuna	1174673	S	3	0	3	0.00000
+Hyphopichia burtonii	717740	S	80	0	80	0.00006
+Meyerozyma guilliermondii	4929	S	6	0	6	0.00000
+Candida parapsilosis	5480	S	1	0	1	0.00000
+Candida tropicalis	5482	S	1	0	1	0.00000
+Candida albicans	5476	S	1	0	1	0.00000
+Candida oxycetoniae	497107	S	1	0	1	0.00000
+Candida orthopsilosis	273371	S	1	0	1	0.00000
+Scheffersomyces stipitis	4924	S	2	0	2	0.00000
+Debaryomyces fabryi	58627	S	2	0	2	0.00000
+Spathaspora passalidarum	340170	S	1	0	1	0.00000
+Suhomyces tanzawaensis	46583	S	1	0	1	0.00000
+[Candida] intermedia	45354	S	3	0	3	0.00000
+[Candida] haemuloni	45357	S	2	0	2	0.00000
+[Candida] auris	498019	S	1	0	1	0.00000
+[Candida] pseudohaemulonii	418784	S	1	0	1	0.00000
+Metschnikowia aff. pulcherrima	2163413	S	2	0	2	0.00000
+Clavispora lusitaniae	36911	S	2	0	2	0.00000
+Saccharomyces kudriavzevii	114524	S	3	0	3	0.00000
+Saccharomyces cerevisiae	4932	S	2	4	6	0.00000
+Saccharomyces paradoxus	27291	S	1	0	1	0.00000
+Saccharomyces jurei	1987369	S	1	0	1	0.00000
+Kazachstania africana	432096	S	3	0	3	0.00000
+Kazachstania barnettii	61262	S	1	0	1	0.00000
+Eremothecium sinecaudum	45286	S	2	0	2	0.00000
+Eremothecium cymbalariae	45285	S	1	0	1	0.00000
+Torulaspora delbrueckii	4950	S	1	0	1	0.00000
+Torulaspora globosa	48254	S	1	0	1	0.00000
+Kluyveromyces marxianus	4911	S	1	0	1	0.00000
+Naumovozyma castellii	27288	S	1	0	1	0.00000
+Saccharomycopsis fibuligera x Saccharomycopsis cf. fibuligera	1725355	S	4	0	4	0.00000
+Saccharomycopsis malanga	44092	S	2	0	2	0.00000
+Ascoidea rubescens	54195	S	1	0	1	0.00000
+Ogataea philodendri	1378263	S	3	0	3	0.00000
+Ogataea angusta	870730	S	1	0	1	0.00000
+Brettanomyces bruxellensis	5007	S	2	0	2	0.00000
+Diutina rugosa	5481	S	1	0	1	0.00000
+Candida sp. VVT-2012	1214789	S	1	1	2	0.00000
+Cyberlindnera jadinii	4903	S	1	0	1	0.00000
+Pneumocystis jirovecii	42068	S	1	0	1	0.00000
+Schizosaccharomyces octosporus	4899	S	1	0	1	0.00000
+Armillaria ostoyae	47428	S	5	0	5	0.00000
+Guyanagaster necrorhizus	856835	S	2	0	2	0.00000
+Marasmius oreades	181124	S	2	0	2	0.00000
+Marasmius tenuissimus	585030	S	1	0	1	0.00000
+Mycena indigotica	2126181	S	1	0	1	0.00000
+Clitopilus hobsonii	648681	S	1	0	1	0.00000
+Agaricus bisporus	5341	S	3	0	3	0.00000
+Pleurotus ostreatus	5322	S	1	0	1	0.00000
+Suillus discolor	1912936	S	2	0	2	0.00000
+Suillus clintonianus	1904413	S	1	0	1	0.00000
+Tylospora asterophora	85907	S	1	3	4	0.00000
+Sparassis crispa	139825	S	5	0	5	0.00000
+Taiwanofungus camphoratus	2696576	S	4	0	4	0.00000
+Dichomitus squalens	114155	S	1	0	1	0.00000
+Postia placenta	104341	S	1	0	1	0.00000
+Neoantrodia serialis	139415	S	1	0	1	0.00000
+Rhizoctonia solani	456999	S	2	0	2	0.00000
+Ceratobasidium sp. AG-Ba	170446	S	1	0	1	0.00000
+Cantharellus anzutake	1750568	S	3	0	3	0.00000
+Fulvoderma sp. JJL-2021a	2897632	S	2	0	2	0.00000
+Stereum hirsutum	40492	S	1	0	1	0.00000
+Cryptococcus wingfieldii	5619	S	4	0	4	0.00000
+Cryptococcus gattii VGI	37769	S	2	0	2	0.00000
+Cryptococcus gattii VGII	1859096	S	2	0	2	0.00000
+Kwoniella bestiolae	324769	S	1	0	1	0.00000
+Kwoniella shandongensis	1734106	S	1	0	1	0.00000
+Kockovaella imperatae	4999	S	1	0	1	0.00000
+Apiotrichum mycotoxinovorans	252803	S	1	0	1	0.00000
+Phaffia rhodozyma	264483	S	1	0	1	0.00000
+Dacryopinax primogenitus	1858805	S	2	0	2	0.00000
+Melanopsichium pennsylvanicum	63383	S	3	0	3	0.00000
+Moesziomyces antarcticus	84753	S	2	0	2	0.00000
+Pseudozyma flocculosa	84751	S	2	0	2	0.00000
+Sporisorium scitamineum	49012	S	1	0	1	0.00000
+Tilletiaria anomala	5281	S	2	0	2	0.00000
+Exobasidium cylindrosporum	271129	S	1	0	1	0.00000
+Tilletiopsis washingtonensis	58919	S	1	0	1	0.00000
+Pseudomicrostroma glucosiphilum	1684307	S	1	0	1	0.00000
+Puccinia graminis	5297	S	2	0	2	0.00000
+Puccinia cf. psidii AE-2014	1505670	S	1	0	1	0.00000
+Puccinia striiformis	27350	S	1	0	1	0.00000
+Melampsora laricis-populina	203908	S	3	0	3	0.00000
+Rhodotorula graminis	29898	S	1	0	1	0.00000
+Lichtheimia ramosa	688394	S	38	0	38	0.00003
+Mucor piriformis	105697	S	1	0	1	0.00000
+Rhizopus microsporus	58291	S	1	0	1	0.00000
+Rhizophagus irregularis	588596	S	9	0	9	0.00001
+Batrachochytrium dendrobatidis	109871	S	1	0	1	0.00000
+Piromyces sp.	45796	S	1	0	1	0.00000
+Linderina pennispora	61395	S	1	0	1	0.00000
+uncultured fungus	175245	S	7	10	17	0.00001
+Salpingoeca rosetta	946362	S	2	0	2	0.00000
+Monosiga brevicollis	81824	S	1	0	1	0.00000
+Sphaeroforma arctica	72019	S	2	0	2	0.00000
+Fonticula alba	691883	S	2	0	2	0.00000
+Glycine max	3847	S	60	16	76	0.00005
+Glycine soja	3848	S	2	1	3	0.00000
+Glycine tomentella	44015	S	1	0	1	0.00000
+Vigna unguiculata	3917	S	21	0	21	0.00001
+Vigna angularis	3914	S	8	1	9	0.00001
+Cajanus cajan	3821	S	2	0	2	0.00000
+Macroptilium erythroloma	77317	S	1	1	2	0.00000
+Abrus precatorius	3816	S	6	0	6	0.00000
+Medicago truncatula	3880	S	10	0	10	0.00001
+Medicago arabica	70936	S	6	0	6	0.00000
+Trifolium pratense	57577	S	1	0	1	0.00000
+Cicer arietinum	3827	S	10	0	10	0.00001
+Pisum sativum	3888	S	5	0	5	0.00000
+Lotus japonicus	34305	S	8	0	8	0.00001
+Lupinus angustifolius	3871	S	19	0	19	0.00001
+Arachis hypogaea	3818	S	6	2	8	0.00001
+Xerocladia viridiramis	464317	S	2	0	2	0.00000
+Prosopis alba	207710	S	1	0	1	0.00000
+Geum urbanum	57919	S	30	0	30	0.00002
+Potentilla anserina	57926	S	5	0	5	0.00000
+Fragaria vesca	57918	S	2	0	2	0.00000
+Fragaria x ananassa	3747	S	1	0	1	0.00000
+Rosa chinensis	74649	S	1	0	1	0.00000
+Malus domestica	3750	S	3	4	7	0.00000
+Malus sylvestris	3752	S	2	9	11	0.00001
+Pyrus x bretschneideri	225117	S	1	1	2	0.00000
+Prunus dulcis	3755	S	6	6	12	0.00001
+Morus notabilis	981085	S	29	0	29	0.00002
+Artocarpus hypargyreus	1955528	S	1	2	3	0.00000
+Trema orientale	63057	S	1	3	4	0.00000
+Quercus robur	38942	S	30	1	31	0.00002
+Quercus lobata	97700	S	5	1	6	0.00000
+Quercus suber	58331	S	4	0	4	0.00000
+Fagus sylvatica	28930	S	8	0	8	0.00001
+Corylus avellana	13451	S	12	0	12	0.00001
+Carpinus viminea	176864	S	6	0	6	0.00000
+Juglans regia	51240	S	1	0	1	0.00000
+Juglans microcarpa x Juglans regia	2249226	S	1	0	1	0.00000
+Pterocarya stenoptera	91225	S	2	0	2	0.00000
+Carya illinoinensis	32201	S	1	0	1	0.00000
+Mercurialis annua	3986	S	6	0	6	0.00000
+Ricinus communis	3988	S	4	0	4	0.00000
+Hevea brasiliensis	3981	S	4	0	4	0.00000
+Manihot esculenta	3983	S	2	0	2	0.00000
+Linum usitatissimum	4006	S	10	0	10	0.00001
+Populus trichocarpa	3694	S	3	0	3	0.00000
+Populus alba	43335	S	2	0	2	0.00000
+Populus euphratica	75702	S	1	0	1	0.00000
+Cucumis melo	3656	S	17	0	17	0.00001
+Cucumis sativus	3659	S	1	0	1	0.00000
+Benincasa hispida	102211	S	1	0	1	0.00000
+Cucurbita moschata	3662	S	1	1	2	0.00000
+Datisca cannabina	34296	S	1	2	3	0.00000
+Tripterygium wilfordii	458696	S	3	1	4	0.00000
+Brassica napus	3708	S	10	8	18	0.00001
+Brassica oleracea	3712	S	8	4	12	0.00001
+Brassica rapa	3711	S	5	3	8	0.00001
+Raphanus sativus	3726	S	19	1	20	0.00001
+Arabidopsis thaliana	3702	S	4	0	4	0.00000
+Arabidopsis arenosa	38785	S	3	0	3	0.00000
+Arabidopsis lyrata	59689	S	1	0	1	0.00000
+Camelina hispida	883000	S	3	0	3	0.00000
+Camelina sativa	90675	S	2	0	2	0.00000
+Capsella rubella	81985	S	1	0	1	0.00000
+Boechera divaricarpa	115915	S	11	1	12	0.00001
+Arabis alpina	50452	S	9	0	9	0.00001
+Thlaspi arvense	13288	S	6	0	6	0.00000
+Carica papaya	3649	S	2	0	2	0.00000
+Tarenaya hassleriana	28532	S	2	0	2	0.00000
+Gossypium raimondii	29730	S	8	5	13	0.00001
+Gossypium herbaceum	34274	S	8	1	9	0.00001
+Gossypium turneri	34284	S	8	2	10	0.00001
+Gossypium hirsutum	3635	S	3	6	9	0.00001
+Gossypioides kirkii	47615	S	10	0	10	0.00001
+Hibiscus syriacus	106335	S	2	0	2	0.00000
+Theobroma cacao	3641	S	11	0	11	0.00001
+Herrania umbratica	108875	S	1	0	1	0.00000
+Durio zibethinus	66656	S	2	0	2	0.00000
+Ailanthus altissimus	2768810	S	18	0	18	0.00001
+Mangifera indica	29780	S	6	0	6	0.00000
+Pistacia vera	55513	S	1	0	1	0.00000
+Citrus trifoliata	37690	S	2	2	4	0.00000
+Chamaenerion angustifolium	13055	S	17	0	17	0.00001
+Punica granatum	22663	S	3	0	3	0.00000
+Syzygium oleosum	219896	S	2	0	2	0.00000
+Eucalyptus grandis	71139	S	1	0	1	0.00000
+Vitis rotundifolia	103349	S	6	1	7	0.00000
+Vitis vinifera	29760	S	3	3	6	0.00000
+Solanum pennellii	28526	S	16	3	19	0.00001
+Solanum lycopersicum	4081	S	12	1	13	0.00001
+Solanum dulcamara	45834	S	29	0	29	0.00002
+Solanum tuberosum	4113	S	16	0	16	0.00001
+Solanum melongena	4111	S	4	22	26	0.00002
+Solanum pinnatisectum	50273	S	4	0	4	0.00000
+Solanum stenotomum	172797	S	1	0	1	0.00000
+Capsicum annuum	4072	S	1	0	1	0.00000
+Nicotiana attenuata	49451	S	1	0	1	0.00000
+Cestrum elegans	103475	S	1	0	1	0.00000
+Ipomoea triloba	35885	S	11	0	11	0.00001
+Ipomoea trifida	35884	S	5	0	5	0.00000
+Ipomoea nil	35883	S	2	0	2	0.00000
+Evolvulus alsinoides	439689	S	3	1	4	0.00000
+Fraxinus pennsylvanica	56036	S	19	0	19	0.00001
+Olea europaea	4146	S	1	0	1	0.00000
+Jasminum sambac	660624	S	14	0	14	0.00001
+Scutellaria galericulata	53169	S	9	0	9	0.00001
+Ballota nigra	194200	S	8	0	8	0.00001
+Salvia splendens	180675	S	5	0	5	0.00000
+Tectona grandis	41396	S	1	1	2	0.00000
+Misopates orontium	102599	S	13	0	13	0.00001
+Sesamum indicum	4182	S	9	0	9	0.00001
+Andrographis paniculata	175694	S	2	0	2	0.00000
+Erythranthe guttata	4155	S	1	0	1	0.00000
+Coffea arabica	13443	S	2	3	5	0.00000
+Gentiana rigescens	553056	S	1	1	2	0.00000
+Pulicaria dysenterica	56535	S	25	0	25	0.00002
+Helianthus annuus	4232	S	3	0	3	0.00000
+Erigeron canadensis	72917	S	1	0	1	0.00000
+Lactuca sativa	4236	S	2	0	2	0.00000
+Cynara cardunculus	4265	S	2	0	2	0.00000
+Hedera helix	4052	S	17	0	17	0.00001
+Daucus carota	4039	S	3	0	3	0.00000
+Impatiens glandulifera	253017	S	9	0	9	0.00001
+Camellia sinensis	4442	S	4	0	4	0.00000
+Diospyros lotus	55363	S	2	0	2	0.00000
+Chenopodium quinoa	63459	S	4	0	4	0.00000
+Spinacia oleracea	3562	S	3	0	3	0.00000
+Beta vulgaris	161934	S	1	0	1	0.00000
+Polygonum aviculare	137693	S	3	0	3	0.00000
+Zea mays	4577	S	198	13	211	0.00015
+Sorghum bicolor	4558	S	16	0	16	0.00001
+Saccharum spontaneum	62335	S	1	1	2	0.00000
+Otachyrium versicolor	158122	S	1	0	1	0.00000
+Setaria viridis	4556	S	24	1	25	0.00002
+Cenchrus purpureus	154765	S	1	0	1	0.00000
+Digitaria exilis	1010633	S	23	0	23	0.00002
+Panicum virgatum	38727	S	4	0	4	0.00000
+Panicum hallii	206008	S	2	0	2	0.00000
+Triticum aestivum	4565	S	4	3	7	0.00000
+Aegilops tauschii	37682	S	2	0	2	0.00000
+Hordeum vulgare	4513	S	2	0	2	0.00000
+Brachypodium distachyon	15368	S	7	0	7	0.00000
+Lolium perenne	4522	S	1	0	1	0.00000
+Lolium rigidum	89674	S	1	0	1	0.00000
+Oryza sativa	4530	S	10	3	13	0.00001
+Oryza ridleyi	83308	S	1	0	1	0.00000
+Dendrocalamus latiflorus	257763	S	1	1	2	0.00000
+Ananas comosus	4615	S	19	0	19	0.00001
+Luzula sylvatica	59018	S	7	0	7	0.00000
+Juncus effusus	13579	S	4	0	4	0.00000
+Musa troglodytarum	320322	S	15	0	15	0.00001
+Musa acuminata	4641	S	7	0	7	0.00000
+Zingiber officinale	94328	S	4	0	4	0.00000
+Elaeis guineensis	51953	S	3	0	3	0.00000
+Cocos nucifera	13894	S	1	1	2	0.00000
+Phoenix dactylifera	42345	S	2	0	2	0.00000
+Commelina communis	4744	S	1	0	1	0.00000
+Phalaenopsis equestris	78828	S	2	0	2	0.00000
+Phalaenopsis aphrodite	212056	S	1	0	1	0.00000
+Dendrobium catenatum	906689	S	1	0	1	0.00000
+Asparagus officinalis	4686	S	3	0	3	0.00000
+Asparagus cochinchinensis	100514	S	1	3	4	0.00000
+Spirodela polyrhiza	29656	S	4	0	4	0.00000
+Spirodela intermedia	51605	S	4	0	4	0.00000
+Papaver somniferum	3469	S	12	0	12	0.00001
+Nelumbo nucifera	4432	S	4	0	4	0.00000
+Macadamia integrifolia	60698	S	2	0	2	0.00000
+Telopea speciosissima	54955	S	1	0	1	0.00000
+Nymphaea colorata	210225	S	11	0	11	0.00001
+Amborella trichopoda	13333	S	1	0	1	0.00000
+Selaginella moellendorffii	88036	S	3	0	3	0.00000
+Rhytidiadelphus loreus	28468	S	14	0	14	0.00001
+Physcomitrium patens	3218	S	2	0	2	0.00000
+Marchantia polymorpha	3197	S	10	0	10	0.00001
+Staurodesmus triangularis	292378	S	1	0	1	0.00000
+Chlamydomonas reinhardtii	3055	S	7	0	7	0.00000
+Dunaliella primolecta	257627	S	1	0	1	0.00000
+Volvox carteri	3067	S	1	0	1	0.00000
+Monoraphidium neglectum	145388	S	1	0	1	0.00000
+Bracteacoccus sp. GILB	2306712	S	1	0	1	0.00000
+Asterarcys sp. GP-2019	2650791	S	1	0	1	0.00000
+Auxenochlorella protothecoides	3075	S	1	0	1	0.00000
+Coccomyxa sp. Obi	2315456	S	2	0	2	0.00000
+Prasiolopsis sp. SAG 84.81	1562155	S	1	1	2	0.00000
+uncultured Choricystis	858337	S	1	0	1	0.00000
+Bathycoccus prasinos	41875	S	3	0	3	0.00000
+Micromonas pusilla	38833	S	2	0	2	0.00000
+Rhipiliopsis reticulata	189436	S	1	0	1	0.00000
+Oltmannsiellopsis viridis	51324	S	1	0	1	0.00000
+Chloropicon primus	1764295	S	1	0	1	0.00000
+Fistulifera solaris	1519565	S	3	0	3	0.00000
+Haslea pseudostrearia	197756	S	1	0	1	0.00000
+Phaeodactylum tricornutum	2850	S	4	0	4	0.00000
+Epithemia pelagica	2809013	S	6	0	6	0.00000
+Cylindrotheca closterium	2856	S	1	0	1	0.00000
+Thalassiosira pseudonana	35128	S	1	0	1	0.00000
+Nannochloropsis oceanica	145522	S	4	0	4	0.00000
+Nannochloropsis gaditana	72520	S	1	0	1	0.00000
+Dictyocha speculum	35687	S	1	0	1	0.00000
+Phytophthora agathidicida	1642459	S	5	0	5	0.00000
+Phytophthora capsici	4784	S	2	0	2	0.00000
+Phytophthora sojae	67593	S	1	0	1	0.00000
+Plasmopara halstedii	4781	S	2	0	2	0.00000
+Hyaloperonospora parasitica	123356	S	1	0	1	0.00000
+Saprolegnia parasitica	101203	S	1	0	1	0.00000
+Albugo laibachii	653948	S	1	1	2	0.00000
+Blastocystis sp. subtype 4	944170	S	2	0	2	0.00000
+Plasmodium vivax	5855	S	2	0	2	0.00000
+Plasmodium cynomolgi	5827	S	1	0	1	0.00000
+Plasmodium knowlesi	5850	S	1	0	1	0.00000
+Plasmodium malariae	5858	S	1	0	1	0.00000
+Plasmodium gonderi	77519	S	1	0	1	0.00000
+Plasmodium sp. gorilla clade G2	880535	S	4	2	6	0.00000
+Plasmodium yoelii	5861	S	2	1	3	0.00000
+Plasmodium coatneyi	208452	S	1	0	1	0.00000
+Babesia bigemina	5866	S	2	0	2	0.00000
+Eimeria tenella	5802	S	2	0	2	0.00000
+Eimeria mitis	44415	S	2	0	2	0.00000
+Eimeria acervulina	5801	S	1	0	1	0.00000
+Eimeria necatrix	51315	S	1	0	1	0.00000
+Toxoplasma gondii	5811	S	3	0	3	0.00000
+Neospora caninum	29176	S	3	0	3	0.00000
+Cryptosporidium muris	5808	S	1	0	1	0.00000
+Gregarina niphandrodes	110365	S	2	0	2	0.00000
+Tetrahymena thermophila	5911	S	1	0	1	0.00000
+Perkinsus marinus	31276	S	1	0	1	0.00000
+Leishmania major	5664	S	1	2	3	0.00000
+Leishmania braziliensis	5660	S	1	1	2	0.00000
+Leptomonas pyrrhocoris	157538	S	2	0	2	0.00000
+Trypanosoma grayi	71804	S	2	0	2	0.00000
+Trypanosoma theileri	67003	S	1	0	1	0.00000
+Trypanosoma rangeli	5698	S	1	0	1	0.00000
+Angomonas deanei	59799	S	4	0	4	0.00000
+Cryptoglena soropigra	1249089	S	1	0	1	0.00000
+Naegleria gruberi	5762	S	2	0	2	0.00000
+Acytostelium subglobosum	361139	S	1	0	1	0.00000
+Dictyostelium purpureum	5786	S	1	0	1	0.00000
+Entamoeba invadens	33085	S	1	0	1	0.00000
+Acanthamoeba castellanii	5755	S	2	0	2	0.00000
+Emiliania huxleyi	2903	S	1	1	2	0.00000
+Schizymenia dubyi	38368	S	1	0	1	0.00000
+Erythrotrichia welwitschii	1076257	S	1	0	1	0.00000
+uncultured eukaryote	100272	S	2	12	14	0.00001
+Guillardia theta	55529	S	1	0	1	0.00000
+Trichomonas vaginalis	5722	S	1	0	1	0.00000
+Natronomonas moolapensis	416273	S	1	0	1	0.00000
+Natronomonas sp. ZY43	2961939	S	1	0	1	0.00000
+Halomicrobium salinisoli	2878391	S	2	0	2	0.00000
+Haloarcula sp. JP-L23	2716717	S	1	0	1	0.00000
+Halosimplex litoreum	1198301	S	1	0	1	0.00000
+Halorussus sp. XZYJT10	2953749	S	2	0	2	0.00000
+Halorussus pelagicus	2505977	S	1	0	1	0.00000
+Halomarina sp. BND7	2961599	S	2	0	2	0.00000
+Salinirubellus salinus	1364945	S	1	0	1	0.00000
+Halostella pelagica	2583824	S	1	0	1	0.00000
+Natrinema sp. J7-2	406552	S	2	0	2	0.00000
+Natrinema sp. DC36	2878680	S	1	0	1	0.00000
+Natrarchaeobaculum aegyptiacum	745377	S	2	0	2	0.00000
+Natrarchaeobaculum sulfurireducens	2044521	S	1	0	1	0.00000
+Halosolutus halophilus	1552990	S	1	0	1	0.00000
+Haloterrigena sp. BND6	2961571	S	1	0	1	0.00000
+Halostagnicola larsenii	353800	S	1	0	1	0.00000
+Natribaculum sp. CGA3	2953881	S	1	0	1	0.00000
+Halorubrum lacusprofundi	2247	S	1	0	1	0.00000
+Halorubrum salinarum	2739057	S	1	0	1	0.00000
+Halolamina sp. CBA1230	1853690	S	1	0	1	0.00000
+Halopenitus persicus	1048396	S	1	0	1	0.00000
+Haloplanus aerogenes	660522	S	1	0	1	0.00000
+Methanosarcina lacustris	170861	S	1	0	1	0.00000
+Methanosarcina sp. MTP4	1434100	S	1	0	1	0.00000
+Methanohalophilus mahii	2176	S	1	0	1	0.00000
+Methanomethylovorans hollandica	101192	S	1	0	1	0.00000
+Methanoculleus bourgensis	83986	S	1	0	1	0.00000
+Methanospirillum hungatei	2203	S	1	0	1	0.00000
+Methanoregula formicica	882104	S	1	0	1	0.00000
+Methanocella paludicola	570267	S	1	0	1	0.00000
+Nanohaloarchaea archaeon SG9	1737403	S	1	0	1	0.00000
+Methanobacterium alkalithermotolerans	2731220	S	1	0	1	0.00000
+Methanobrevibacter smithii	2173	S	1	0	1	0.00000
+Thermococcus sp. 2319x1	1674923	S	1	0	1	0.00000
+Thermococcus radiotolerans	187880	S	1	0	1	0.00000
+Archaeoglobus fulgidus	2234	S	1	0	1	0.00000
+Archaeoglobus veneficus	58290	S	1	0	1	0.00000
+Euryarchaeota archaeon	2026739	S	1	0	1	0.00000
+Acidianus brierleyi	41673	S	2	0	2	0.00000
+Acidianus sp. HS-5	2886040	S	1	0	1	0.00000
+Thermoproteus tenax	2271	S	1	0	1	0.00000
+Pyrobaculum neutrophilum	70771	S	1	0	1	0.00000
+Nitrosopumilus ureiphilus	1470067	S	1	0	1	0.00000
+Marine Group I thaumarchaeote	2511932	S	1	0	1	0.00000
+Candidatus Nitrosotenuis cloacae	1603555	S	1	0	1	0.00000
+Cenarchaeum symbiosum	46770	S	1	0	1	0.00000
+uncultured marine thaumarchaeote KM3_203_A01	1456097	S	1	0	1	0.00000
+uncultured archaeon	115547	S	2	0	2	0.00000
+uncultured DPANN archaeon	2219213	S	1	1	2	0.00000
+Candidatus Heimdallarchaeota archaeon	2026747	S	2	0	2	0.00000
+Siphoviridae sp.	2170413	S	72	15	87	0.00006
+Escherichia phage CMS-2020a	2735572	S	22	140	162	0.00011
+Siphoviridae sp. ctBfm1	2828158	S	4	3	7	0.00000
+Bacillus phage vB_BanS_Nate	2894788	S	2	0	2	0.00000
+Salmonella phage SSU5	1177632	S	1	0	1	0.00000
+Siphoviridae sp. ctaDn21	2825563	S	1	0	1	0.00000
+Lactobacillus phage phiadh	12417	S	1	0	1	0.00000
+Mycobacterium phage MalagasyRose	2599870	S	1	0	1	0.00000
+Siphoviridae sp. ctZHD14	2827891	S	1	0	1	0.00000
+Clostridium phage phi8074-B1	1147137	S	1	0	1	0.00000
+Vibrio phage 1.104.O._10N.286.49.A12	1881324	S	1	0	1	0.00000
+Siphoviridae sp. ctX581	2826365	S	1	0	1	0.00000
+Podoviridae sp.	2202567	S	82	20	102	0.00007
+Podoviridae sp. cti4q9	2826569	S	7	7	14	0.00001
+Podoviridae sp. ct3k57	2825217	S	2	1	3	0.00000
+Myoviridae sp.	2202564	S	50	17	67	0.00005
+Enterobacteria phage SfV	55884	S	7	7	14	0.00001
+Enterobacteria phage SfI	1225789	S	2	30	32	0.00002
+Pseudomonas phage vB_PaeM_PA5oct	2163605	S	1	0	1	0.00000
+Myoviridae sp. ctx322	2826711	S	1	0	1	0.00000
+Pseudomonas phage PhiPA3	998086	S	1	0	1	0.00000
+Escherichia phage vB_EcoP_Kapi1	2746235	S	6	7	13	0.00001
+Escherichia phage N7	2340720	S	3	3	6	0.00000
+Enterobacteria phage Sf101	1524881	S	2	2	4	0.00000
+Escherichia phage APC_JM3.2	2045361	S	1	0	1	0.00000
+Escherichia phage JEP4	2759219	S	1	2	3	0.00000
+Escherichia phage HF4s	2775262	S	1	1	2	0.00000
+Lederbergvirus P22	10754	S	1	8	9	0.00001
+Lederbergvirus Sf6	10761	S	1	1	2	0.00000
+Peduovirus P2	10679	S	4	3	7	0.00000
+Yersinia phage P37	2724352	S	2	4	6	0.00000
+Escherichia phage S164	2939122	S	1	2	3	0.00000
+Peduovirus YPM50	2956280	S	1	2	3	0.00000
+Peduovirus R18C	2843959	S	1	5	6	0.00000
+Lambdavirus lambda	10710	S	2	15	17	0.00001
+Escherichia phage Lambda_ev243	2742957	S	1	13	14	0.00001
+Enterobacteria phage H-19B	69932	S	1	2	3	0.00000
+Lambdavirus HK629	2169968	S	2	16	18	0.00001
+Tequatrovirus ecnp1	2844191	S	2	0	2	0.00000
+Klebsiella phage Metamorpho	2767580	S	1	0	1	0.00000
+Angelvirus px29	2955358	S	1	0	1	0.00000
+Firehammervirus CPt10	722418	S	2	1	3	0.00000
+Byrnievirus HK97	37554	S	2	2	4	0.00000
+Wongtaivirus HK542	2169922	S	1	1	2	0.00000
+Stenotrophomonas phage vB_SmaS-DLP_6	1651816	S	1	0	1	0.00000
+Rhizobium phage RHph_I1_18	2509726	S	1	0	1	0.00000
+Punavirus P1	10678	S	1	4	5	0.00000
+Pectobacterium phage vB_PatM_CB7	1958916	S	1	0	1	0.00000
+Tinduovirus TIN2	1982570	S	1	0	1	0.00000
+uncultured Caudovirales phage	2100421	S	1	0	1	0.00000
+Ruegeria phage vB_RpoS-V18	2218619	S	1	0	1	0.00000
+Junavirus LJ	2845134	S	1	0	1	0.00000
+Kamchatkavirus AP45	2843645	S	1	0	1	0.00000
+Klebsiella virus ZCKP1	2734133	S	1	0	1	0.00000
+Nonagvirus nv9g	1921118	S	1	0	1	0.00000
+Salmonella phage SPFM13	2528683	S	1	17	18	0.00001
+Streptococcus phage Javan14	2548001	S	1	0	1	0.00000
+Oslovirus Lyz12581Vzw	2844268	S	1	77	78	0.00005
+Baltivirus phi18tres	2955411	S	1	0	1	0.00000
+Annadreamyvirus annadreamy	2846392	S	1	0	1	0.00000
+Inoviridae sp.	2219103	S	70	54	124	0.00009
+Lineavirus I22	10869	S	37	0	37	0.00003
+Lineavirus IKe	1977304	S	1	1	2	0.00000
+Human papillomavirus	10566	S	1	0	1	0.00000
+Flumine parvovirus 11	2940893	S	1	0	1	0.00000
+Circoviridae sp.	1954248	S	1	0	1	0.00000
+Bacteriophage sp.	38018	S	102	13	115	0.00008
+Aphid lethal paralysis virus	209529	S	1	0	1	0.00000
+Porcine reproductive and respiratory syndrome virus	28344	S	1	0	1	0.00000
+Betaarterivirus suid 2	2499685	S	1	0	1	0.00000
+Mamastrovirus 3	1239567	S	1	0	1	0.00000
+Zika virus	64320	S	1	0	1	0.00000
+Pestivirus C	2170082	S	1	0	1	0.00000
+Narnaviridae sp.	2583949	S	1	0	1	0.00000
+Rehudzovirus terrihabitans	2846055	S	1	0	1	0.00000
+Influenza A virus	11320	S	1	0	1	0.00000
+Rotavirus A	28875	S	1	0	1	0.00000
+Human immunodeficiency virus 1	11676	S	3	0	3	0.00000
+Human immunodeficiency virus 2	11709	S	1	0	1	0.00000
+Blueberry red ringspot virus	172220	S	1	0	1	0.00000
+Changjiang picorna-like virus 7	1922796	S	1	0	1	0.00000
+Pithovirus sibericum	1450746	S	1	0	1	0.00000
+Pandoravirus inopinatum	1605721	S	1	0	1	0.00000
+Prokaryotic dsDNA virus sp.	2591644	S	1	0	1	0.00000
+African swine fever virus	10497	S	1	0	1	0.00000
+Abalone asfa-like virus	2839893	S	1	0	1	0.00000
+Bodo saltans virus	2024608	S	1	0	1	0.00000
+synthetic construct	32630	S	65	74	139	0.00010
+Cloning vector pFL122	299444	S	2	11	13	0.00001
+Shuttle vector pTET15	696860	S	2	3	5	0.00000
+TF expression vector pB1H2	382948	S	1	2	3	0.00000
+Cloning vector pUC18Ter	1918676	S	1	1	2	0.00000
+Cloning vector pAJM.677	2461531	S	1	1	2	0.00000
+Cloning vector pGABE	2557861	S	1	2	3	0.00000
+Expression vector pRESQ70	510745	S	1	12	13	0.00001
+Recombinant plasmid pUCR1.0	437896	S	1	1	2	0.00000
+Cloning vector pRepAts-dnaA	1151788	S	1	4	5	0.00000
+Cloning vector pIS26-CRISPRCas9	2854388	S	1	1	2	0.00000
+Cloning vector pJHU1	1150471	S	1	0	1	0.00000
+Helper vector pTKRED	711475	S	1	2	3	0.00000
+Cloning vector pJFR5	1978236	S	1	1	2	0.00000
+Cloning vector p.sfGFP:TAG-151_tRNASer:CTA	2045313	S	1	12	13	0.00001
+Cloning vector SBa_000560	1176380	S	1	7	8	0.00001
+Cloning vector pINIIIompA3	44121	S	1	0	1	0.00000
+translation factor module pTFM1	1735752	S	1	0	1	0.00000
+Expression vector pTRX-srtA	573375	S	1	0	1	0.00000
+Expression vector pMMS	1077524	S	1	12	13	0.00001
+Cloning vector pGFIB-1	1789745	S	1	3	4	0.00000
+unidentified cloning vector	45196	S	1	3	4	0.00000
+Cloning vector pBAD24-rnc-sfGFP	1367469	S	1	4	5	0.00000
+Cloning vector Crypto RNAi HP-Frame	795389	S	1	0	1	0.00000
+Shuttle vector pKV12	1265608	S	1	3	4	0.00000
+Reporter vector pGlowRed	797074	S	1	4	5	0.00000
+Expression vector pSG590_5	1569341	S	1	2	3	0.00000
+CRIM plasmid pLA2	172443	S	1	5	6	0.00000
+Expression vector pCon5	999511	S	1	3	4	0.00000
+Cloning vector pLacCOs1	1090868	S	1	9	10	0.00001
+synthetic Escherichia coli Syn61	2580236	S	29	14	43	0.00003
+Sym plasmid	28430	S	1	2	3	0.00000
+Plasmid pIP1527	2571	S	1	0	1	0.00000
+Transposon Tn3	2401	S	1	0	1	0.00000
+uncultured organism	155900	S	97	36	133	0.00009
+uncultured prokaryote	198431	S	18	2	20	0.00001
+uncultured microorganism	358574	S	2	0	2	0.00000
