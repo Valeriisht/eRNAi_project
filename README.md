@@ -1,5 +1,7 @@
 # eRNAi
 
+<img align=right src="https://clipart-library.com/images/BTaKAn6gc.jpg" alt="# Codon-optimization Tool" width="100"/>
+
 - The repository for scientific project to develop an algorithm for predicting RNA interference from the environment based on omics data
 
 ## Содержание
