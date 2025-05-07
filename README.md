@@ -2,9 +2,11 @@
 
 <img align=right src="https://clipart-library.com/images/BTaKAn6gc.jpg" alt="# Codon-optimization Tool" width="100"/>
 
-- The repository for scientific project to develop an algorithm for predicting RNA interference from the environment based on omics data
+## RNA-mediated interactions: An eRNAi target search algorithm for studying the impact of the metagenome
 
-## Содержание
+- The phenomenon of environmental RNA interference (eRNAi) is based on the transfer of small RNA molecules (sRNA) between organisms to suppress the expression of target genes. The design algorithm for finding eRNAi targets is based on multi-omics analysis by integrating metagenomic and transcriptomic data.
+
+## Contents
 - [System specifications](#system-specifications)
 - [Installation](#Installation)
 - [Testing](#Testing)
@@ -24,8 +26,6 @@ Activate it:
 conda env create -f environment.yml
 conda activate eRNAi
 ```
-
-## Usage
 
 ## Examples
 
