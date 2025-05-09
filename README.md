@@ -18,7 +18,6 @@
 <img src="https://github.com/Valeriisht/eRNAi_project/blob/dev/imgs/pipeline.png" />
 
 ## Contents
-- [System specifications](#system-specifications)
 - [Installation](#Installation)
 - [Testing](#Testing)
 - [Contributing](#Contributing)
@@ -38,8 +37,6 @@ conda env create -f environment.yml
 conda activate eRNAi
 ```
 
-## Examples
-
 ## Testing
 
 Three types of tests: unit tests, integration tests, and generation tests cover the project.
@@ -47,11 +44,8 @@ Three types of tests: unit tests, integration tests, and generation tests cover 
 To run it, execute the command:
 
 ```
+pytest tests/ 
 ```
-
-## Issues 
-
-Metatransriptomics rule is in the development stage.
 
 ## Contributing 
 
