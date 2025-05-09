@@ -1,4 +1,4 @@
-# Enviromental RNA-interference (eRNAi)
+# Environmental RNA-interference (eRNAi)
 
 <img align=right src="https://clipart-library.com/images/BTaKAn6gc.jpg" alt="# Codon-optimization Tool" width="100"/>
 
