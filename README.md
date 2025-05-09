@@ -6,7 +6,7 @@
 
 - The phenomenon of environmental RNA interference (eRNAi) is based on the transfer of small RNA molecules (sRNA) between organisms to suppress the expression of target genes. The design algorithm for finding eRNAi targets is based on multi-omics analysis by integrating metagenomic and transcriptomic data.
 
-<img src="https://github.com/Valeriisht/eRNAi_project/blob/dev/imgs/pipeline.pdf" />
+<img src="https://github.com/Valeriisht/eRNAi_project/blob/dev/imgs/pipeline.png" />
 
 ## Contents
 - [System specifications](#system-specifications)
