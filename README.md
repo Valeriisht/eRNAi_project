@@ -1,4 +1,4 @@
-# eRNAi
+# Enviromental RNA-interference (eRNAi)
 
 <img align=right src="https://clipart-library.com/images/BTaKAn6gc.jpg" alt="# Codon-optimization Tool" width="100"/>
 
@@ -8,12 +8,12 @@
 
 ### Steps
 
-1) Data analysis and selection of suitable target datasets
-2) Data pre-processing 
-3) Canonical Correspondence Analysis (CCA)
-4) Identification of meta-genome and transcriptome overlap regions
-5) Statistical validation of results  
-4) Pipeline validation and testing 
+- 1) Data analysis and selection of suitable target datasets
+- 2) Data pre-processing 
+- 3) Canonical Correspondence Analysis (CCA)
+- 4) Identification of meta-genome and transcriptome overlap regions
+- 5) Statistical validation of results  
+- 4) Pipeline validation and testing 
 
 <img src="https://github.com/Valeriisht/eRNAi_project/blob/dev/imgs/pipeline.png" />
 
