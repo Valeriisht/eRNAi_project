@@ -6,6 +6,15 @@
 
 - The phenomenon of environmental RNA interference (eRNAi) is based on the transfer of small RNA molecules (sRNA) between organisms to suppress the expression of target genes. The design algorithm for finding eRNAi targets is based on multi-omics analysis by integrating metagenomic and transcriptomic data.
 
+### Steps
+
+1) Data analysis and selection of suitable target datasets
+2) Data pre-processing 
+3) Canonical Correspondence Analysis (CCA)
+4) Identification of meta-genome and transcriptome overlap regions
+5) Statistical validation of results  
+4) Pipeline validation and testing 
+
 <img src="https://github.com/Valeriisht/eRNAi_project/blob/dev/imgs/pipeline.png" />
 
 ## Contents
