@@ -14,6 +14,8 @@
 - [Installation](#Installation)
 - [Testing](#Testing)
 - [Contributing](#Contributing)
+- [Literature](#Literature)
+- [Citation](#Citation)
 
 ## Pipeline
 
@@ -62,3 +64,6 @@ pytest tests/
 
 [Contributing.md](docs/CONTRIBUTING.md).
 
+## Literature
+
+## Citation
