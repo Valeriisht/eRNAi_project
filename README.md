@@ -1,8 +1,6 @@
-# Environmental RNA-interference (eRNAi)
+# RNA-mediated interactions: An eRNAi target search algorithm for studying the impact of the metagenome
 
 <img align=right src="https://clipart-library.com/images/BTaKAn6gc.jpg" alt="# Codon-optimization Tool" width="100"/>
-
-## RNA-mediated interactions: An eRNAi target search algorithm for studying the impact of the metagenome
 
 - The phenomenon of environmental RNA interference (eRNAi) is based on the transfer of small RNA molecules (sRNA) between organisms to suppress the expression of target genes. Investigating the processes of environmental RNA interference provides novel insights into the dynamics of interactions between living beings.
 
