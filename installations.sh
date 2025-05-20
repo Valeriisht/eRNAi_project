@@ -8,4 +8,8 @@ conda install bioconda::kraken2=2.14
 conda install bioconda::bracken=3.1
 conda install bioconda::metaphlan
 conda install -c conda-forge coincbc
+conda install bioconda::ncbi-genome-download
+conda install bioconda::dsk=2.3.3
+conda install bioconda::blast=2.16.0
+conda install conda-forge::datasets=3.6.0
 
