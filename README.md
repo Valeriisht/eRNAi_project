@@ -42,12 +42,28 @@ To get the tool clone the git repository:
 ```sh
 git clnone git@github.com:Valeriisht/eRNAi_project.git
 ```
+
 Create a conda environment with the necessary packages. 
 Activate it:
 
 ```sh
-conda env create -f environment.yml
+conda env create -f environment.yaml
 conda activate eRNAi
+```
+
+Then you can use your data, such as metagenomic and transcriptomic data.
+In order to use your own data, you need to specify the parameters (data references and SRA ID) in the configuration file (```config.yaml```).
+
+## Usage
+
+The scripts for primary data processing can be found in the following folder ```workflow/rules/```
+
+To run the process, select the desired rule all in ```SnakeFile``` to process the data.
+
+Example:
+
+```
+snalemake --cores 8
 ```
 
 ## Testing
