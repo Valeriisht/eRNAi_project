@@ -63,7 +63,7 @@ To run the process, select the desired rule all in ```SnakeFile``` to process th
 Example:
 
 ```
-snalemake --cores 8
+snakemake --cores 8
 ```
 
 ## Testing
