@@ -2,7 +2,7 @@
 
 <img align=right src="https://clipart-library.com/images/BTaKAn6gc.jpg" alt="# Codon-optimization Tool" width="100"/>
 
-- The phenomenon of environmental RNA interference (eRNAi) is based on the transfer of small RNA molecules (sRNA) between organisms to suppress the expression of target genes. Investigating the processes of environmental RNA interference provides novel insights into the dynamics of interactions between living beings.
+- The phenomenon of environmental RNA interference (eRNAi) is based on the transfer of small RNA molecules (sRNA) between organisms to suppress the expression of target genes. Investigating the processes of environmental RNA interference provides novel insights into the dynamics of interactions between living beings and raises the question of whether RNA could be transferred between organisms.
 
 ## Aim
 
@@ -12,7 +12,9 @@
 - [Pipeline](#Pipeline)
 - [Dataset](#Dataset)
 - [Installation](#Installation)
+- [Usage](#Usage)
 - [Testing](#Testing)
+- [Results](#Results)
 - [Contributing](#Contributing)
 - [Literature](#Literature)
 - [Citation](#Citation)
