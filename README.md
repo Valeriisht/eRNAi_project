@@ -11,13 +11,13 @@
 ## Contents
 - [Pipeline](#Pipeline)
 - [Dataset](#Dataset)
+- [Methods](#Methods)
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Testing](#Testing)
 - [Results](#Results)
 - [Contributing](#Contributing)
 - [Literature](#Literature)
-- [Citation](#Citation)
 
 ## Pipeline
 
@@ -36,6 +36,35 @@ The data were obtained from public sources.
 
 - *Gallus gallus*, **BioProject PRJNA503784** (Tejas M. Shah et al. 2019)
 - *Homo Sapiens*,  **NASA GeneLab - OSD-574** (Park J et al. 2024)
+
+## Methods
+
+The following tools are used in this project: 
+
+### Core Frameworks
+- **Snakemake**  
+  *Mölder et al., 2021*  
+  ```doi:10.12688/f1000research.29032.1```
+
+### Metagenomics
+- **Kraken 2** | *Lu et al., 2022*  
+  ```doi:10.1038/s41596-022-00738-y```
+- **Bracken** | *Lu et al., 2017*  
+  ```doi:10.7717/peerj-cs.104```
+
+### Sequence Analysis
+- **DSK** | *Rizk et al., 2013*  
+  ```doi:10.1093/bioinformatics/btt020```
+- **BLAST+** | *Camacho et al., 2009*  
+  ```doi:10.1186/1471-2105-10-421```
+
+### Transcriptomics
+- **Kallisto** | *Bray et al., 2016*  
+  ```doi:10.1038/nbt.3519```
+
+### Statistical Computing
+- **R** | *R Core Team, 2024*  
+  ```https://www.R-project.org/```
 
 ## Installation
 
@@ -56,9 +85,10 @@ conda activate eRNAi
 Then you can use your data, such as metagenomic and transcriptomic data.
 In order to use your own data, you need to specify the parameters (data references and SRA ID) in the configuration file (```config.yaml```).
 
+
 ## Usage
 
-The scripts for primary data processing can be found in the following folder ```workflow/rules/```
+The scripts for primary data processing can be found in the following folder [```rules```](workflow/rules/) 
 
 To run the process, select the desired rule all in ```SnakeFile``` to process the data.
 
@@ -72,18 +102,32 @@ snakemake --cores 8
 
 Three types of tests: unit tests, integration tests, and generation tests cover the project.
 
+Nowdays: 
+
+[Test Coverage]
+│
+├── Unit Tests:        ✔ Almost implemented (and some in progress)
+│   └── Coverage:      
+│
+├── Integration Tests:  ⌛ In progress
+└── Generative Tests: ⏳ Planned 
+
 To run it, execute the command:
 
 ```
 pytest tests/ 
 ```
 
+## Results
+
+1) DSK+BLAST revealed a significant number of common sites between microbial sequences and the host genome
+
 
 ## Contributing 
 
 [Contributing.md](docs/CONTRIBUTING.md).
 
-## Citation
+## Literature
 1) Park, J., Overbey, E. G., Narayanan, S. A., Kim, J., Tierney, B. T., Damle, N., Najjar, D., Ryon, K. A., Proszynski, J., Kleinman, A., Hirschberg, J. W., MacKay, M., Afshin, E. E., Granstein, R., Gurvitch, J., Hudson, B. M., Rininger, A., Mullane, S., Church, S. E., … Mason, C. E. (2024). Spatial multi-omics of human skin reveals KRAS and inflammatory responses to spaceflight. Nature Communications, 15(1), 4773. https://doi.org/10.1038/s41467-024-48625-2
 
 2) Shah, T. M., Patel, J. G., Gohil, T. P., Blake, D. P., & Joshi, C. G. (2019). Host transcriptome and microbiome interaction modulates physiology of full-sibs broilers with divergent feed conversion ratio. Npj Biofilms and Microbiomes, 5(1), 24. https://doi.org/10.1038/s41522-019-0096-3
