@@ -44,27 +44,20 @@ The following tools are used in this project:
 ### Core Frameworks
 - **Snakemake**  
   *Mölder et al., 2021*  
-  ```doi:10.12688/f1000research.29032.1```
 
 ### Metagenomics
 - **Kraken 2** | *Lu et al., 2022*  
-  ```doi:10.1038/s41596-022-00738-y```
 - **Bracken** | *Lu et al., 2017*  
-  ```doi:10.7717/peerj-cs.104```
 
 ### Sequence Analysis
 - **DSK** | *Rizk et al., 2013*  
-  ```doi:10.1093/bioinformatics/btt020```
 - **BLAST+** | *Camacho et al., 2009*  
-  ```doi:10.1186/1471-2105-10-421```
 
 ### Transcriptomics
 - **Kallisto** | *Bray et al., 2016*  
-  ```doi:10.1038/nbt.3519```
 
 ### Statistical Computing
 - **R** | *R Core Team, 2024*  
-  ```https://www.R-project.org/```
 
 ## Installation
 
