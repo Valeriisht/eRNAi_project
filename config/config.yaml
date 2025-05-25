@@ -1,7 +1,91 @@
-##### directories
-result_dir:  results/ 
+output_dir: "kraken"
+input_dir: "metagenome/dehost"
+ref_dir: "data/data_ggallus/genome"
+taxid: "galGal6"
+sample_name: "gallus_sample"
 
-##### params for specific rules
-# read quality trimming
+sra:
+  sra_id:
+  # as example
+    - "SRR8265535"
+    - "SRR8265537" 
+    - "SRR8265543"
+    - "SRR8265545"
+    - "SRR8265547"
+    - "SRR8265551"
+    - "SRR8265564"
+    - "SRR8265565"
+    - "SRR8265567"
+    - "SRR8265569"
+    - "SRR8265571"
+    - "SRR8265536"
+    - "SRR8265538"
+    - "SRR8265544"
+    - "SRR8265546"
+    - "SRR8265552"
+    - "SRR8265563"
+    - "SRR8265566"
+    - "SRR8265568"
+
+  paired: True
+  thread: 2
+
+threads:
+  bwa_index: 2
+  bwa_align: 2
+  sam_to_bam: 2
+  split_reads: 2
+
+# transcriptome params
+#==================
+
+kallisto:
+  kmer_size: 31  # k-mer length (default is 31)
+  bootstrap: 30  # Number of bootstrap replicates for uncertainty estimation
+
+# host_genome params
+#==========================
+
+threads:
+  bwa_index: 8
+  bwa_align: 8
+  sam_to_bam: 8  
+  split_reads: 4    
+
+
+#kraken2 params
+#============================
+
+algorithm: "kraken2"  # Algorithm to be used  
+database: "/mnt/metagenomics/kraken2"  # Path to the Kraken2 database  
+sample_name: "gallus_gallus"  # Sample name (used for naming output files) 
+
+#============================
+
+# bracken params
+read_length: 150
+taxonomic_level: ['S']
+
+
+# preprocessing params
+#=================
+##### params for specific rules ####
 fastp:
-  qualified_quality_phred: 30
+    thread: 8
+    qualified_quality_phred: 20
+    min_length: 50
+    detect_adapters: True
+
+# metaphlan params
+#===============================
+
+metaphlan:
+  threads: 8
+
+# humann params
+#===============================
+humann:
+  threads: 8
+
+
+

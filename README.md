@@ -76,6 +76,10 @@ To run it, execute the command:
 pytest tests/ 
 ```
 
+## Issues 
+
+Metatransriptomics rule is in the development stage.
+
 ## Contributing 
 
 [Contributing.md](docs/CONTRIBUTING.md).

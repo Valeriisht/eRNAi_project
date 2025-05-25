@@ -1,0 +1,15 @@
+d__Bacteria	39
+d__Bacteria|p__Firmicutes	16
+d__Bacteria|p__Actinobacteria	3
+d__Bacteria|p__Proteobacteria	15
+d__Bacteria|p__Bacteroidota	3
+d__Bacteria|p__Planctomycetota	1
+d__Eukaryota	12
+d__Eukaryota|k__Metazoa	12
+d__Eukaryota|k__Metazoa|p__Chordata	8
+d__Eukaryota|k__Metazoa|p__Annelida	1
+d__Eukaryota|k__Metazoa|p__Platyhelminthes	1
+d__Eukaryota|k__Metazoa|p__Arthropoda	2
+d__Viruses	4
+d__Viruses|k__Heunggongvirae	4
+d__Viruses|k__Heunggongvirae|p__Uroviricota	4
