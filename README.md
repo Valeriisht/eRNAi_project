@@ -162,7 +162,13 @@ Check whether the probability of finding intersections is statistically signific
 
 - T-test
 
-  - Differences in probabilities of direction by group between species
+  - Differences in probabilities of direction by group between species - revealed no statistically significant difference
+
+  vis of transcript overlapping between different organisms:
+  [image](img/statistic_tests/windrose.png)
+  
+  ![image](img/statistic_tests/windrose.png)
+
 
 Output:
 
