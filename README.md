@@ -119,11 +119,11 @@ pytest tests/
 
    - The relationship between microorganisms and the transcriptome
 
-   vis:
+   vis: [image](img/CCA_graphics.png)
 
-   [image](img/CCA_graphics.png)
+   ![image](img/CCA_graphics.png)
    
-2) DSK+BLAST revealed a significant number of common sites between microbial sequences and the host genome
+3) DSK+BLAST revealed a significant number of common sites between microbial sequences and the host genome
 
 params:
 
@@ -139,15 +139,13 @@ Check whether the probability of finding intersections is statistically signific
 
   - Probabilities for DSK-targets inside and outside the transcriptome in CCA - intersection with CCA transcripts
 
-  vis:
-  [image](img/statistic_tests/CCA_out(graphic1).png)
+  vis: [image](img/statistic_tests/CCA_out(graphic1).png)
 
   ![image](img/statistic_tests/CCA_out(graphic1).png)
 
   - Probabilities for DSK-targets with co-directional, oppositely directed and other transcripts within CCA transcripts
 
-  vis:
-  [image](img/statistic_tests/fisher_cca.png)
+  vis: [image](img/statistic_tests/fisher_cca.png)
 
   ![image](img/statistic_tests/fisher_cca.png)
 
@@ -155,8 +153,7 @@ Check whether the probability of finding intersections is statistically signific
 
   - Probability co-directional/opposite-directional/otherwise
 
-  vis:
-  [image](img/statistic_tests/binomial_cca.png)
+  vis: [image](img/statistic_tests/binomial_cca.png)
   
   ![image](img/statistic_tests/binomial_cca.png)
 
@@ -164,8 +161,7 @@ Check whether the probability of finding intersections is statistically signific
 
   - Differences in probabilities of direction by group between species - revealed no statistically significant difference
 
-  vis of transcript overlapping between different organisms:
-  [image](img/statistic_tests/windrose.png)
+  vis of transcript overlapping between different organisms: [image](img/statistic_tests/windrose.png)
   
   ![image](img/statistic_tests/windrose.png)
 
