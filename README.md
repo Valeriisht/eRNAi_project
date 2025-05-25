@@ -115,9 +115,55 @@ pytest tests/
 
 ## Results
 
-1) DSK+BLAST revealed a significant number of common sites between microbial sequences and the host genome
+1) Canonical Correspondence Analysis (CCA)
 
+   - The relationship between microorganisms and the transcriptome
 
+   vis:
+
+   [image](img/CCA_graphics.png)
+   
+2) DSK+BLAST revealed a significant number of common sites between microbial sequences and the host genome
+
+params:
+
+- e-value: 0.1
+- word_size 12 
+- task blastn-short
+
+3) Statistics
+
+Check whether the probability of finding intersections is statistically significant and associated with CCA.
+
+- Fisher tests:
+
+  - Probabilities for DSK-targets inside and outside the transcriptome in CCA - intersection with CCA transcripts
+
+  vis:
+  [image](img/statistic_tests/CCA_out(graphic1).png)
+
+  - Probabilities for DSK-targets with co-directional, oppositely directed and other transcripts within CCA transcripts
+
+  vis:
+  [image](img/statistic_tests/fisher_cca.png)
+
+- Binomial test:
+
+  - Probability co-directional/opposite-directional/otherwise
+
+  vis:
+  [image](img/statistic_tests/binomial_cca.png)
+
+- T-test
+
+  - Differences in probabilities of direction by group between species
+
+Output:
+
+- The assay results do not contradict  hypothesis concerning that non-coding regions of prokaryotic mRNAs may act as regulatory elements, exerting influence on the expression of target genes in eukaryotic cells.
+- The developed algorithm - is potentially able to detect the effectors of inter-organismal eRNAi interactions.
+
+ 
 ## Contributing 
 
 [Contributing.md](docs/CONTRIBUTING.md).
