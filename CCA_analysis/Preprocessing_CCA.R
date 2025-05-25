@@ -1,19 +1,14 @@
-## подготовим файлы для анализа
+## Preprocessing for CCA
 
-# for file in *species.report; do
-# echo "Обрабатываю $file..."
-# /home/v.ishtuganova/eRNAi_project_last/eRNAi_project/kraken2/KrakenTools/kreport2mpa.py -r "$file" -o "${file%.*}.mpa" || echo "Ошибка в $file"
-# done
-# 
 
-################################## metagenome
+##################################metagenome################################## 
 
-# файлы 
-file_path <- "results/kraken_res/bracken/"
+# files loading 
+file_path <- "kraken/"
 file_pattern <- "*_species.report"  
 
 
-# Получаем список файлов
+# list of files
 
 file_list <- list.files(path = file_path, 
                         pattern = file_pattern, 
@@ -21,12 +16,12 @@ file_list <- list.files(path = file_path,
 
 process_metaphlan_file <- function(file_path) {
   
-  sample_name <- gsub(".*/(.*).nt_bracken_species\\.report", "\\1", file_path)
+  sample_name <- gsub(".*_(.*)_bracken_species\\.report", "\\1", file_path)
   
   df <- read.delim(file_path, 
                    sep = "\t",
                    header = FALSE,
-                   quote = "",  # игнорировать кавычки - аномальные назвния 
+                   quote = "",  # abnormal name 
                    comment.char = "", 
                    col.names = c("Percentage", "Value_num", "Null", "Rank", "Taxonomy_ID", "Species"),
                    stringsAsFactors = FALSE)
@@ -43,29 +38,29 @@ all_data_filltered <- all_data[all_data$Rank == "S", ]
 metagenome_filltered <- all_data_filltered[, c("Value_num", "Species", "Sample")]
 
 
-
 ####################################################################################################################################  
 
 
 ################################# transcriptome ################################################################################################### 
 
 
-# Указываем путь к корневой папке
-root_path <- "results/output/transcriptome_kallisto/mrna/" # во всех подпапках надо
+# root folder
+root_path <- "kallisto_res/mrna/" # replace
 
-# Находим все CSV-файлы в папках и подпапках
+
+#TSV-file 
 pattern <- "*.tsv" 
 
 
 
-# Получаем список файлов (рекурсивно)
+# list - recursion 
 trans_list <- list.files(path = root_path, 
                          pattern = pattern, 
                          full.names = TRUE,
                          recursive = TRUE) 
 
 process_kallisto_file <- function(file_path) {
-  # Извлекаем имя образца из названия файла
+  # sample_name extraction
   sample_name <- gsub(".*/([^/]+)_quant_results/abundance\\.tsv", "\\1", file_path)
   
   df <- read.table(file_path, 
@@ -74,7 +69,7 @@ process_kallisto_file <- function(file_path) {
                    stringsAsFactors = FALSE)
   
   df_processed <- df %>%
-    select(target_id, tpm) %>%  # Используем TPM значения
+    select(target_id, tpm) %>%  #  TPM value
     rename(Gene = target_id, Abundance = tpm) %>%
     mutate(Sample = sample_name)
   
@@ -84,7 +79,7 @@ process_kallisto_file <- function(file_path) {
 
 all_transcriptome <- bind_rows(lapply(trans_list, process_kallisto_file))
 
-# Преобразуем в матрицу образцов × генов
+# mtarix sample × genes
 transcriptome_matrix <- all_transcriptome %>%
   pivot_wider(
     names_from = Sample,
@@ -93,16 +88,14 @@ transcriptome_matrix <- all_transcriptome %>%
   ) %>%
   as.data.frame()
 
-# Устанавливаем гены как названия строк
+# set row names
 rownames(transcriptome_matrix) <- transcriptome_matrix$Gene
 transcriptome_matrix <- transcriptome_matrix[, -1]
 
-# write.table(transcriptome_matrix, "transcriptome.tsv", sep="\t", row.names = TRUE)
-
 #################################################################################################################################################################### 
 
-
-# save.image(file = "Preprocess_environment.RData")
+# write.table(transcriptome_matrix, "transcriptome.tsv", sep="\t", row.names = TRUE)
+save.image(file = "Preprocess_environment.RData")
 
 
 
