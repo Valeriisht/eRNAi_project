@@ -142,10 +142,14 @@ Check whether the probability of finding intersections is statistically signific
   vis:
   [image](img/statistic_tests/CCA_out(graphic1).png)
 
+  ![image](img/statistic_tests/CCA_out(graphic1).png)
+
   - Probabilities for DSK-targets with co-directional, oppositely directed and other transcripts within CCA transcripts
 
   vis:
   [image](img/statistic_tests/fisher_cca.png)
+
+  ![image](img/statistic_tests/fisher_cca.png)
 
 - Binomial test:
 
@@ -153,6 +157,8 @@ Check whether the probability of finding intersections is statistically signific
 
   vis:
   [image](img/statistic_tests/binomial_cca.png)
+  
+  ![image](img/statistic_tests/binomial_cca.png)
 
 - T-test
 
