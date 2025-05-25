@@ -1,26 +1,32 @@
-output_dir: "metagenome_gallus/dehost"
-input_dir: "metagenome_gallus/old"
-ref_dir: "data/data_ggallus/genome_reference"
+output_dir: "kraken"
+input_dir: "metagenome/dehost"
+ref_dir: "data/data_ggallus/genome"
 taxid: "galGal6"
 sample_name: "gallus_sample"
 
 sra:
   sra_id:
-  - "SRR8265535"
-  - "SRR8265536"
-  - "SRR8265537"
-  - "SRR8265538"
-  - "SRR8265543"
-  - "SRR8265545"
-  - "SRR8265546"
-  - "SRR8265547"
-  - "SRR8265551"
-  - "SRR8265552"
-  - "SRR8265563"
-  - "SRR8265564"
-  - "SRR8265568"
-  - "SRR8265641"
-  - "SRR8265643"
+  # as example
+    - "SRR8265535"
+    - "SRR8265537" 
+    - "SRR8265543"
+    - "SRR8265545"
+    - "SRR8265547"
+    - "SRR8265551"
+    - "SRR8265564"
+    - "SRR8265565"
+    - "SRR8265567"
+    - "SRR8265569"
+    - "SRR8265571"
+    - "SRR8265536"
+    - "SRR8265538"
+    - "SRR8265544"
+    - "SRR8265546"
+    - "SRR8265552"
+    - "SRR8265563"
+    - "SRR8265566"
+    - "SRR8265568"
+
   paired: True
   thread: 2
 
@@ -30,15 +36,14 @@ threads:
   sam_to_bam: 2
   split_reads: 2
 
-# transcriptome
+# transcriptome params
 #==================
 
 kallisto:
-  kmer_size: 31  # Длина k-mer (по умолчанию 31)
-  bootstrap: 30  # Количество бутстрап-повторов для оценки неопределённости
+  kmer_size: 31  # k-mer length (default is 31)
+  bootstrap: 30  # Number of bootstrap replicates for uncertainty estimation
 
-
-# host_genome 
+# host_genome params
 #==========================
 
 threads:
@@ -48,23 +53,21 @@ threads:
   split_reads: 4    
 
 
-#kraken2
+#kraken2 params
 #============================
 
-algorithm: "kraken2"  # Используемый алгоритм
-database: "kraken2_db"  # Путь к базе данных Kraken2 
-#input:
-#  - "results/output/{sra.sra_id}_filtered_1.fastq"  # Путь к первому файлу с ридами (R1)
-#  - "results/output/{sra.sra_id}_filtered_2.fastq"  # Путь ко второму файлу с ридами (R2)
-# output_dir: "results/output"  # Директория для выходных файлов
-sample_name: "gallus_gallus"  # Имя образца (используется для именования выходных файлов)
+algorithm: "kraken2"  # Algorithm to be used  
+database: "/mnt/metagenomics/kraken2"  # Path to the Kraken2 database  
+sample_name: "gallus_gallus"  # Sample name (used for naming output files) 
 
-# bracken parameters
+#============================
+
+# bracken params
 read_length: 150
-taxonomic_level: ['S','G', 'P']
+taxonomic_level: ['S']
 
 
-# preprocessing
+# preprocessing params
 #=================
 ##### params for specific rules ####
 fastp:
@@ -73,17 +76,16 @@ fastp:
     min_length: 50
     detect_adapters: True
 
-
+# metaphlan params
 #===============================
-# metaphlan parameters
+
 metaphlan:
   threads: 8
 
-# humann parameters
+# humann params
+#===============================
 humann:
   threads: 8
 
-# входные файлы
-metagenome: "metagenome.fastq.gz"
-host_genome: "host_genome.fna"  # референс
+
 
