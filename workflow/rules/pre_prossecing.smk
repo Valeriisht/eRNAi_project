@@ -1,20 +1,20 @@
 ###### Configuration #######
 configfile: "config/config.yaml"
  
-# для выходных файлов
+# for output files
 OUTPUT_DIR = config["output_dir"]
 SRA_ID = config["sra"]["sra_id"]
 
  
-# Создаем директорию для выходных файлов, если она не существует
+# create dir
 import os
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(os.path.join(OUTPUT_DIR, "logs"), exist_ok=True)
  
-# предварительная загрузка 
+# pre-download
 rule prefetch_data:
     output:
-        sra_file = "results/sra/{SRA_ID}.sra"
+        sra_file = "metagenome/sra/{SRA_ID}.sra"
     params:
         sra_id = "{SRA_ID}"
     log:
@@ -26,7 +26,7 @@ rule prefetch_data:
 
 rule download_data:
     input:
-        sra_file = "results/sra/{SRA_ID}.sra"
+        sra_file = "metagenome/sra/{SRA_ID}.sra"
     output: 
         f1 = OUTPUT_DIR + "/raw_{SRA_ID}_1.fastq",
         r1 = OUTPUT_DIR + "/raw_{SRA_ID}_2.fastq" 

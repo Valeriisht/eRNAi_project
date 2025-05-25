@@ -1,81 +1,70 @@
 # Snakefile
 configfile: "config/config.yaml"
 
-# Конфигурация
-SRA_ID = config["sra"]["sra_id"]
-ALGO = config["algorithm"]       # "kraken2" или "metaphlan"
-DB = config.get("database", "")  # Путь к базе Kraken2 (обязательно для алгоритма kraken2)
-# Парные fastq.gz файлы
+# config 
+SRA_IDS = config["sra"]["sra_id"]
+ALGO = config["algorithm"]       # "kraken2" or "metaphlan"
+DB = config.get("database", "")  # path to Kraken2 
+
+
+INP_DIR = config["input_dir"]
 OUT_DIR = config["output_dir"]
-SAMPLE = config["sample_name"]   # Имя образца (для выходных файлов)
-#level = config['taxonomic_level']
+SAMPLE = config["sample_name"]   # for output file
+
 wildcard_constraints:
-    level="S|G|P"  # Разрешаем только уровни S, G, P
+    level="S"  # levels: S, G, P
 
-INPUT_R1 = "{OUT_DIR}/{SRA_ID}_filtered_1.fastq"
+def INPUT_R1(wildcards):
+    return f"{INP_DIR}/{wildcards.sra_id}_metagenome_reads.fastq"
 
-INPUT_R2 = "{OUT_DIR}/{SRA_ID}_filtered_2.fastq"
 
-
-### Вариант 1: Kraken2 + Bracken ###
+### 1: Kraken2 + Bracken ###
 if ALGO == "kraken2":
     if not DB:
-        raise ValueError("Для алгоритма kraken2 требуется база данных (database)")
+        raise ValueError("Kraken2 database required")
 
-    # Шаг 1: Таксономическая классификация Kraken2
     rule kraken2_classify:
         input:
             r1 = INPUT_R1,
-            r2 = INPUT_R2
         output:
-            report = temp(f"{OUT_DIR}/kraken2_{SRA_ID}.report"),
-            raw = temp(f"{OUT_DIR}/kraken2_output_{SRA_ID}.report")
+            report = temp(f"{OUT_DIR}/kraken2_{{sra_id}}.report"),
+            raw = temp(f"{OUT_DIR}/kraken2_output_{{sra_id}}.report")
+        threads: 8
         log:
-            f"{OUT_DIR}/logs/kraken2.log"
+            f"{OUT_DIR}/logs/kraken2_{{sra_id}}.log"
         shell:
             """
-            # Классификация ридов
-            kraken2 --db {DB} --threads 8 --paired {input.r1} {input.r2} \
-                    --output {output.raw} --report {output.report} > {log} 2>&1
+            kraken2 --db {DB} --threads {threads} {input.r1} \
+                   --output {output.raw} --report {output.report} > {log} 2>&1
             """
 
-    # Шаг 2: Оценка обилия Bracken
     rule bracken_abundance:
         input:
             rules.kraken2_classify.output.report
         output:
-            f"{OUT_DIR}/bracken_{SRA_ID}_output_{{level}}.report"
+            f"{OUT_DIR}/bracken_{{sra_id}}_output_{{level}}.report"
         params:
             db = DB,
-            readlen = config['read_length'],
+            readlen = READ_LEN,
             threshold = 10
         log:
-            f"{OUT_DIR}/logs/bracken_{SRA_ID}_{{level}}.log"
+            f"{OUT_DIR}/logs/bracken_{{sra_id}}_{{level}}.log"
         shell:
             """
-            # Оценка обилия на уровне видов
-            bracken -d {params.db} -i {input} -o {output}  -r {params.readlen} -l {wildcards.level}  -t {params.threshold} > {log} 2>&1
-
-            # Проверка и исправление файла
-            # awk 'NR == 1 || $4 ~ /^-?[0-9]+(\\.[0-9]+)?$/ {{print}}' {output} > {output}.tmp
-            # mv {output}.tmp {output}
+            bracken -d {params.db} -i {input} -o {output} \
+                    -r {params.readlen} -l {wildcards.level} \
+                    -t {params.threshold} > {log} 2>&1
             """
 
-
-    # Шаг 3: Конвертация в формат Metaphlan
     rule convert_to_mpa:
         input:
-            rules.bracken_abundance.output
+            expand(f"{OUT_DIR}/bracken_{{sra_id}}_output_S.report", sra_id=SRA_IDS)
         output:
             f"{OUT_DIR}/{SAMPLE}_report.tsv"
         shell:
-            """
-            # Генерация Metaphlan-подобного отчета
-            kreport2mpa.py -r {input} -o {output} --display-header
-            """
+            "kreport2mpa.py -r {input} -o {output} --display-header"
 
-
-### Вариант 2: Metaphlan ###
+### 2: Metaphlan ###
 elif ALGO == "metaphlan":
     rule metaphlan_profile:
         input:
@@ -87,10 +76,10 @@ elif ALGO == "metaphlan":
             f"{OUT_DIR}/logs/metaphlan.log"
         shell:
             """
-            # Генерация таксономического профиля
+            # taxonomic profile
             metaphlan {input.r1},{input.r2} --input_type fastq \
                       --nproc 8 -o {output} > {log} 2>&1
             """
 
 else:
-    raise ValueError("Неподдерживаемый алгоритм. Допустимые значения: kraken2, metaphlan")
+    raise ValueError("Unsupported algorithm. Valid values: kraken2, metaphlan")

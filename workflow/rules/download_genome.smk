@@ -5,7 +5,7 @@ TAXID = config["taxid"]
 OUTPUT_DIR = config["output_dir"]
 GENOME_FILE = f"{OUTPUT_DIR}/{TAXID}.fna"
 
-#Загрузка архива
+# download archive
 rule download_genome:
     output:
         zip = f"{OUTPUT_DIR}/{TAXID}_genome.zip"
@@ -15,7 +15,8 @@ rule download_genome:
         f"{OUTPUT_DIR}/logs/download.log"
     shell:
         "datasets download genome taxon {params.taxid} --reference --filename {output.zip} > {log} 2>&1"
-#Распаковка
+
+# unpacking
 rule extract_genome:
     input:
         rules.download_genome.output.zip
@@ -25,7 +26,8 @@ rule extract_genome:
         f"{OUTPUT_DIR}/logs/extract.log"
     shell:
         "unzip {input} -d {output} > {log} 2>&1"
-#Поиск и переименование 
+
+# rename and find
 rule find_rename_genome:
     input:
         rules.extract_genome.output
@@ -37,14 +39,14 @@ rule find_rename_genome:
         f"{OUTPUT_DIR}/logs/rename.log"
     shell:
         """
-        # Поиск файла .fna в директории
-        echo "Поиск файла .fna в директории {input}" > {log}
+        # Searching for .fna file in the directory
+        echo "Searching for .fna file in directory {input}" > {log}
         GENOME_FILE=$(find "{input}" -name '*.fna' -print -quit)
         if [[ -z "$GENOME_FILE" ]]; then
-            echo "Геном для taxid {params.taxid} не найден" >> {log}
+            echo "Genome for taxid {params.taxid} not found" >> {log}
             exit 1
         fi
-        echo "Найден файл: $GENOME_FILE" >> {log}
+        echo "Found file: $GENOME_FILE" >> {log}
         mv "$GENOME_FILE" {output} >> {log} 2>&1
         """
 

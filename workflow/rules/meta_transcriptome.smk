@@ -19,7 +19,7 @@ rule fastp_preprocessing:
         --length_required 50
         """ 
         
-# Анализ с MetaPhlAn
+# analysis with MetaPhlAn
 rule analysis_MetaPhlAn:
     input: 
         processed_fastq = "output/processed.fastq.gz"
@@ -36,7 +36,7 @@ rule analysis_MetaPhlAn:
         --length_required 50
         """
 
-# Анализ с HUMAnN
+# analysis withHUMAnN
 rule humann_analysis:
     input: 
         processed_fastq = "output/processed.fastq.gz"
@@ -52,7 +52,7 @@ rule humann_analysis:
         --threads {threads}
         """
         
-# переименование
+# rename
 rule rename_human:
     input: 
         pathabundance = "output/humann_output/humann_pathabundance.tsv"
@@ -65,7 +65,7 @@ rule rename_human:
         --names uniref90
         """
 
-# перегруппировка таблицы 
+# group by
 rule regroup_table_humman:
     input: 
         table_renamed = "output/humann_output/pathabundance_renamed.tsv"
@@ -78,7 +78,7 @@ rule regroup_table_humman:
         --groups metacyc
         """ 
 
-# финальное переименование таблицы 
+# final rename 
 rule final_humann_table:
     input: 
         regroup_table_humman =  "output/humann_output/pathabundance_regroup.tsv"
@@ -91,7 +91,7 @@ rule final_humann_table:
         --groups metacyc
         """
 
-# очистка временных файлов
+# tmp file cleaning
 rule clean_temporary_files:
     input: 
         processed_fastq = "output/processed.fastq.gz",

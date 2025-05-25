@@ -1,16 +1,16 @@
 configfile: "config/config.yaml"
 
-# Глобальные переменные
-SRA_ID = config["sra"]["sra_id"]  # Список SRA ID
+# global params
+SRA_ID = config["sra"]["sra_id"]  
 OUT_DIR = config["output_dir"]
 INP_DIR = config["input_dir"]
 TAXID = config["taxid"]
 REFERENCE = config["ref_dir"]
 
-# Создаем директории
+# create dir
 os.makedirs(f"{OUT_DIR}/logs", exist_ok=True)
 
-# Правило для индексирования (один раз)
+# index
 rule bwa_index:
     input:
         host_genome = f"{REFERENCE}/{TAXID}.fa"
@@ -26,7 +26,7 @@ rule bwa_index:
     shell:
         "bwa index  {input.host_genome} 2> {log}"
 
-# Правило для выравнивания (для каждого SRA ID)
+# align (for each SRA ID)
 rule bwa_align:
     input:
         r1 = f"{INP_DIR}/{{sra_id}}_filtered_1.fastq",
@@ -50,24 +50,24 @@ rule sam_to_bam:
         bam = f"{OUT_DIR}/{{sra_id}}_aligned_sorted.bam",
         bai = f"{OUT_DIR}/{{sra_id}}_aligned_sorted.bam.bai"
     params:
-        threads = 4,  # Используем 4 потока, как в рабочем тесте
-        memory = "2G"  # Консервативный объем памяти
+        threads = 4,  
+        memory = "2G"  # conservative
     log:
         f"{OUT_DIR}/logs/{{sra_id}}_sam_to_bam.log"
     shell:
         """
-        # Шаг 1: Конвертация SAM → BAM (как в рабочем тесте)
+        # Step 1: Convert SAM → BAM (as in the working test)
         samtools view -@ {params.threads} -b -o {OUT_DIR}/temp_{wildcards.sra_id}.bam {input.sam} 2>> {log} || exit 1
 
-        # Шаг 2: Сортировка BAM
+        # Step 2: Sort BAM
         samtools sort -@ {params.threads} -m {params.memory} \
             -o {output.bam} {OUT_DIR}/temp_{wildcards.sra_id}.bam 2>> {log} || exit 1
 
-        # Шаг 3: Индексация
+        # Step 3: Index the BAM file
         samtools index -@ {params.threads} {output.bam} 2>> {log} || exit 1
 
-        # Очистка временного файла
-        rm -f {OUT_DIR}/temp_{wildcards.sra_id}.bam
+        # Cleanup temporary file
+        rm -f {OUT_DIR}/temp_{wildcards.sra_id}.bam         
         """
 
 rule split_reads:
