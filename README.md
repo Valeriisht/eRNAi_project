@@ -97,13 +97,15 @@ Three types of tests: unit tests, integration tests, and generation tests cover 
 
 Nowdays: 
 
+```
 [Test Coverage]
 │
 ├── Unit Tests:        ✔ Almost implemented (and some in progress)
 │   └── Coverage:      
 │
 ├── Integration Tests:  ⌛ In progress
-└── Generative Tests: ⏳ Planned 
+└── Generative Tests: ⏳ Planned
+```
 
 To run it, execute the command:
 
