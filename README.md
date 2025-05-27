@@ -132,7 +132,7 @@ pytest tests/
 
    ![image](img/CCA_graphics.png)
 
-   Instructions can be found in [script_CCA](CCA_analysis/CCA.R)
+Instructions can be found in [script_CCA](CCA_analysis/CCA.R)
    
 3) DSK+BLAST revealed a significant number of common sites between microbial sequences and the host genome
 
@@ -176,9 +176,10 @@ Check whether the probability of finding intersections is statistically signific
   
   ![image](img/statistic_tests/windrose.png)
 
-  Instructions can be found in [script_CCA](CCA_analysis/Statistic_Analysis.R)
 
-Output:
+Instructions can be found in [script_CCA](CCA_analysis/Statistic_Analysis.R)
+
+**Output:**
 
 - The assay results do not contradict  hypothesis concerning that non-coding regions of prokaryotic mRNAs may act as regulatory elements, exerting influence on the expression of target genes in eukaryotic cells.
 - The developed algorithm - is potentially able to detect the effectors of inter-organismal eRNAi interactions.
