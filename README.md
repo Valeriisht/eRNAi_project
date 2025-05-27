@@ -134,7 +134,7 @@ pytest tests/
 
 Instructions can be found in [script_CCA](CCA_analysis/CCA.R)
    
-3) DSK+BLAST revealed a significant number of common sites between microbial sequences and the host genome
+2) DSK+BLAST revealed a significant number of common sites between microbial sequences and the host genome
 
 params:
 
@@ -144,7 +144,7 @@ params:
 
 3) Statistics
 
-Check whether the probability of finding intersections is statistically significant and associated with CCA.
+**Check whether the probability of finding intersections is statistically significant and associated with CCA.**
 
 - Fisher tests:
 
