@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Директории
+# directory
 meta_dir="meta_dsk/txt_results"
 dir_out="meta_genome_dsk"
 genome_kmers="data/data_ggallus/genome/dsk/gal_genome.txt"
-min_count=2  # Минимальная частота k-mer
+min_count=2  # min freq k-mer
 
-# Создаем выходную директорию
+# create output dir
 mkdir -p "$dir_out"
 
-# Функция для обработки одного файла
+# function for one file
 process_file() {
     local meta_file="$1"
     local sample_name=$(basename "$meta_file" ".txt")
@@ -17,15 +17,15 @@ process_file() {
     local tmp_genome="$dir_out/genome_kmers_clean.tmp"
     local tmp_meta="$dir_out/meta_kmers_clean.tmp"
 
-    # 1. Подготовка временных файлов (только если genome не обработан)
+    # 1. Preparing temporary files (only if genome is not processed)
     [ -f "$tmp_genome" ] || awk '{print $1}' "$genome_kmers" > "$tmp_genome"
 
-    # 2. Обработка метагенома
+    # 2. Metagenome treatment
     awk '{print $1}' "$meta_file" > "$tmp_meta"
 
-    # 3. Поиск пересечений
+    # 3. Search for intersections
     if grep -Fxf "$tmp_genome" "$tmp_meta" > "$output_file"; then
-        # 4. Фильтрация по частоте
+        # 4. Frequency filtering
         if [ "$min_count" -gt 1 ]; then
             awk -v min="$min_count" '
                 NR==FNR {genome[$1]=$2; next}
@@ -34,31 +34,31 @@ process_file() {
             mv "${output_file}.tmp" "$output_file"
         fi
 
-        # Статистика
+        # Statistic
         local count=$(wc -l < "$output_file")
-        echo "${sample_name}: $count общих k-mer (частота ≥$min_count)" >> "${dir_out}/summary.txt"
+        echo "${sample_name}: $count general k-mer (freq ≥$min_count)" >> "${dir_out}/summary.txt"
         return 0
     else
-        echo "Ошибка обработки $meta_file" >> "${dir_out}/errors.log"
+        echo "Processing error $meta_file" >> "${dir_out}/errors.log"
         return 1
     fi
 }
 
-# Экспорт функции для GNU Parallel
+# Exporting a function for GNU Parallel
 export -f process_file
 export genome_kmers dir_out min_count
 
-# Основной цикл обработки
+# Basic processing cycle
 for meta_file in "$meta_dir"/*_k15.h5.txt; do
-    # Пытаемся обработать файл с повторными попытками
+    # retried file processing
     for attempt in {1..3}; do
         if process_file "$meta_file"; then
-            break  # Успешно - переходим к следующему файлу
+            break  # move on to the next file
         else
-            sleep 10  # Ждем перед повторной попыткой
+            sleep 10  #  before retrying
         fi
     done
 done
 
-# Очистка (только если все успешно)
+# clean (only if successful)
 [ $? -eq 0 ] && rm "$dir_out"/*.tmp 2>/dev/null
