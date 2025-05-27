@@ -4,6 +4,15 @@
 
 - The phenomenon of environmental RNA interference (eRNAi) is based on the transfer of small RNA molecules (sRNA) between organisms to suppress the expression of target genes. Investigating the processes of environmental RNA interference provides novel insights into the dynamics of interactions between living beings and raises the question of whether RNA could be transferred between organisms.
 
+## Authors
+
+V. Ishtuganova¹ ², M. Kravchenko¹ ², D.Smutin ³
+
+1. Bioinformatics Institute, Kantemirovskaya st. 2A, 197342, St. Petersburg, Russia
+2. Saint-Petersburg State University, Universitetskaya emb. 7/9, 199034, St. Petersburg, Russia
+3. Information Technologies, Mechanics and Optics University, Kronverksky Pr. 49, bldg. A, St. Petersburg, Russia
+
+
 ## Aim
 
 - The main goal of the project is the development of an algorithm to identify potential targets in an organism's genome that can be specifically regulated by environmental double-stranded RNAs.
@@ -122,6 +131,8 @@ pytest tests/
    vis: [image](img/CCA_graphics.png)
 
    ![image](img/CCA_graphics.png)
+
+   Instructions can be found in [script_CCA](CCA_analysis/CCA.R)
    
 3) DSK+BLAST revealed a significant number of common sites between microbial sequences and the host genome
 
@@ -165,6 +176,7 @@ Check whether the probability of finding intersections is statistically signific
   
   ![image](img/statistic_tests/windrose.png)
 
+  Instructions can be found in [script_CCA](CCA_analysis/Statistic_Analysis.R)
 
 Output:
 
