@@ -62,8 +62,6 @@ transcriptome <- transcriptome_matrix[rowSums(transcriptome_matrix == 0) / ncol(
 
 
 ### =========================================================================================================================
-# нормализация с помощью программы lima  
-
 
 # transcriptome <- data.frame(lapply(transcriptome[, -1], function(x) as.numeric(as.character(x))))
 # transcriptome <- sweep(transcriptome, 2, colSums(transcriptome), "/")
