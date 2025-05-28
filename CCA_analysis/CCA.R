@@ -63,10 +63,6 @@ transcriptome <- transcriptome_matrix[rowSums(transcriptome_matrix == 0) / ncol(
 
 ### =========================================================================================================================
 
-# transcriptome <- data.frame(lapply(transcriptome[, -1], function(x) as.numeric(as.character(x))))
-# transcriptome <- sweep(transcriptome, 2, colSums(transcriptome), "/")
-
-
 # normaization
 metagenome <- sweep(metagenome, 2, colSums(metagenome, na.rm = TRUE), "/")
 transcriptome <- sweep(transcriptome, 2, colSums(transcriptome), "/")
