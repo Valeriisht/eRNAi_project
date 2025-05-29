@@ -2,7 +2,7 @@
 
 <img align=right src="https://clipart-library.com/images/BTaKAn6gc.jpg" alt="# Codon-optimization Tool" width="100"/>
 
-- The phenomenon of environmental RNA interference (eRNAi) is based on the transfer of small RNA molecules (sRNA) between organisms to suppress the expression of target genes. Investigating the processes of environmental RNA interference provides novel insights into the dynamics of interactions between living beings and raises the question of whether RNA could be transferred between organisms.
+The phenomenon of environmental RNA interference (eRNAi) is based on the transfer of small RNA molecules (sRNA) between organisms to suppress the expression of target genes. Investigating the processes of environmental RNA interference provides novel insights into the dynamics of interactions between living beings and raises the question of whether **RNA could be transferred between organisms**.
 
 ## Authors
 
@@ -23,10 +23,9 @@ V. Ishtuganova¹ ², M. Kravchenko¹ ², D.Smutin ³
 - [Methods](#Methods)
 - [Installation](#Installation)
 - [Usage](#Usage)
-- [Testing](#Testing)
+- [Development](#Development)
 - [Results](#Results)
-- [Contributing](#Contributing)
-- [Literature](#Literature)
+- [References](#References)
 
 ## Pipeline
 
@@ -73,7 +72,7 @@ The following tools are used in this project:
 To get the tool clone the git repository:
 
 ```sh
-git clnone git@github.com:Valeriisht/eRNAi_project.git
+git clone git@github.com:Valeriisht/eRNAi_project
 ```
 
 Create a conda environment with the necessary packages. 
@@ -100,7 +99,9 @@ Example:
 snakemake --cores 8
 ```
 
-## Testing
+## Development
+
+### Testing
 
 Three types of tests: unit tests, integration tests, and generation tests cover the project.
 
@@ -109,9 +110,7 @@ Nowdays:
 ```
 [Test Coverage]
 │
-├── Unit Tests:        ✔ Almost implemented (and some in progress)
-│   └── Coverage:      
-│
+├── Unit Tests:        ✔ Implemented (In progress: [####>  70%])
 ├── Integration Tests:  ⌛ In progress
 └── Generative Tests: ⏳ Planned
 ```
@@ -119,16 +118,18 @@ Nowdays:
 To run it, execute the command:
 
 ```
-pytest tests/ 
+pytest
 ```
+
+### Contributing 
+
+See [contribution guide](docs/CONTRIBUTING.md).
 
 ## Results
 
 1) Canonical Correspondence Analysis (CCA)
 
    - The relationship between microorganisms and the transcriptome
-
-   vis: [image](img/CCA_graphics.png)
 
    ![image](img/CCA_graphics.png)
 
@@ -184,12 +185,8 @@ Instructions can be found in [script_CCA](CCA_analysis/Statistic_Analysis.R)
 - The assay results do not contradict  hypothesis concerning that non-coding regions of prokaryotic mRNAs may act as regulatory elements, exerting influence on the expression of target genes in eukaryotic cells.
 - The developed algorithm - is potentially able to detect the effectors of inter-organismal eRNAi interactions.
 
- 
-## Contributing 
 
-[Contributing.md](docs/CONTRIBUTING.md).
-
-## Literature
+## References
 1) Park, J., Overbey, E. G., Narayanan, S. A., Kim, J., Tierney, B. T., Damle, N., Najjar, D., Ryon, K. A., Proszynski, J., Kleinman, A., Hirschberg, J. W., MacKay, M., Afshin, E. E., Granstein, R., Gurvitch, J., Hudson, B. M., Rininger, A., Mullane, S., Church, S. E., … Mason, C. E. (2024). Spatial multi-omics of human skin reveals KRAS and inflammatory responses to spaceflight. Nature Communications, 15(1), 4773. https://doi.org/10.1038/s41467-024-48625-2
 
 2) Shah, T. M., Patel, J. G., Gohil, T. P., Blake, D. P., & Joshi, C. G. (2019). Host transcriptome and microbiome interaction modulates physiology of full-sibs broilers with divergent feed conversion ratio. Npj Biofilms and Microbiomes, 5(1), 24. https://doi.org/10.1038/s41522-019-0096-3

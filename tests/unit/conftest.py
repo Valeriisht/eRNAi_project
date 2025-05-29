@@ -1,5 +1,5 @@
 import pytest
-from snakemake import snakemake
+import snakemake
 
 @pytest.fixture(scope="session")
 def snakemake_runner():
