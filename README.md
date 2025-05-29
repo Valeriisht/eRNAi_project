@@ -1,6 +1,6 @@
 # RNA-mediated interactions: An eRNAi target search algorithm for studying the impact of the metagenome
 
-[![conda package](https://github.com/Valeriisht/eRNAi_project/actions/workflows/python-package.yml/badge.svg)](https://github.com/Valeriisht/eRNAi_project/actions/workflows/python-package.yaml?label=build)
+[![conda package](https://github.com/Valeriisht/eRNAi_project/actions/workflows/conda.yml/badge.svg)](https://github.com/Valeriisht/eRNAi_project/actions/workflows/conda.yaml?label=build)
 
 <img align=right src="https://clipart-library.com/images/BTaKAn6gc.jpg" alt="# eRNAi prediction tool" width="100"/>
 
@@ -188,4 +188,16 @@ Scripts & documentation can be found in [the custom R pipeline](CCA_analysis/Sta
  9) R Core Team (2024). _R: A Language and Environment for Statistical Computing_. R Foundation for Statistical Computing, Vienna, Austria. <https://www.R-project.org/>.
 
 
-
+## Dependencies
+Full dependency list avialable in ```environmental.yaml```
+General pipeline depends on:
+- `python` > 3.11
+- `SnakeMake`
+- `R` > 4.2.0
+- analysis tools:
+  - `fastp`
+  - `Kraken 2`
+  - `Bracken`
+  - `Kallisto`
+  - `DSK`
+  - `BlastN`
