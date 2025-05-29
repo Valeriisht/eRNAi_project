@@ -1,6 +1,8 @@
 # RNA-mediated interactions: An eRNAi target search algorithm for studying the impact of the metagenome
 
-<img align=right src="https://clipart-library.com/images/BTaKAn6gc.jpg" alt="# Codon-optimization Tool" width="100"/>
+[![conda package](https://github.com/Valeriisht/eRNAi_project/actions/workflows/python-package.yml/badge.svg)](https://github.com/Valeriisht/eRNAi_project/actions/workflows/python-package.yaml?label=build)
+
+<img align=right src="https://clipart-library.com/images/BTaKAn6gc.jpg" alt="# eRNAi prediction tool" width="100"/>
 
 The phenomenon of environmental RNA interference (eRNAi) is based on the transfer of small RNA molecules (sRNA) between organisms to suppress the expression of target genes. Investigating the processes of environmental RNA interference provides novel insights into the dynamics of interactions between living beings and raises the question of whether **RNA could be transferred between organisms**.
 
@@ -36,7 +38,7 @@ V. Ishtuganova¹ ², M. Kravchenko¹ ², D.Smutin ³
 5) Statistical validation of results  
 4) Pipeline validation and testing 
 
-<img src="https://github.com/Valeriisht/eRNAi_project/blob/dev/imgs/pipeline.png" />
+<img src="img/pipeline.svg" />
 
 ## Dataset
 
@@ -69,22 +71,16 @@ The following tools are used in this project:
 
 ## Installation
 
-To get the tool clone the git repository:
+Install with:
 
 ```sh
 git clone git@github.com:Valeriisht/eRNAi_project
-```
-
-Create a conda environment with the necessary packages. 
-Activate it:
-
-```sh
-conda env create -f environment.yaml
+conda env create -f enviromental.yaml
 conda activate eRNAi
 ```
 
 Then you can use your data, such as metagenomic and transcriptomic data.
-In order to use your own data, you need to specify the parameters (data references and SRA ID) in the configuration file (```config.yaml```).
+In order to use your own data, you need to specify the parameters (data references and SRA ID) in the configuration file (```config/config.yaml```).
 
 
 ## Usage
@@ -103,23 +99,15 @@ snakemake --cores 8
 
 ### Testing
 
-Three types of tests: unit tests, integration tests, and generation tests cover the project.
-
-Nowdays: 
+We implement an integrated testing pipeline for better development
 
 ```
-[Test Coverage]
-│
-├── Unit Tests:        ✔ Implemented (In progress: [####>  70%])
+├── Unit Tests:         ✔ Implemented [###>  ~70%]
 ├── Integration Tests:  ⌛ In progress
-└── Generative Tests: ⏳ Planned
+└── Generative Tests:   ⏳ Planned
 ```
 
-To run it, execute the command:
-
-```
-pytest
-```
+Run with ```pytest```
 
 ### Contributing 
 
@@ -151,34 +139,28 @@ params:
 
   - Probabilities for DSK-targets inside and outside the transcriptome in CCA - intersection with CCA transcripts
 
-  vis: [image](img/statistic_tests/CCA_out(graphic1).png)
-
   ![image](img/statistic_tests/CCA_out(graphic1).png)
 
   - Probabilities for DSK-targets with co-directional, oppositely directed and other transcripts within CCA transcripts
-
-  vis: [image](img/statistic_tests/fisher_cca.png)
 
   ![image](img/statistic_tests/fisher_cca.png)
 
 - Binomial test:
 
-  - Probability co-directional/opposite-directional/otherwise
-
-  vis: [image](img/statistic_tests/binomial_cca.png)
+  - Probability of co-directional/opposite-directional/otherwise
   
   ![image](img/statistic_tests/binomial_cca.png)
 
 - T-test
 
   - Differences in probabilities of direction by group between species - revealed no statistically significant difference
-
-  vis of transcript overlapping between different organisms: [image](img/statistic_tests/windrose.png)
+  
+  *Transcript overlapping between different organisms:*
   
   ![image](img/statistic_tests/windrose.png)
 
 
-Instructions can be found in [script_CCA](CCA_analysis/Statistic_Analysis.R)
+Scripts & documentation can be found in [the custom R pipeline](CCA_analysis/Statistic_Analysis.R)
 
 **Output:**
 

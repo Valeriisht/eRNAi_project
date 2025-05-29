@@ -1,21 +1,22 @@
 # Conda environment file
-name: eRNAi_project
+name: eRNAi
 channels:
   - conda-forge
   - bioconda
   - defaults
 dependencies:
   - python=3.11
-  - bioconda::sra-tools=3.2.0
-  - bioconda::humann=3.9
-  - bioconda::snakemake=8.30.0
-  - conda-forge::datasets=16.40.1
-  - bioconda::fastp=0.24.0
-  - bioconda::kraken2=2.14
-  - bioconda::bracken=3.1
-  - bioconda::metaphlan
-  - conda-forge::coincbc
-  - bioconda::ncbi-genome-download
-  - bioconda::dsk=2.3.3
-  - bioconda::blast=2.16.0
-  - conda-forge::datasets=3.6.0
+  - bioconda::snakemake
+  - bioconda::fastp
+  - bioconda::kraken2
+  - bioconda::bracken
+  - bioconda::dsk
+  - bioconda::blast
+
+# optional:
+##  - bioconda::sra-tools=3.2.0
+##  - bioconda::humann=3.9
+##  - conda-forge::datasets=16.40.1
+##  - bioconda::metaphlan
+##  - conda-forge::coincbc
+##  - bioconda::ncbi-genome-download
