@@ -36,8 +36,8 @@ The phenomenon of environmental RNA interference (eRNAi) is based on the transfe
 
 The data were obtained from public sources.
 
-- *Gallus gallus*, **BioProject PRJNA503784** [Tejas M. Shah et al. 2019](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA503784)
-- *Homo Sapiens*,  **NASA GeneLab - OSD-574** [Park J et al. 2024](https://osdr.nasa.gov/bio/repo/data/studies/OSD-574)
+- *Gallus gallus*, **BioProject PRJNA503784** [(Tejas M. Shah et al. 2019)](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA503784)
+- *Homo Sapiens*,  **NASA GeneLab - OSD-574** [(Park J et al. 2024)](https://osdr.nasa.gov/bio/repo/data/studies/OSD-574)
 
 ## Methods
 
