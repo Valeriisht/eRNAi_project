@@ -14,6 +14,7 @@ The phenomenon of environmental RNA interference (eRNAi) is based on the transfe
 - [Pipeline](#Pipeline)
 - [Dataset](#Dataset)
 - [Methods](#Methods)
+- [Dependencies](#Dependencies)
 - [Installation](#Installation)
 - [Usage](#Usage)
 - [Development](#Development)
@@ -35,8 +36,8 @@ The phenomenon of environmental RNA interference (eRNAi) is based on the transfe
 
 The data were obtained from public sources.
 
-- *Gallus gallus*, **BioProject PRJNA503784** [Tejas M. Shah et al. 2019]()
-- *Homo Sapiens*,  **NASA GeneLab - OSD-574** [Park J et al. 2024]()
+- *Gallus gallus*, **BioProject PRJNA503784** [Tejas M. Shah et al. 2019](https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA503784)
+- *Homo Sapiens*,  **NASA GeneLab - OSD-574** [Park J et al. 2024](https://osdr.nasa.gov/bio/repo/data/studies/OSD-574)
 
 ## Methods
 
@@ -58,7 +59,24 @@ The following tools are used in this project:
 - **Kallisto** | *Bray et al., 2016*  
 
 ### Statistical Computing
-- **R** | *R Core Team, 2024*  
+- **R** | *R Core Team, 2024*
+
+
+## Dependencies
+
+Full dependency list avialable in ```environmental.yaml```
+General pipeline depends on:
+- `python` > 3.11
+- `SnakeMake`
+- `R` > 4.2.0
+- analysis tools:
+  - `fastp`
+  - `Kraken 2`
+  - `Bracken`
+  - `Kallisto`
+  - `DSK`
+  - `BlastN`
+
 
 ## Installation
 
@@ -179,23 +197,9 @@ Scripts & documentation can be found in [the custom R pipeline](CCA_analysis/Sta
  9) R Core Team (2024). _R: A Language and Environment for Statistical Computing_. R Foundation for Statistical Computing, Vienna, Austria. <https://www.R-project.org/>.
 
 
-## Dependencies
-Full dependency list avialable in ```environmental.yaml```
-General pipeline depends on:
-- `python` > 3.11
-- `SnakeMake`
-- `R` > 4.2.0
-- analysis tools:
-  - `fastp`
-  - `Kraken 2`
-  - `Bracken`
-  - `Kallisto`
-  - `DSK`
-  - `BlastN`
- 
-  ## Authors
+## Authors
 
-V. Ishtuganova¹ (va ², M. Kravchenko¹ ², D.Smutin ³
+V. Ishtuganova¹ ² (valeriishtuganova@gmail.com), M. Kravchenko¹ ² (https://github.com/MariiaKaar), D.Smutin ³ (dvsmutin@gmail.com)
 
 1. Bioinformatics Institute, Kantemirovskaya st. 2A, 197342, St. Petersburg, Russia
 2. Saint-Petersburg State University, Universitetskaya emb. 7/9, 199034, St. Petersburg, Russia
