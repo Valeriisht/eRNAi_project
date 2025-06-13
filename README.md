@@ -14,6 +14,7 @@ The phenomenon of environmental RNA interference (eRNAi) is based on the transfe
 - [Pipeline](#Pipeline)
 - [Dataset](#Dataset)
 - [Methods](#Methods)
+- [System requirements](#System-requirements)
 - [Dependencies](#Dependencies)
 - [Installation](#Installation)
 - [Usage](#Usage)
@@ -61,6 +62,27 @@ The following tools are used in this project:
 ### Statistical Computing
 - **R** | *R Core Team, 2024*
 
+## System requirements
+
+- The minimum requirements are as follows:
+
+### Device requirements
+
+- **Operation memory** - at least 4 GB
+- **Processor** - x86-64 architecture,  4+ cores recommended
+
+### Software requirements
+
+- **Operation system**
+  - Linux: Ubuntu 20.04+
+  - Windows: 10/11 (64-bit)
+  - macOS: 11.0+ (Big Sur)
+
+### Recomended 
+
+- SSD-disk
+- 4+ core processor
+  
 
 ## Dependencies
 
@@ -76,8 +98,6 @@ General pipeline depends on:
   - `Kallisto`
   - `DSK`
   - `BlastN`
-
-Technic Requirements:
 
 
 
