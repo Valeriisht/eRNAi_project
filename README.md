@@ -77,6 +77,9 @@ General pipeline depends on:
   - `DSK`
   - `BlastN`
 
+Technic Requirements:
+
+
 
 ## Installation
 
