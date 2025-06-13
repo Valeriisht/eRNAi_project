@@ -21,6 +21,7 @@ The phenomenon of environmental RNA interference (eRNAi) is based on the transfe
 - [Development](#Development)
 - [Results](#Results)
 - [References](#References)
+- [Authors](#Authors)
 
 ## Pipeline
 
