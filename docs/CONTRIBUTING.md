@@ -4,6 +4,13 @@ This project and everyone participating in it is governed by the [CONTRIBUTING.m
 Follow existing style, formatting, and naming conventions for the file you are modifying and for the entire project.
 Please review the following guidelines before you get started
 
+
+## Reporting bugs and proposing features
+
+- Search [existing issues](../../issues) before opening a new one.
+- For a bug report, include: what you ran, what you expected, what happened instead, and the relevant log file (pipeline logs are written under `{output_dir}/logs/`).
+- For a feature or pipeline-stage proposal, describe the input/output of the new stage and which existing rule it should connect to.
+
 ## Code Style
 
 - Follow the PEP 8 standards for Python
@@ -21,8 +28,7 @@ Please review the following guidelines before you get started
   - **str**, **int**, **float**, and **bool** to annotate simple data types.
   - **List**, **Tuple**, **Dict**, and **Set** from the typing module to annotate collections.
   - Union to indicate that a variable can have one of several types.
-  - Callable to annotate functions as types.
-  - Вocstrings to describe the purpose of a function, its arguments, and its return value.
+  - Docstrings to describe the purpose of a function, its arguments, and its return value.
 
 
 ## ArgParse annotation
@@ -58,53 +64,40 @@ The following basic packages are required to work on the project:
 
 The minimum list of packages and their versions that are required for the project can be found in requirements/minimal.txt
 
-## Install packeges 
+## Installing packages
 
-- Each package is installed using conda. Save the installation code in repository. 
+- Every package is installed conda, save any installation code you add to the repository (`requirements/installations.sh`).
+- Conda dependencies and their versions are listed in `enviromental.yaml` at the repository root. 
 
-- The repository contains a separate YAML files that lists the dependencies and the versions used. A list of Conda packages and channels to install is contained in the environment.yaml file.
-  
-- When creating or upgrading an environment, you must specify the exact versions of the packages that will be installed.
+## Snakemake conventions
 
-## SnakeMake wraps
-
-- The enviromental.yaml file for each rule must be stacked in the Snakefile so that Snakemake can create an isolated conda environment with the necessary dependencies to run that rule.
+- Each pipeline stage are in its own rule file under `workflow/rules/` and is pulled into the root `Snakefile` via `include:`.
+- Give every rule a `log:` directive pointing into `{output_dir}/logs/`.
 
 ## Folder structure
 
-Use the following folder structure
+This is the actual structure of the repository — keep new code inside it rather than introducing parallel folders:
 
-- src/: Framework source code:
-  - Contains modules and packages that implement the functionality of the framework. Each module should have a unique name and contain docstrings.
+- `workflow/rules/`: Snakemake rule files, one per pipeline stage (preprocessing, host/metagenome split, metagenome classification, transcriptome quantification, metatranscriptome, genome download).
+- `scripts/`:  Python/Bash scripts invoked by the pipeline or run manually.
+- `CCA_analysis/`: R scripts for the CCA and downstream statistical analysis.
+- `config/`: `config.yaml` and any other run configuration.
+- `data/`: input data references (SRA ID lists, reference genomes), large/raw data files are excluded via `.gitignore`.
+- `tests/`: tests for `scripts/` and for the Snakemake rules. Uses pytest, test filenames start with `test_`.
+- `docs/`: documentation, including this file.
+- `requirements/`: minimal package lists (`minimal.txt`, `tests.txt`) and install scripts.
+- Code generated during development, testing, or builds must be in `.gitignore`, not committed.
 
-- tests/: Tests.
-  - Contains tests for every module in src/.
-  - The pytest library is used to write and execute the tests. Test filenames start with test_.
+## Running tests locally
 
-- docs/: Documentation
-  - Includes a file with the contributor rules 
+```
+pip install -r requirements/tests.txt
+pytest tests/
+```
 
-- examples/: Usage examples.
-  - Contains code examples that demonstrate how to use the framework.
+## Pull requests
 
-- requirements/: packages 
-  - contains a set of minimum required packages 
-
-- scripts/: Basic project scripts for execution.
-
-- Code generated during development, testing, build/compile should be in .gitignore
-
-## Execute through a Python or Bash layer
-
-- Use Python or Bash scripts to execute the framework
-
-## Pull Requests
-
-- Describe changes made in the PR description clearly and in detail.
-- Verify that all tests pass before submitting the PR.
-- Update documentation if you make changes to the code.
-  
-For function annotation, use the Callable object from the typing module.
-
-
-
+- Describe the changes made in the PR description clearly and in detail.
+- Link the issue(s) the PR addresses.
+- Verify that all tests pass, and that `snakemake -n` (dry-run) succeeds if you touched any rule file, before requesting review.
+- Update documentation (README, `docs/PIPELINE.md`, this file) if your change affects usage, configuration, or folder structure.
