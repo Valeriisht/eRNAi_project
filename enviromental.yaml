@@ -1,22 +1,36 @@
-# Conda environment file
 name: eRNAi
+
 channels:
   - conda-forge
   - bioconda
   - defaults
-dependencies:
-  - python=3.11
-  - bioconda::snakemake
-  - bioconda::fastp
-  - bioconda::kraken2
-  - bioconda::bracken
-  - bioconda::dsk
-  - bioconda::blast
 
-# optional:
-##  - bioconda::sra-tools=3.2.0
-##  - bioconda::humann=3.9
-##  - conda-forge::datasets=16.40.1
-##  - bioconda::metaphlan
-##  - conda-forge::coincbc
-##  - bioconda::ncbi-genome-download
+dependencies:
+  # Workflow runner and Python utilities used by scripts/tests
+  - python=3.11
+  - snakemake=8.30.*
+  - pandas
+  - pyyaml
+  - pytest
+  - pytest-mock
+  - flake8
+  - black
+
+  # Data retrieval and reference preparation
+  - sra-tools=3.2.*
+  - ncbi-datasets-cli
+  - ncbi-genome-download
+
+  # Read processing and host-read removal
+  - fastp=0.24.*
+  - bwa
+  - samtools
+
+  # Host transcriptome quantification
+  - kallisto
+
+  # Metagenome and k-mer workflow
+  - kraken2
+  - bracken=3.1.*
+  - dsk=2.3.3
+  - blast=2.16.*
