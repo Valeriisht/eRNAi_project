@@ -331,7 +331,7 @@ This is a separate draft that isn't currently included in the root `Snakefile`.
 - However, it runs `fastp` again and references `input.fastq`, `output.processed_fastq`, `output.html_report`, none of which exist in this rule.
 - In other words, metatranscriptomic taxonomic profiling **isn't implemented**.
 
-### HUMAnN
+### HUMAnN - not implemented
 
 - Describes the intended input/output of the functional profile.
 - Contains a second, redundant `shell:` — a syntax error.
