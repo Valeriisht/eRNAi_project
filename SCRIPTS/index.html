@@ -1,0 +1,1114 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../SNAKEMAKE/">
+      
+      
+        <link rel="next" href="../CONTRIBUTING/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Скрипты и тесты - eRNAi Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#review-of-helper-scripts-environments-and-tests" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="eRNAi Documentation" class="md-header__button md-logo" aria-label="eRNAi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            eRNAi Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Скрипты и тесты
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="eRNAi Documentation" class="md-nav__button md-logo" aria-label="eRNAi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    eRNAi Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BASIC_DOC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FILES_EXPLONATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Устройство репозитория
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SNAKEMAKE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snakemake-пайплайн
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Скрипты и тесты
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Скрипты и тесты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scriptsdownload_metagenomepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scripts/download_metagenome.py
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="scripts/download_metagenome.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imports-and-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imports and logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genomedownloadconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GenomeDownloadConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_existing_genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        check_existing_genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify_genome_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        verify_genome_file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download_genomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        download_genomes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scriptsrun_download_metagenomepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scripts/run_download_metagenome.py
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scriptsfind_shared_kmerssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scripts/find_shared_kmers.sh
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="scripts/find_shared_kmers.sh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        process_file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting the result
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirementsinstallationssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        requirements/installations.sh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirementsminimaltxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        requirements/minimal.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirementsteststxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        requirements/tests.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tests: to do
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests: to do">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tests__init__py" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tests/__init__.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testsconftestpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tests/conftest.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testsunitconftestpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tests/unit/conftest.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testsunittest_kallisto_rulespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tests/unit/test_kallisto_rules.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testsunittest_sra_rulespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tests/unit/test_sra_rules.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONTRIBUTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scriptsdownload_metagenomepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scripts/download_metagenome.py
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="scripts/download_metagenome.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imports-and-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imports and logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genomedownloadconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GenomeDownloadConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_existing_genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        check_existing_genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify_genome_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        verify_genome_file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download_genomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        download_genomes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scriptsrun_download_metagenomepy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scripts/run_download_metagenome.py
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scriptsfind_shared_kmerssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scripts/find_shared_kmers.sh
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="scripts/find_shared_kmers.sh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        process_file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting the result
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirementsinstallationssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        requirements/installations.sh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirementsminimaltxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        requirements/minimal.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirementsteststxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        requirements/tests.txt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tests: to do
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests: to do">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tests__init__py" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tests/__init__.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testsconftestpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tests/conftest.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testsunitconftestpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tests/unit/conftest.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testsunittest_kallisto_rulespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tests/unit/test_kallisto_rules.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testsunittest_sra_rulespy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tests/unit/test_sra_rules.py
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="review-of-helper-scripts-environments-and-tests">Review of helper scripts, environments, and tests<a class="headerlink" href="#review-of-helper-scripts-environments-and-tests" title="Permanent link">&para;</a></h1>
+<h2 id="scriptsdownload_metagenomepy"><code>scripts/download_metagenome.py</code><a class="headerlink" href="#scriptsdownload_metagenomepy" title="Permanent link">&para;</a></h2>
+<p>This Python script downloads <strong>reference bacterial genomes</strong>. It's needed after CCA, for the taxa identified in the ordination, to obtain FASTA genomes for k-mer/sequence analysis.</p>
+<p>A few notes on the code follow.</p>
+<h3 id="imports-and-logging">Imports and logging<a class="headerlink" href="#imports-and-logging" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>gzip</code> opens <code>.gz</code> FASTA files without manual decompression.</li>
+<li><code>tempfile</code> creates an automatically cleaned-up temporary directory.</li>
+<li><code>subprocess</code> runs the external <code>ncbi-genome-download</code> command.</li>
+<li><code>dataclass</code> creates a compact configuration class.</li>
+</ul>
+<h3 id="genomedownloadconfig"><code>GenomeDownloadConfig</code><a class="headerlink" href="#genomedownloadconfig" title="Permanent link">&para;</a></h3>
+<p><code>@dataclass</code> automatically generates the class constructor. Fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>assembly_level</code></td>
+<td>complete assemblies only</td>
+</tr>
+<tr>
+<td><code>refseq_category</code></td>
+<td>RefSeq reference genomes only</td>
+</tr>
+<tr>
+<td><code>file_format</code></td>
+<td>FASTA</td>
+</tr>
+<tr>
+<td><code>parallel</code></td>
+<td>3 parallel downloads</td>
+</tr>
+<tr>
+<td><code>retries</code></td>
+<td>3 attempts</td>
+</tr>
+</tbody>
+</table>
+<p>A parameter template passed later into the function.</p>
+<h3 id="check_existing_genome"><code>check_existing_genome</code><a class="headerlink" href="#check_existing_genome" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Arguments: genus name and output folder.</li>
+<li>Builds the expected filename, e.g. <code>output_downloaded_metagenome/Escherichia_reference.fna.gz</code>.</li>
+<li>Returns a <code>Path</code> object if the file exists, otherwise <code>None</code>.</li>
+</ul>
+<p>The script stores <strong>one genome per genus</strong>, not one genome per species.</p>
+<p>Issue: for CCA taxa at species level this is a very rough simplification — different <code>Bacteroides</code> species, for example, could end up represented by the wrong genome.</p>
+<h3 id="verify_genome_file"><code>verify_genome_file</code><a class="headerlink" href="#verify_genome_file" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Opens the gzip FASTA in text mode.</li>
+<li>Reads only the first header line.</li>
+<li>Considers the genome a match if the genus name appears in the header.</li>
+<li>Logs an error otherwise.</li>
+</ul>
+<p>Issue: this doesn't guarantee taxonomic correctness — the header may use an abbreviated name, or the genus may appear in a different field.</p>
+<h3 id="download_genomes"><code>download_genomes</code><a class="headerlink" href="#download_genomes" title="Permanent link">&para;</a></h3>
+<p>Arguments: a collection/list of genera, an output directory, and a configuration.</p>
+<ul>
+<li>Creates the target directory.</li>
+<li>Builds the result as a <code>{genus: downloaded_path}</code> mapping.</li>
+<li>Iterates over the taxa: reuses a previously saved valid file, or adds the genus to <code>genera_to_download</code>.</li>
+<li>Returns early if everything is already downloaded.</li>
+<li>Creates a temporary directory that is removed at the end of the block.</li>
+<li>Builds the external program's arguments as an argument list rather than a shell string — safer than constructing a shell command.</li>
+<li>Runs <code>ncbi-genome-download</code> with <code>check=True</code>, which raises an exception on a nonzero exit code.</li>
+<li>Expects a specific output structure from that program: iterates over <code>*_genomic.fna.gz</code>, checks the header, and copies the first matching file into the permanent directory.</li>
+<li>Catches errors and only logs them rather than re-raising — so the caller must check for an incomplete <code>results</code>.</li>
+<li>Returns the dictionary of successfully found genomes.</li>
+</ul>
+<hr />
+<h2 id="scriptsrun_download_metagenomepy"><code>scripts/run_download_metagenome.py</code><a class="headerlink" href="#scriptsrun_download_metagenomepy" title="Permanent link">&para;</a></h2>
+<p>A short driver for the module above.</p>
+<ul>
+<li>Imports <code>download_genomes</code>.</li>
+<li>Computes a directory two levels above the current working directory.
+  Issue: the result depends on where the script is run from.</li>
+<li>Expects <code>species.csv</code> in that computed directory.</li>
+<li>Reads the CSV, treats the first column as the index, strips whitespace after delimiters, and expects <code>Genus</code>, <code>CCA1</code>, <code>CCA2</code> columns.</li>
+<li>Sets the output folder.</li>
+<li>Strips leading/trailing whitespace from genus names.</li>
+<li>Converts the <code>Genus</code> column into a Python list.</li>
+<li>Downloads the genomes.</li>
+</ul>
+<p><code>species.csv</code> contains CCA coordinates; only the genus names are actually used here.</p>
+<hr />
+<h2 id="scriptsfind_shared_kmerssh"><code>scripts/find_shared_kmers.sh</code><a class="headerlink" href="#scriptsfind_shared_kmerssh" title="Permanent link">&para;</a></h2>
+<p>This script assumes DSK has already produced <code>kmer-count</code>-style tables, and finds <strong>exact shared k-mers</strong> between the host genome and each metagenome file.</p>
+<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Selects the Bash interpreter.</li>
+<li>Sets the expected directory of input metagenome DSK tables.</li>
+<li>Sets the DSK table for the chicken genome.</li>
+<li>Sets the minimum occurrence count for a k-mer in the host genome to 2.</li>
+</ul>
+<h3 id="process_file"><code>process_file</code><a class="headerlink" href="#process_file" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Takes a single metagenome DSK table as positional argument <code>$1</code>.</li>
+<li>Extracts the sample name from the basename, stripping only the <code>.txt</code> suffix.</li>
+<li>Builds the final output filename plus two temporary filenames.</li>
+<li>If the cleaned host table doesn't exist yet, uses <code>awk '{print $1}'</code> to take the first column (the k-mers themselves) from the host DSK table; <code>||</code> means "otherwise."</li>
+<li>Similarly extracts k-mers from the current metagenome table.</li>
+<li>Uses <code>grep -Fxf</code>: <code>-F</code> for literal strings, <code>-x</code> for full-line match, <code>-f</code> for patterns from the host table — the result is the exact intersection of k-mers.</li>
+<li>Checks whether a frequency filter is needed.</li>
+<li>The first <code>awk</code> reads the host k-mer/count table into an associative array; the second input is the intersection lines from the metagenome. It prints the k-mer and the <strong>host genome count</strong> if that count is ≥ 2. The metagenome count is neither filtered nor saved to the final file.</li>
+<li>Counts the final rows, writes a summary, and returns success.</li>
+<li>On failure, writes an error log and returns failure.</li>
+</ul>
+<h3 id="loop">Loop<a class="headerlink" href="#loop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Exports the function/variables for GNU Parallel, but <code>parallel</code> is never actually called — a leftover from a possible parallel version.</li>
+<li>Iterates only over <code>*_k15.h5.txt</code> filenames: k=15 is hardcoded into the filename.</li>
+<li>Retries processing up to three times, waiting 10 seconds between attempts.</li>
+<li>Removes temporary files if the last command in the loop succeeded. If an earlier file failed, this check may not reflect that correctly — an explicit error counter or <code>set -euo pipefail</code> would be safer.</li>
+</ul>
+<h3 id="interpreting-the-result">Interpreting the result<a class="headerlink" href="#interpreting-the-result" title="Permanent link">&para;</a></h3>
+<p><code>*_shared_kmers.txt</code> answers the question: "which short DNA strings occur in both the host genome and the selected metagenome table?"</p>
+<hr />
+<h3 id="requirementsinstallationssh"><code>requirements/installations.sh</code><a class="headerlink" href="#requirementsinstallationssh" title="Permanent link">&para;</a></h3>
+<p>Each line is a separate interactive <code>conda install</code> command.
+This file should be replaced with a single lockable <code>environment.yml</code> with pinned versions. It can be removed.</p>
+<h3 id="requirementsminimaltxt"><code>requirements/minimal.txt</code><a class="headerlink" href="#requirementsminimaltxt" title="Permanent link">&para;</a></h3>
+<p>A minimal Python development list: Python, pytest, flake8, black, requests, pandas, numpy. It doesn't install the conda bioinformatics programs and isn't sufficient for the full pipeline.</p>
+<h3 id="requirementsteststxt"><code>requirements/tests.txt</code><a class="headerlink" href="#requirementsteststxt" title="Permanent link">&para;</a></h3>
+<p>A separate conda YAML: <code>snakemake-tests</code> environment, Python 3.10, pytest, Snakemake, Kallisto, pytest-mock.</p>
+<hr />
+<h2 id="tests-to-do">Tests: to do<a class="headerlink" href="#tests-to-do" title="Permanent link">&para;</a></h2>
+<h3 id="tests__init__py"><code>tests/__init__.py</code><a class="headerlink" href="#tests__init__py" title="Permanent link">&para;</a></h3>
+<p>Makes <code>tests/</code> a package.</p>
+<h3 id="testsconftestpy"><code>tests/conftest.py</code><a class="headerlink" href="#testsconftestpy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Provides the <code>mocker</code> fixture via the pytest-mock plugin.</li>
+</ul>
+<h3 id="testsunitconftestpy"><code>tests/unit/conftest.py</code><a class="headerlink" href="#testsunitconftestpy" title="Permanent link">&para;</a></h3>
+<h3 id="testsunittest_kallisto_rulespy"><code>tests/unit/test_kallisto_rules.py</code><a class="headerlink" href="#testsunittest_kallisto_rulespy" title="Permanent link">&para;</a></h3>
+<h3 id="testsunittest_sra_rulespy"><code>tests/unit/test_sra_rules.py</code><a class="headerlink" href="#testsunittest_sra_rulespy" title="Permanent link">&para;</a></h3>
+<ul>
+<li>These are useful smoke tests documenting the expected commands, but not integration tests. They won't catch syntax errors, missing paths, or incorrect connections between the real Snakemake rules.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

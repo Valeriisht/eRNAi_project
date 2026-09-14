@@ -1,0 +1,2010 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../FILES_EXPLONATION/">
+      
+      
+        <link rel="next" href="../SCRIPTS/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Snakemake-пайплайн - eRNAi Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#snakemake-part-review" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="eRNAi Documentation" class="md-header__button md-logo" aria-label="eRNAi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            eRNAi Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Snakemake-пайплайн
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="eRNAi Documentation" class="md-nav__button md-logo" aria-label="eRNAi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    eRNAi Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BASIC_DOC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FILES_EXPLONATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Устройство репозитория
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snakemake-пайплайн
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snakemake-пайплайн
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-bit-about-snakemake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A bit about Snakemake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configconfigyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/config.yaml
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="config/config.yaml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sra-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SRA and resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bwasamtools-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BWA/SAMtools resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kallisto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kallisto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metagenomeqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metagenome/QC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snakefile-what-happens-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snakefile: what happens here
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snakefile: what happens here">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metagenome-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metagenome target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-removal-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Host removal branch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qc-and-transcriptome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QC and transcriptome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#honest-assessment-of-the-snakefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Honest assessment of the Snakefile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowrulesdownload_genomesmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/download_genome.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/download_genome.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download_genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        download_genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract_genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        extract_genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_rename_genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        find_rename_genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean_temp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clean_temp
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowrulespre_prossecingsmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/pre_prossecing.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/pre_prossecing.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefetch_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        prefetch_data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        download_data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process_paired_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        process_paired_data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowruleshost_communitysmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/host_community.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/host_community.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters-and-side-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters and side effect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bwa_index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bwa_index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bwa_align" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bwa_align
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sam_to_bam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sam_to_bam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split_reads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        split_reads
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowrulesmeta_genomesmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/meta_genome.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/meta_genome.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kraken2-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kraken2 branch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bracken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bracken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Merging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metaphlan-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MetaPhlAn alternative
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowrulestranscriptomesmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/transcriptome.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/transcriptome.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paths_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kallisto_index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kallisto_index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kallisto_quant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kallisto_quant
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowrulesmeta_transcriptomesmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/meta_transcriptome.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/meta_transcriptome.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qc-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QC rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supposed-metaphlan-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supposed MetaPhlAn step
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#humann-not-implemented" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HUMAnN - not implemented
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#humann-postprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HUMAnN postprocessing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleanup-and-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cleanup and target
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SCRIPTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Скрипты и тесты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONTRIBUTING/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-bit-about-snakemake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A bit about Snakemake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configconfigyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        config/config.yaml
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="config/config.yaml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sra-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SRA and resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bwasamtools-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BWA/SAMtools resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kallisto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kallisto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metagenomeqc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metagenome/QC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snakefile-what-happens-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snakefile: what happens here
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snakefile: what happens here">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metagenome-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metagenome target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-removal-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Host removal branch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qc-and-transcriptome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QC and transcriptome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#honest-assessment-of-the-snakefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Honest assessment of the Snakefile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowrulesdownload_genomesmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/download_genome.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/download_genome.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download_genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        download_genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extract_genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        extract_genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_rename_genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        find_rename_genome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean_temp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clean_temp
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowrulespre_prossecingsmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/pre_prossecing.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/pre_prossecing.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prefetch_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        prefetch_data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        download_data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process_paired_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        process_paired_data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowruleshost_communitysmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/host_community.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/host_community.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters-and-side-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters and side effect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bwa_index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bwa_index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bwa_align" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bwa_align
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sam_to_bam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sam_to_bam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#split_reads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        split_reads
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowrulesmeta_genomesmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/meta_genome.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/meta_genome.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kraken2-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kraken2 branch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bracken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bracken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Merging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metaphlan-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MetaPhlAn alternative
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowrulestranscriptomesmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/transcriptome.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/transcriptome.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paths_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kallisto_index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kallisto_index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kallisto_quant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kallisto_quant
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflowrulesmeta_transcriptomesmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        workflow/rules/meta_transcriptome.smk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="workflow/rules/meta_transcriptome.smk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qc-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QC rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supposed-metaphlan-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supposed MetaPhlAn step
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#humann-not-implemented" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HUMAnN - not implemented
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#humann-postprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HUMAnN postprocessing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleanup-and-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cleanup and target
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="snakemake-part-review">Snakemake part review<a class="headerlink" href="#snakemake-part-review" title="Permanent link">&para;</a></h1>
+<p>Here we look at the <code>.smk</code> files in <code>rules</code>.</p>
+<h2 id="a-bit-about-snakemake">A bit about Snakemake<a class="headerlink" href="#a-bit-about-snakemake" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>configfile:</code></td>
+<td>read a YAML file and make its values available as <code>config[...]</code></td>
+</tr>
+<tr>
+<td><code>rule NAME:</code></td>
+<td>name a computation step</td>
+</tr>
+<tr>
+<td><code>input:</code></td>
+<td>files that must exist before the step runs</td>
+</tr>
+<tr>
+<td><code>output:</code></td>
+<td>files whose appearance means the step completed successfully</td>
+</tr>
+<tr>
+<td><code>wildcard</code></td>
+<td>a placeholder, e.g. <code>{sra_id}</code> becomes <code>SRR8265535</code></td>
+</tr>
+<tr>
+<td><code>shell:</code></td>
+<td>the command Snakemake will pass to the shell</td>
+</tr>
+</tbody>
+</table>
+<p>Snakemake builds its graph not by line order but by matching input and output names. If <code>rule B</code> requests a file produced by <code>rule A</code>, B waits for A.</p>
+<h2 id="configconfigyaml"><code>config/config.yaml</code><a class="headerlink" href="#configconfigyaml" title="Permanent link">&para;</a></h2>
+<h3 id="paths">Paths<a class="headerlink" href="#paths" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>output_dir: "kraken"</code> — the directory the rules expect to write results into. Not only Kraken files end up there.</li>
+<li><code>input_dir: "metagenome/dehost"</code> — the directory of expected reads after host sequences have been removed.</li>
+<li><code>ref_dir</code> — the directory holding the host reference.</li>
+<li><code>taxid: "galGal6"</code> — the assembly/reference name.</li>
+<li><code>sample_name</code> — the shared prefix for the merged report.</li>
+</ul>
+<h3 id="sra-and-resources">SRA and resources<a class="headerlink" href="#sra-and-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>sra.sra_id</code> — the list of metagenomic SRA runs.</li>
+<li><code>paired: True</code> means paired-end reads are expected.</li>
+<li><code>thread: 2</code> — threads for <code>fasterq-dump</code>.</li>
+</ul>
+<h3 id="bwasamtools-resources">BWA/SAMtools resources<a class="headerlink" href="#bwasamtools-resources" title="Permanent link">&para;</a></h3>
+<p>The <code>threads:</code> block is declared twice. YAML will keep the <strong>second</strong> block, so the values actually in effect are 8, 8, 8, 4. This should be collapsed into a single block so the true settings are documented.</p>
+<h3 id="kallisto">Kallisto<a class="headerlink" href="#kallisto" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>kmer_size: 31</code> — the desired k-mer length for the Kallisto index.</li>
+<li><code>bootstrap: 30</code> — the number of bootstrap replicates used to estimate uncertainty in the abundance estimate.</li>
+</ul>
+<h3 id="metagenomeqc">Metagenome/QC<a class="headerlink" href="#metagenomeqc" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>algorithm</code> selects the Kraken2 or MetaPhlAn branch (NOT IMPLEMENTED).</li>
+<li><code>database</code> — an absolute path — SHOULD BE REMOVED.</li>
+<li><code>read_length: 150</code> — the read length passed to Bracken.</li>
+<li><code>taxonomic_level: ['S']</code> — species level is requested. The code also supports <code>G</code> and <code>P</code>, but the current configuration doesn't produce them.</li>
+<li>fastp thresholds: Q20 and 50 nt. <code>detect_adapters</code> is set, but the rule always enables adapter detection and never checks this boolean.</li>
+</ul>
+<hr />
+<h2 id="snakefile-what-happens-here"><code>Snakefile</code>: what happens here<a class="headerlink" href="#snakefile-what-happens-here" title="Permanent link">&para;</a></h2>
+<h3 id="main-script">Main script<a class="headerlink" href="#main-script" title="Permanent link">&para;</a></h3>
+<p><code>configfile: "config/config.yaml"</code> makes the YAML values available as the <code>config</code> dictionary.</p>
+<h3 id="global-variables">Global variables<a class="headerlink" href="#global-variables" title="Permanent link">&para;</a></h3>
+<p>Each line copies a convenient value out of <code>config</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">INP_DIR</span>  <span class="c1"># path to input reads</span>
+<span class="n">OUT_DIR</span>  <span class="c1"># path to results</span>
+<span class="n">SAMPLE</span>   <span class="c1"># name of the merged report</span>
+<span class="n">SRA_IDS</span>  <span class="c1"># list of accession IDs</span>
+<span class="n">DB</span>       <span class="c1"># Kraken database</span>
+<span class="n">ALGO</span>     <span class="c1"># kraken2/metaphlan</span>
+<span class="n">READ_LEN</span> <span class="c1"># read length for Bracken</span>
+<span class="n">LEVELS</span>   <span class="c1"># S/G/P</span>
+</code></pre></div>
+<h3 id="metagenome-target">Metagenome target<a class="headerlink" href="#metagenome-target" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Includes the rules from <code>meta_genome.smk</code>.</li>
+<li>Declares <code>rule all</code>, i.e. the desired final files.</li>
+<li><code>expand(...)</code> multiplies the template across all SRA IDs — for two IDs, for example, it produces two Kraken report names.</li>
+</ul>
+<h3 id="host-removal-branch">Host removal branch<a class="headerlink" href="#host-removal-branch" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Includes <code>host_community.smk</code>.</li>
+<li>The template produces two files per SRA ID: host reads and metagenome reads.</li>
+</ul>
+<h3 id="qc-and-transcriptome">QC and transcriptome<a class="headerlink" href="#qc-and-transcriptome" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Includes two modules.</li>
+</ul>
+<h3 id="download-genome">Download genome<a class="headerlink" href="#download-genome" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The rule for downloading genomes.</li>
+</ul>
+<h3 id="honest-assessment-of-the-snakefile">Honest assessment of the <code>Snakefile</code><a class="headerlink" href="#honest-assessment-of-the-snakefile" title="Permanent link">&para;</a></h3>
+<p>This is a draft file that bundles several alternative runs into a single document.</p>
+<p>The correct structure is to run things in this order (they were previously run separately):</p>
+<div class="highlight"><pre><span></span><code>Snakefile
+  ├── include: preprocessing.smk
+  ├── include: host_removal.smk
+  ├── include: metagenome.smk
+  ├── include: host_transcriptome.smk
+  ├── include: metatranscriptome.smk
+  └── one rule all: all selected final outputs
+</code></pre></div>
+<hr />
+<p>Now a walkthrough of the individual files — a bit about each one:</p>
+<table>
+<thead>
+<tr>
+<th>Rule / block</th>
+<th>Why it's needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rule all</code></td>
+<td>Defines the final outputs of the whole workflow and triggers the build of all dependencies.</td>
+</tr>
+<tr>
+<td><code>download_genome.smk</code></td>
+<td>Downloads the host reference genome/transcriptome for alignment and quantification.</td>
+</tr>
+<tr>
+<td><code>download_metagenome</code></td>
+<td>Downloads the raw metagenome FASTQ files by accession.</td>
+</tr>
+<tr>
+<td><code>pre_prossecing.smk</code></td>
+<td>Cleans reads: adapters, low quality, short sequences; produces QC reports.</td>
+</tr>
+<tr>
+<td>Host genome indexing</td>
+<td>Prepares the reference for fast alignment of metagenomic reads to the host.</td>
+</tr>
+<tr>
+<td><code>host_community.smk</code>: host-read removal</td>
+<td>Removes host reads from the metagenome, leaving the potentially microbial reads.</td>
+</tr>
+<tr>
+<td><code>meta_genome.smk</code>: Kraken2</td>
+<td>Determines the taxonomic composition of microorganisms in the sample.</td>
+</tr>
+<tr>
+<td><code>meta_genome.smk</code>: Bracken</td>
+<td>Estimates taxon abundance from the Kraken2 results.</td>
+</tr>
+<tr>
+<td>Merging metagenome profiles</td>
+<td>Builds a "sample × microorganism" matrix for integrative analysis.</td>
+</tr>
+<tr>
+<td><code>transcriptome.smk</code>: Kallisto index</td>
+<td>Builds the host transcriptome index.</td>
+</tr>
+<tr>
+<td><code>transcriptome.smk</code>: Kallisto quantification</td>
+<td>Estimates host transcript/gene expression from RNA-seq.</td>
+</tr>
+<tr>
+<td>Merging RNA-seq results</td>
+<td>Builds a "sample × host gene" matrix.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="workflowrulesdownload_genomesmk"><code>workflow/rules/download_genome.smk</code><a class="headerlink" href="#workflowrulesdownload_genomesmk" title="Permanent link">&para;</a></h2>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The config is re-read here. Under <code>include</code>, this is redundant but usually not critical.</li>
+<li>The reference ID and output directory are copied.</li>
+<li>The final filename <code>kraken/galGal6.fna</code> is computed.</li>
+</ul>
+<h3 id="download_genome"><code>download_genome</code><a class="headerlink" href="#download_genome" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Declares the rule.</li>
+<li>Declares the named output <code>zip</code>.</li>
+<li>Passes <code>TAXID</code> into the command as <code>params.taxid</code>.</li>
+<li>Points to the log file.</li>
+<li>Runs the NCBI Datasets CLI and redirects stdout/stderr into the log. <code>--reference</code> requests the reference genome.</li>
+</ul>
+<h3 id="extract_genome"><code>extract_genome</code><a class="headerlink" href="#extract_genome" title="Permanent link">&para;</a></h3>
+<ul>
+<li>References the named output of the previous rule; this is a graph edge.</li>
+<li><code>directory(...)</code> tells Snakemake the output is a directory, not a single file.</li>
+<li>Unzips the archive into that directory.</li>
+</ul>
+<h3 id="find_rename_genome"><code>find_rename_genome</code><a class="headerlink" href="#find_rename_genome" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Expects the directory from <code>extract_genome</code>.</li>
+<li>Sets the final <code>.fna</code> target.</li>
+<li>Looks for the <strong>first</strong> <code>.fna</code> in the archive; if there are several, the choice is undocumented and could be wrong.</li>
+<li>Fails the job with an error if no fasta is found.</li>
+<li>Moves the found fasta to the standard output name.</li>
+</ul>
+<h3 id="clean_temp"><code>clean_temp</code><a class="headerlink" href="#clean_temp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Once <code>GENOME_FILE</code> exists, a <code>clean.done</code> marker is created.</li>
+<li>The command removes the zip and the unpacked directory.</li>
+<li>This is only safe if <code>GENOME_FILE</code> genuinely already holds the needed copy of the fasta. The documentation should note that intermediate files are deleted.</li>
+</ul>
+<hr />
+<h2 id="workflowrulespre_prossecingsmk"><code>workflow/rules/pre_prossecing.smk</code><a class="headerlink" href="#workflowrulespre_prossecingsmk" title="Permanent link">&para;</a></h2>
+<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Reads the shared config.</li>
+<li>Extracts the output directory and the list of SRA IDs. The name <code>SRA_ID</code> is misleading: it holds a list, not a single ID.</li>
+<li>Creates the output and <code>logs</code> directories <strong>while the Snakefile is being parsed</strong>, not inside a job. This is a side effect and should probably be removed in a future version — the output paths/commands themselves should create the directory.</li>
+</ul>
+<h3 id="prefetch_data"><code>prefetch_data</code><a class="headerlink" href="#prefetch_data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Writes <code>{SRA_ID}</code> in uppercase. Snakemake technically allows this as a wildcard name, but the rest of the project uses <code>{sra_id}</code>.</li>
+<li>Defines what gets substituted for the wildcard in the command.</li>
+<li>Downloads a single SRA archive.</li>
+<li>Has no input: this is a starting rule, triggered by the requested <code>.sra</code> output.</li>
+</ul>
+<h3 id="download_data"><code>download_data</code><a class="headerlink" href="#download_data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Connects this rule to <code>prefetch_data</code>: its input matches that rule's output.</li>
+<li>Names mate 1 and mate 2; the variable <code>r1</code> should actually be named <code>r2</code> — as written it makes the code confusing to read.</li>
+<li>Takes the SRA ID, thread count, and expected layout.</li>
+<li>Enables strict shell mode: an error, an uninitialized variable, or a pipe failure stops the command.</li>
+<li>Converts <code>.sra</code> to FASTQ. <code>strace</code> isn't part of the actual processing and requires Linux; it was likely left in for debugging and should be removed for portability.</li>
+<li>Renames the FASTQ files to the expected Snakemake output names.</li>
+</ul>
+<h3 id="process_paired_data"><code>process_paired_data</code><a class="headerlink" href="#process_paired_data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Takes the raw pair from the previous rule.</li>
+<li>Defines the two filtered FASTQ files and the JSON QC report.</li>
+<li>Passes the fastp parameters from the YAML. <code>detect_adapters</code> is declared here but isn't actually used as a condition in the shell command.</li>
+<li>Runs fastp: <code>-i/-I</code> are the two inputs, <code>-o/-O</code> the two outputs, <code>-q</code> the quality cutoff, <code>--length_required</code> the minimum length.</li>
+<li>Deletes the raw reads. This saves space but makes reprocessing and auditing harder; using <code>temp()</code> or storing the raw files separately would be better.</li>
+</ul>
+<hr />
+<h2 id="workflowruleshost_communitysmk"><code>workflow/rules/host_community.smk</code><a class="headerlink" href="#workflowruleshost_communitysmk" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Dehosting.</li>
+</ul>
+<h3 id="parameters-and-side-effect">Parameters and side effect<a class="headerlink" href="#parameters-and-side-effect" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Copies the config. <code>SRA_ID</code> again holds a list and isn't used in this file.</li>
+<li>Creates the logs folder at parse time; see the note above.</li>
+</ul>
+<h3 id="bwa_index"><code>bwa_index</code><a class="headerlink" href="#bwa_index" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Expects the host fasta <code>ref_dir/galGal6.fa</code>.</li>
+<li>Uses <code>expand()</code> for the five BWA index files (<code>.amb</code>, <code>.ann</code>, <code>.bwt</code>, <code>.pac</code>, <code>.sa</code>) — a correct way to represent a single multi-part index.</li>
+<li>Pulls a resource value from the YAML, but the command <strong>doesn't actually pass</strong> the thread count: <code>bwa index</code> in this form doesn't take that parameter.</li>
+<li>Builds the index.</li>
+</ul>
+<h3 id="bwa_align"><code>bwa_align</code><a class="headerlink" href="#bwa_align" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Takes the QC-cleaned paired reads. Their directory should match the preprocessing <code>output_dir</code>, or there should be an explicit move step; currently the YAML specifies different paths.</li>
+<li>Makes the index dependency explicit.</li>
+<li>Produces a SAM file for each <code>{sra_id}</code>.</li>
+<li>Sets <code>-v 1</code>, but that's a parameter of the old <code>bwa aln</code>, not <code>bwa mem</code>; it should be removed or replaced with a meaningful <code>bwa mem</code> option.</li>
+<li>Runs paired-end alignment: <code>-t</code> for threads, then the reference, R1, R2; the SAM goes to output, diagnostic stderr to the log.</li>
+</ul>
+<h3 id="sam_to_bam"><code>sam_to_bam</code><a class="headerlink" href="#sam_to_bam" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Input is a SAM file; output is a coordinate-sorted BAM and its index.</li>
+<li>Hard-coded resources; better moved into the config.</li>
+<li><code>samtools view</code> converts SAM into a temporary BAM.</li>
+<li>Sorts the BAM.</li>
+<li>Creates the <code>.bai</code> index.</li>
+<li>Removes the temporary BAM.</li>
+<li><code>|| exit 1</code> after each operation prevents continuing on failure — this is good practice.</li>
+</ul>
+<h3 id="split_reads"><code>split_reads</code><a class="headerlink" href="#split_reads" title="Permanent link">&para;</a></h3>
+<p>Idea: split reads by their alignment flag.</p>
+<ul>
+<li><code>-f 4</code> selects reads with the <code>unmapped</code> flag set.</li>
+<li><code>-F 4</code> excludes unmapped reads, i.e. keeps mapped ones.</li>
+<li>Writes unmapped mate 1 out as <code>metagenome_reads</code>.</li>
+<li>Writes mapped mate 1 out as <code>host_reads</code>.</li>
+<li>In both calls, <code>-2 /dev/null</code> <strong>discards mate 2</strong>. This can turn paired-end data into single-end data and break downstream rules.</li>
+<li>The outputs are named <code>.fastq.gz</code>, but <code>samtools fastq</code> isn't given any compression option and doesn't compress based on the file extension — this needs to be fixed.</li>
+<li>Biological note: <code>-f 4</code> keeps reads where that specific read is unmapped; it needs to be decided whether only pairs where both mates are non-host should be kept.</li>
+</ul>
+<hr />
+<h2 id="workflowrulesmeta_genomesmk"><code>workflow/rules/meta_genome.smk</code><a class="headerlink" href="#workflowrulesmeta_genomesmk" title="Permanent link">&para;</a></h2>
+<h3 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Gets the list of samples.</li>
+<li>Selects the classification method and Kraken database.</li>
+<li>Copies paths/prefix.</li>
+<li>Restricts the level wildcard to <code>S</code> only. So with the file as it stands, genus/phylum outputs aren't possible, even though the comment mentions them.</li>
+<li>A Python function that returns the input path for a given wildcard. It expects <code>.fastq</code>, whereas the previous rule declares <code>.fastq.gz</code> and a different output directory.</li>
+</ul>
+<h3 id="kraken2-branch">Kraken2 branch<a class="headerlink" href="#kraken2-branch" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This block is selected if the config specifies <code>kraken2</code>.</li>
+<li>Stops the workflow early if there's no database path.</li>
+<li>Defines <code>kraken2_classify</code>.</li>
+<li>Calls the <code>INPUT_R1</code> function, passing it a specific <code>sra_id</code>.</li>
+<li>Marks the report and the raw classification output as <code>temp()</code>. Snakemake can delete these files after downstream rules run, which conflicts with wanting to keep the reports as results — <code>temp()</code> should be removed for archival outputs.</li>
+<li>Runs Kraken2 on a single file, so this is single-end syntax.</li>
+</ul>
+<h3 id="bracken">Bracken<a class="headerlink" href="#bracken" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Requires the Kraken report — this is the Kraken → Bracken dependency.</li>
+<li>Produces the abundance report per sample and rank.</li>
+<li>Uses <code>READ_LEN</code>, but that variable is only defined in the root <code>Snakefile</code>; if the <code>.smk</code> file is run on its own, it won't exist. Using <code>config["read_length"]</code> directly would be more robust.</li>
+<li>Sets an abundance threshold of 10 reads, but this parameter isn't in the YAML and isn't documented in the README.</li>
+<li>Runs Bracken with the database, input report, output, read length, rank, and threshold.</li>
+</ul>
+<h3 id="merging">Merging<a class="headerlink" href="#merging" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Builds the list of all species reports.</li>
+<li>Produces a single combined <code>gallus_gallus_report.tsv</code>.</li>
+<li>Calls <code>kreport2mpa.py</code>. It should be checked whether this utility actually accepts Bracken output in this format — it's more commonly applied to a Kraken report.</li>
+</ul>
+<h3 id="metaphlan-alternative">MetaPhlAn alternative<a class="headerlink" href="#metaphlan-alternative" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This branch is only selected when <code>algorithm: metaphlan</code>.</li>
+<li>Uses <code>INPUT_R2</code>, but no such function exists in the file.</li>
+<li>The whole branch produces a single shared output for all samples and has no wildcard, so it doesn't actually implement multi-sample profiling.</li>
+<li>This is a draft and shouldn't be run without further work.</li>
+</ul>
+<hr />
+<h2 id="workflowrulestranscriptomesmk"><code>workflow/rules/transcriptome.smk</code><a class="headerlink" href="#workflowrulestranscriptomesmk" title="Permanent link">&para;</a></h2>
+<h3 id="paths_1">Paths<a class="headerlink" href="#paths_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Builds the fasta path as <code>ref_dir/{taxid}.fa</code>. By its name this is the transcriptome fasta, but the directory <code>ref_dir</code> is called <code>genome</code> — it should be confirmed that it actually holds transcript sequences and not genomic fasta.</li>
+<li>Again fetches the list of SRA IDs, even though the variable is named in the singular.</li>
+<li>Uses <code>{SRA_ID}</code> in uppercase and <code>input_dir</code>, which in the config points to the non-host metagenome reads. Host RNA-seq needs a separate <code>host_transcriptome_input_dir</code> and the <code>{sra_id}</code> wildcard.</li>
+</ul>
+<h3 id="kallisto_index"><code>kallisto_index</code><a class="headerlink" href="#kallisto_index" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The transcript fasta.</li>
+<li>The binary Kallisto index.</li>
+<li>Hard-codes k=31 instead of using <code>config["kallisto"]["kmer_size"]</code>.</li>
+<li>Calls <code>kallisto index</code>.</li>
+</ul>
+<h3 id="kallisto_quant"><code>kallisto_quant</code><a class="headerlink" href="#kallisto_quant" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The index and the two mate read files.</li>
+<li>The output directory, which will contain <code>abundance.tsv</code> and Kallisto's auxiliary files.</li>
+<li><code>-b 30</code> bootstraps.</li>
+<li>Checks whether R2 exists. But since R2 is declared as a required input, Snakemake won't even start the job if it's missing — so the single-end branch is effectively unreachable.</li>
+<li>The paired-end quantification.</li>
+<li>The intended single-end quantification.</li>
+<li>This file is missing <code>import os</code>, so the R2-existence check will fail at interpretation time.</li>
+</ul>
+<hr />
+<h2 id="workflowrulesmeta_transcriptomesmk"><code>workflow/rules/meta_transcriptome.smk</code><a class="headerlink" href="#workflowrulesmeta_transcriptomesmk" title="Permanent link">&para;</a></h2>
+<p>This is a separate draft that isn't currently included in the root <code>Snakefile</code>.</p>
+<h3 id="qc-rule">QC rule<a class="headerlink" href="#qc-rule" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Looks for <code>config.yaml</code> in the current directory, not <code>config/config.yaml</code>.</li>
+<li>Expects <code>input_fastq</code>, which doesn't exist in the current config.</li>
+<li>Produces a single shared output with no sample wildcard.</li>
+<li>Runs single-end fastp with Q30 and a minimum length of 50.</li>
+</ul>
+<h3 id="supposed-metaphlan-step">Supposed MetaPhlAn step<a class="headerlink" href="#supposed-metaphlan-step" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The input and output names look reasonable.</li>
+<li>However, it runs <code>fastp</code> again and references <code>input.fastq</code>, <code>output.processed_fastq</code>, <code>output.html_report</code>, none of which exist in this rule.</li>
+<li>In other words, metatranscriptomic taxonomic profiling <strong>isn't implemented</strong>.</li>
+</ul>
+<h3 id="humann-not-implemented">HUMAnN - not implemented<a class="headerlink" href="#humann-not-implemented" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Describes the intended input/output of the functional profile.</li>
+<li>Contains a second, redundant <code>shell:</code> — a syntax error.</li>
+<li>The intended HUMAnN command: a functional abundance table.</li>
+</ul>
+<h3 id="humann-postprocessing">HUMAnN postprocessing<a class="headerlink" href="#humann-postprocessing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>rename_human</code> renames pathway identifiers to UniRef90 names.</li>
+<li><code>regroup_table_humman</code> regroups features by MetaCyc. The name <code>humman</code> is a historical typo.</li>
+<li><code>final_humann_table</code> again uses <code>humann_rename_table</code>, but passes <code>--groups metacyc</code>, which doesn't match the purpose of the rename command — the CLI and the intended goal of this step should be checked.</li>
+</ul>
+<h3 id="cleanup-and-target">Cleanup and target<a class="headerlink" href="#cleanup-and-target" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>clean_temporary_files</code> removes the processed fastq and creates a marker.</li>
+<li>Its output isn't required anywhere, so the rule won't necessarily run.</li>
+<li><code>rule all</code> requests the MetaPhlAn and final HUMAnN outputs, but as things stand, the upstream MetaPhlAn/HUMAnN rules aren't valid.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

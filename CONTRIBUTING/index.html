@@ -1,0 +1,790 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../SCRIPTS/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Contributing - eRNAi Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contributing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="eRNAi Documentation" class="md-header__button md-logo" aria-label="eRNAi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            eRNAi Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Contributing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="eRNAi Documentation" class="md-nav__button md-logo" aria-label="eRNAi Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    eRNAi Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BASIC_DOC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FILES_EXPLONATION/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Устройство репозитория
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SNAKEMAKE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snakemake-пайплайн
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SCRIPTS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Скрипты и тесты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-bugs-and-proposing-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporting bugs and proposing features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Style
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Function Annotation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#argparse-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ArgParse annotation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base Packages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing packages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snakemake-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snakemake conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folder-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Folder structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-tests-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running tests locally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pull requests
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-bugs-and-proposing-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reporting bugs and proposing features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Style
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Function Annotation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#argparse-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ArgParse annotation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base Packages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing packages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snakemake-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snakemake conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folder-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Folder structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-tests-locally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running tests locally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pull requests
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h1>
+<p>This project and everyone participating in it is governed by the <a href="./master/docs/CONTRIBUTING.md">CONTRIBUTING.md</a>.
+Follow existing style, formatting, and naming conventions for the file you are modifying and for the entire project.
+Please review the following guidelines before you get started</p>
+<h2 id="reporting-bugs-and-proposing-features">Reporting bugs and proposing features<a class="headerlink" href="#reporting-bugs-and-proposing-features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Search <a href="../../issues">existing issues</a> before opening a new one.</li>
+<li>For a bug report, include: what you ran, what you expected, what happened instead, and the relevant log file (pipeline logs are written under <code>{output_dir}/logs/</code>).</li>
+<li>For a feature or pipeline-stage proposal, describe the input/output of the new stage and which existing rule it should connect to.</li>
+</ul>
+<h2 id="code-style">Code Style<a class="headerlink" href="#code-style" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Follow the PEP 8 standards for Python</li>
+<li>Variable and function names should be unique and reflect their purpose</li>
+<li>Class names should start with a capital letter</li>
+<li>Add comments to complex code.</li>
+<li>Use flake8 and black to check and automatically format code</li>
+</ul>
+<h2 id="function-annotation">Function Annotation<a class="headerlink" href="#function-annotation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The Python typing module is used to annotate types for functions and variables.</li>
+<li>
+<p>Annotate the types of all functions, methods, arguments, and return values, as well as variables, where possible and appropriate.</p>
+</li>
+<li>
+<p>Using:</p>
+</li>
+<li><strong>str</strong>, <strong>int</strong>, <strong>float</strong>, and <strong>bool</strong> to annotate simple data types.</li>
+<li><strong>List</strong>, <strong>Tuple</strong>, <strong>Dict</strong>, and <strong>Set</strong> from the typing module to annotate collections.</li>
+<li>Union to indicate that a variable can have one of several types.</li>
+<li>Docstrings to describe the purpose of a function, its arguments, and its return value.</li>
+</ul>
+<h2 id="argparse-annotation">ArgParse annotation<a class="headerlink" href="#argparse-annotation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Use ArgParse for all scripts that need the user to interact with the command line.</li>
+<li>Using:</li>
+<li>Create an ArgumentParser object.</li>
+<li>Describe what the script does in the description</li>
+<li>
+<p>Use the <em>add_argument()</em> method to define the arguments that your script will accept.</p>
+<p>The options for <em>add_argument()</em> :
+- <em>name or flags</em>: The name of the argument or a list of flags (e.g., -o, --output).
+- <em>help</em>: A short description of the argument to be displayed in the help.
+- <em>type</em>: The expected data type of the argument (e.g., str, int, float).
+- <em>default</em>: The default value of the argument.
+- <em>required</em>: Specify True if the argument is required.
+- <em>choices</em>: A list of acceptable values for the argument.
+- <em>action</em>: Specifies the action to perform when this argument is detected on the command line.</p>
+</li>
+<li>
+<p>Calling the parse_args() method to parse command line arguments</p>
+</li>
+</ul>
+<h2 id="base-packages">Base Packages<a class="headerlink" href="#base-packages" title="Permanent link">&para;</a></h2>
+<p>The following basic packages are required to work on the project: </p>
+<ul>
+<li>python (version 3.9 or higher)</li>
+<li>pytest (for running tests)</li>
+<li>flake8 (for code style checking)</li>
+<li>black (for automatic code formatting)</li>
+<li>requests (for working with HTTP requests)</li>
+<li>pandas (for data analysis)</li>
+<li>numpy (for data analysis)</li>
+</ul>
+<p>The minimum list of packages and their versions that are required for the project can be found in requirements/minimal.txt</p>
+<h2 id="installing-packages">Installing packages<a class="headerlink" href="#installing-packages" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Every package is installed conda, save any installation code you add to the repository (<code>requirements/installations.sh</code>).</li>
+<li>Conda dependencies and their versions are listed in <code>enviromental.yaml</code> at the repository root. </li>
+</ul>
+<h2 id="snakemake-conventions">Snakemake conventions<a class="headerlink" href="#snakemake-conventions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Each pipeline stage are in its own rule file under <code>workflow/rules/</code> and is pulled into the root <code>Snakefile</code> via <code>include:</code>.</li>
+<li>Give every rule a <code>log:</code> directive pointing into <code>{output_dir}/logs/</code>.</li>
+</ul>
+<h2 id="folder-structure">Folder structure<a class="headerlink" href="#folder-structure" title="Permanent link">&para;</a></h2>
+<p>This is the actual structure of the repository — keep new code inside it rather than introducing parallel folders:</p>
+<ul>
+<li><code>workflow/rules/</code>: Snakemake rule files, one per pipeline stage (preprocessing, host/metagenome split, metagenome classification, transcriptome quantification, metatranscriptome, genome download).</li>
+<li><code>scripts/</code>:  Python/Bash scripts invoked by the pipeline or run manually.</li>
+<li><code>CCA_analysis/</code>: R scripts for the CCA and downstream statistical analysis.</li>
+<li><code>config/</code>: <code>config.yaml</code> and any other run configuration.</li>
+<li><code>data/</code>: input data references (SRA ID lists, reference genomes), large/raw data files are excluded via <code>.gitignore</code>.</li>
+<li><code>tests/</code>: tests for <code>scripts/</code> and for the Snakemake rules. Uses pytest, test filenames start with <code>test_</code>.</li>
+<li><code>docs/</code>: documentation, including this file.</li>
+<li><code>requirements/</code>: minimal package lists (<code>minimal.txt</code>, <code>tests.txt</code>) and install scripts.</li>
+<li>Code generated during development, testing, or builds must be in <code>.gitignore</code>, not committed.</li>
+</ul>
+<h2 id="running-tests-locally">Running tests locally<a class="headerlink" href="#running-tests-locally" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>pip install -r requirements/tests.txt
+pytest tests/
+</code></pre></div>
+<h2 id="pull-requests">Pull requests<a class="headerlink" href="#pull-requests" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Describe the changes made in the PR description clearly and in detail.</li>
+<li>Link the issue(s) the PR addresses.</li>
+<li>Verify that all tests pass, and that <code>snakemake -n</code> (dry-run) succeeds if you touched any rule file, before requesting review.</li>
+<li>Update documentation (README, <code>docs/PIPELINE.md</code>, this file) if your change affects usage, configuration, or folder structure.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
