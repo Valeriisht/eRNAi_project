@@ -1,10 +1,10 @@
-name: eRNAi
-
+name: ernai
+ 
 channels:
   - conda-forge
   - bioconda
   - defaults
-
+ 
 dependencies:
   # Workflow runner and Python utilities used by scripts/tests
   - python=3.11
@@ -15,22 +15,23 @@ dependencies:
   - pytest-mock
   - flake8
   - black
-
+ 
   # Data retrieval and reference preparation
   - sra-tools=3.2.*
   - ncbi-datasets-cli
   - ncbi-genome-download
-
+ 
   # Read processing and host-read removal
   - fastp=0.24.*
   - bwa
   - samtools
-
+ 
   # Host transcriptome quantification
-  - kallisto
-
+  - kallisto=0.48.*
+ 
   # Metagenome and k-mer workflow
   - kraken2
   - bracken=3.1.*
   - dsk=2.3.3
   - blast=2.16.*
+ 
