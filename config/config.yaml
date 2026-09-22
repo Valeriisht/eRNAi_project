@@ -1,14 +1,15 @@
+# paths
 output_dir: "kraken"
-input_dir: "metagenome/dehost"
+input_dir: "kraken"                    
 ref_dir: "data/data_ggallus/genome"
 taxid: "galGal6"
-sample_name: "gallus_sample"
+sample_name: "gallus_gallus"     
+accession: "GCF_000002315.6"      
 
 sra:
   sra_id:
-  # as example
     - "SRR8265535"
-    - "SRR8265537" 
+    - "SRR8265537"
     - "SRR8265543"
     - "SRR8265545"
     - "SRR8265547"
@@ -26,50 +27,33 @@ sra:
     - "SRR8265563"
     - "SRR8265566"
     - "SRR8265568"
-
   paired: True
   thread: 2
 
 threads:
-  bwa_index: 2
-  bwa_align: 2
-  sam_to_bam: 2
-  split_reads: 2
+  bwa_index: 8
+  bwa_align: 8
+  sam_to_bam: 8
+  split_reads: 4
 
 # transcriptome params
 #==================
-
 kallisto:
-  kmer_size: 31  # k-mer length (default is 31)
-  bootstrap: 30  # Number of bootstrap replicates for uncertainty estimation
-
-# host_genome params
-#==========================
-
-threads:
-  bwa_index: 8
-  bwa_align: 8
-  sam_to_bam: 8  
-  split_reads: 4    
-
+  kmer_size: 31   # k-mer length (default is 31)
+  bootstrap: 30   # Number of bootstrap replicates for uncertainty estimation
 
 #kraken2 params
 #============================
-
-algorithm: "kraken2"  # Algorithm to be used  
-database: "/mnt/metagenomics/kraken2"  # Path to the Kraken2 database  
-sample_name: "gallus_gallus"  # Sample name (used for naming output files) 
+algorithm: "kraken2"                       # Algorithm to be used
+database: "/nfs/home/vishtuganova/kraken2_db"    
 
 #============================
-
 # bracken params
 read_length: 150
 taxonomic_level: ['S']
 
-
 # preprocessing params
 #=================
-##### params for specific rules ####
 fastp:
     thread: 8
     qualified_quality_phred: 20
@@ -78,7 +62,6 @@ fastp:
 
 # metaphlan params
 #===============================
-
 metaphlan:
   threads: 8
 
@@ -86,6 +69,3 @@ metaphlan:
 #===============================
 humann:
   threads: 8
-
-
-

@@ -12,4 +12,6 @@ conda install bioconda::ncbi-genome-download
 conda install bioconda::dsk=2.3.3
 conda install bioconda::blast=2.16.0
 conda install conda-forge::datasets=3.6.0
+conda install -c bioconda kallisto
+
 

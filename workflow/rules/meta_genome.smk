@@ -15,7 +15,7 @@ wildcard_constraints:
     level="S"  # levels: S, G, P
 
 def INPUT_R1(wildcards):
-    return f"{INP_DIR}/{wildcards.sra_id}_metagenome_reads.fastq"
+    return f"{INP_DIR}/{wildcards.sra_id}_metagenome_reads.fastq.gz"
 
 
 ### 1: Kraken2 + Bracken ###

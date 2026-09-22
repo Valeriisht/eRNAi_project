@@ -1,0 +1,23 @@
+site_name: eRNAi Documentation
+site_url: https://valeriisht.github.io/eRNAi_project/
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Главная: BASIC_DOC.md
+  - Устройство репозитория: FILES_EXPLONATION.md
+  - Snakemake-пайплайн: SNAKEMAKE.md
+  - Скрипты и тесты: SCRIPTS.md
+  - Contributing: CONTRIBUTING.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - toc:
+      permalink: true
+
+docs_dir: docs

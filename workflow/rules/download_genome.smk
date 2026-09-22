@@ -2,19 +2,20 @@
 configfile: "config/config.yaml"
 
 TAXID = config["taxid"]
+ACCESSION = config["accession"]
 OUTPUT_DIR = config["output_dir"]
-GENOME_FILE = f"{OUTPUT_DIR}/{TAXID}.fna"
+GENOME_FILE = f"{config['ref_dir']}/{TAXID}.fa"
 
 # download archive
 rule download_genome:
     output:
         zip = f"{OUTPUT_DIR}/{TAXID}_genome.zip"
     params:
-        taxid = TAXID
+        accession = ACCESSION
     log:
         f"{OUTPUT_DIR}/logs/download.log"
     shell:
-        "datasets download genome taxon {params.taxid} --reference --filename {output.zip} > {log} 2>&1"
+        "datasets download genome accession {params.accession} --filename {output.zip} > {log} 2>&1"
 
 # unpacking
 rule extract_genome:
