@@ -10,6 +10,7 @@ DB = config.get("database", "")  # path to Kraken2
 INP_DIR = config["input_dir"]
 OUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]   # for output file
+READ_LEN = config.get("read_length", 150)
 
 wildcard_constraints:
     level="S"  # levels: S, G, P
@@ -40,29 +41,32 @@ if ALGO == "kraken2":
 
     rule bracken_abundance:
         input:
-            rules.kraken2_classify.output.report
+            f"{OUT_DIR}/kraken2_{{sra_id}}.report"
         output:
             f"{OUT_DIR}/bracken_{{sra_id}}_output_{{level}}.report"
         params:
             db = DB,
-            readlen = READ_LEN,
+            read_len = READ_LEN,
             threshold = 10
         log:
             f"{OUT_DIR}/logs/bracken_{{sra_id}}_{{level}}.log"
         shell:
             """
             bracken -d {params.db} -i {input} -o {output} \
-                    -r {params.readlen} -l {wildcards.level} \
-                    -t {params.threshold} > {log} 2>&1
+                -r {params.read_len} -l {wildcards.level} -t {params.threshold} \
+                > {log} 2>&1 
             """
+    
 
     rule convert_to_mpa:
         input:
             expand(f"{OUT_DIR}/bracken_{{sra_id}}_output_S.report", sra_id=SRA_IDS)
         output:
             f"{OUT_DIR}/{SAMPLE}_report.tsv"
+        log:
+            f"{OUT_DIR}/logs/convert_to_mpa.log"
         shell:
-            "kreport2mpa.py -r {input} -o {output} --display-header"
+            "combine_bracken_outputs.py --files {input} -o {output} > {log} 2>&1"
 
 ### 2: Metaphlan ###
 elif ALGO == "metaphlan":

@@ -82,6 +82,7 @@ INP_DIR = config["input_dir"]
 OUT_DIR = config["output_dir"]
 SAMPLE = config["sample_name"]
 SRA_IDS = config["sra"]["sra_id"]
+TRANS_SRA_IDS = config["host_transcriptome_sra_id"]
 DB = config["database"]
 ALGO = config["algorithm"]
 READ_LEN = config["read_length"]
@@ -115,5 +116,5 @@ rule all:
         f"{OUT_DIR}/{SAMPLE}_report.tsv",
         # transcriptome
         expand(OUT_DIR + "/{taxid}/{sra_id}_quant_results",
-               taxid=TAXID, sra_id=SRA_IDS)
+               taxid=TAXID, sra_id=TRANS_SRA_IDS)
 
